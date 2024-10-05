@@ -27,7 +27,7 @@ const data = [
 
 const MarketSplitByType = () => {
   return (
-    <div className="w-full h-full bg-white shadow-lg rounded-lg p-6 flex flex-col">
+    <div className="w-full h-full bg-white shadow-xl shadow-gray-300 rounded-lg p-6 flex flex-col">
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
           data={data}

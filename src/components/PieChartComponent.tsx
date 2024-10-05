@@ -10,7 +10,7 @@ const data = [
   { name: "Latin America", value: 100 },
 ];
 
-const COLORS = ["#4287f5", "#00c49f", "#ffbb28", "#ff8042", "#8884d8"];
+const COLORS = ["#49e3bb", "#4c90fa", "#544fc5", "#b9c2fc", "#2c2cfe"];
 
 const PieChartComponent = () => {
   const [radius, setRadius] = useState({ outer: 100, inner: 35 });
@@ -36,7 +36,7 @@ const PieChartComponent = () => {
   }, []);
 
   return (
-    <div className="p-4 shadow-lg bg-white rounded-lg flex flex-col md:flex-row">
+    <div className="p-4 shadow-xl shadow-gray-300 bg-white rounded-lg flex flex-col md:flex-row">
       <div className="w-full md:w-3/4">
         <h2 className="text-lg font-bold mb-4 text-center md:text-left">
           Market Share, By Region

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaBell, FaSlidersH, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 interface Tab {
   label: string;
@@ -39,9 +40,9 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="shadow-md">
-      <div className="bg-blue-600 flex justify-between items-center px-4 md:px-6 py-3">
+      <div className="bg-[#3B4ACC] flex justify-between items-center px-4 md:px-6 py-3">
         <div className="flex items-center space-x-4 md:space-x-6">
-          <div className="relative w-24 h-10 md:w-28 md:h-12 lg:w-32 lg:h-14">
+          <div className="relative w-24 h-10 md:w-28 md:h-12 lg:w-48 lg:h-14">
             <Image
               src="/images/VMRWhiteLogo.png"
               alt="Logo"
@@ -52,18 +53,18 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="text-white hidden sm:block">
-            <h1 className="text-[10px] font-semibold leading-tight">
-              VERIFIED MARKET RESEARCH
+            <h1 className="text-[8px] font-semibold leading-tight uppercase mb-1">
+              Industry Access:
             </h1>
-            <p className="text-[12px] text-gray-200 leading-tight">
-              Industry Access:{" "}
-              <span className="underline">Electronics & Semiconductors</span>
+            <p className="text-[12px] text-gray-200 leading-tight flex items-center">
+              <span>Electronics & Semiconductors</span>
+              <MdKeyboardArrowDown />
             </p>
           </div>
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className="hidden md:inline bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition duration-300">
+          <button className=" hidden md:inline bg-teal-500 text-white text-[12px] px-3 py-1 rounded-5px hover:bg-teal-600 transition duration-300">
             SUBSCRIBE
           </button>
 
@@ -78,15 +79,15 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Bottom Navigation (hidden on mobile, shows in menu) */}
-      <div className="bg-white md:flex justify-between items-center px-4 md:px-6 py-3 hidden">
-        <div className="flex space-x-4 md:space-x-8">
+      <div className="relative bg-white md:flex justify-between items-center px-4 md:px-0 hidden shadow-lg shadow-gray-300">
+        <div className="flex space-x-4 md:space-x-8 relative w-full">
           {tabs.map((tab) => (
             <a
               key={tab.label}
               href="#"
-              className={`font-semibold ${
+              className={`relative z-10 font-semibold px-8 py-2 ${
                 tab.isActive
-                  ? "text-blue-600 border-b-2 border-blue-600"
+                  ? "bg-[#3B4ACC] text-white absolute inset-0 h-full z-0"
                   : "text-gray-700 hover:text-blue-600"
               }`}
               onClick={tab.onClick}
@@ -97,7 +98,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Right-side Icons */}
-        <div className="flex space-x-4 text-blue-600">
+        <div className="flex space-x-4 text-blue-600 z-10 mr-8">
           <FaSlidersH className="text-xl cursor-pointer" />
           <FaBell className="text-xl cursor-pointer" />
         </div>

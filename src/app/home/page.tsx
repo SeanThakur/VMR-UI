@@ -26,44 +26,103 @@ export default function Home() {
             </div>
 
             <div className="w-full md:w-2/5 rounded-lg flex flex-col space-y-8 md:ml-8">
-              <div className="flex-grow bg-white shadow-lg rounded-lg p-6">
-                <h2 className="text-lg font-semibold mb-4">Report Details</h2>
-                <ul className="space-y-2 text-gray-700">
-                  <li>
-                    <strong>Pages:</strong> 202 Pages
-                  </li>
-                  <li>
-                    <strong>Format:</strong> PDF, PPTX, PNG
-                  </li>
-                  <li>
-                    <strong>Language:</strong> English
-                  </li>
-                  <li>
-                    <strong>Published:</strong> February 2024
-                  </li>
-                  <li>
-                    <strong>Access Type:</strong> Enterprise User
-                  </li>
-                  <li>
-                    <strong>Market Value:</strong> $112.7 Billion (2023)
-                  </li>
-                  <li>
-                    <strong>CAGR:</strong> 6.27%
-                  </li>
-                  <li>
-                    <strong>Segments:</strong>
-                    <ul className="pl-4 list-disc">
-                      <li>
-                        By Type (USA-sourced, South America-sourced,
-                        Australia-sourced)
-                      </li>
-                      <li>
-                        By Application (Scientific Research, Industrial
-                        Production)
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+              <div className="flex-grow bg-white shadow-xl shadow-gray-300 rounded-lg p-6 border-t-4 border-[#3B4ACC]">
+                <h2 className="font-normal text-[12px] leading-[14.06px] mb-2 text-[#7F7F7F] uppercase">
+                  Report Details
+                </h2>
+                <p className="font-normal text-[12px] leading-[14.06px] mb-2 text-black">
+                  Global Treasury And Risk Management Software Market
+                </p>
+                <div className="h-[0.5px] w-[90%] bg-gray-300 my-4"></div>
+                <div className="w-[90%]">
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex justify-between">
+                      <span className="font-normal text-[#7F7F7F] text-[12px]">
+                        Pages:
+                      </span>
+                      <span className="w-[65%] text-[12px] text-black">
+                        202 Pages
+                      </span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="font-normal text-[#7F7F7F] text-[12px]">
+                        Format:
+                      </span>
+                      <span className="w-[65%] text-[12px]">
+                        PDF, PPTX, PNG
+                      </span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="font-normal text-[#7F7F7F] text-[12px]">
+                        Language:
+                      </span>
+                      <span className="w-[65%] text-[12px] text-black">
+                        English
+                      </span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="font-normal text-[#7F7F7F] text-[12px]">
+                        Published:
+                      </span>
+                      <span className="w-[65%] text-[12px] text-black">
+                        February 2024
+                      </span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="font-normal text-[#7F7F7F] text-[12px]">
+                        Access Type:
+                      </span>
+                      <span className="w-[65%] text-[12px] text-black flex flex-col">
+                        Enterprise User
+                        <span className="text-[#7F7F7F]">
+                          (downloadable PDF + Insights)
+                        </span>
+                      </span>
+                    </li>
+                    <div className="h-[0.5px] bg-gray-300 my-4"></div>
+                    <li className="flex justify-between">
+                      <span className="font-normal text-[#7F7F7F] text-[12px]">
+                        Market Value:
+                      </span>
+                      <span className="w-[65%] text-[12px] text-black">
+                        $112.7 Billion{" "}
+                        <span className="text-[#7F7F7F]">(2023)</span>
+                      </span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="font-normal text-[#7F7F7F] text-[12px]">
+                        CAGR:
+                      </span>
+                      <span className="w-[65%] text-[12px] text-black">
+                        6.27%
+                      </span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span className="font-normal text-[#7F7F7F] text-[12px]">
+                        Segments:
+                      </span>
+                      <ul className="w-[65%] pl-4 list-disc">
+                        <li>
+                          <span className="text-[12px] text-black">
+                            By Type
+                          </span>{" "}
+                          <span className="text-[10px] text-[#7F7F7F]">
+                            (USA-sourced, South America-sourced,
+                            Australia-sourced)
+                          </span>
+                        </li>
+                        <li>
+                          <span className="text-[12px] text-black">
+                            By Application
+                          </span>{" "}
+                          <span className="text-[10px] text-[#7F7F7F]">
+                            (Scientific Research, Industrial Production)
+                          </span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div className="flex-grow w-full">
                 <PieChartComponent />

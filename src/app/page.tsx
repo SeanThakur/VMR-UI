@@ -70,7 +70,7 @@ const RootPage: React.FC = () => {
 
         <div className="w-full lg:w-2/5 bg-white flex flex-col justify-center p-4 sm:p-8 md:p-12 min-h-screen shadow-lg shadow-gray-500">
           <div className="flex flex-col items-center justify-center mb-6">
-            <div className="relative w-52 h-32">
+            <div className="relative w-60 h-32">
               <Image
                 src="/images/VMRLogo.png"
                 alt="Logo"

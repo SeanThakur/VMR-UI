@@ -41,11 +41,11 @@ const BarChartComponent = () => {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Bar dataKey="USA-sourced" stackId="a" fill="#4287f5" />
-            <Bar dataKey="South America-sourced" stackId="a" fill="#ffa500" />
-            <Bar dataKey="Australia-sourced" stackId="a" fill="#00ff00" />
-            <Bar dataKey="Scientific Research" stackId="b" fill="#ff4500" />
-            <Bar dataKey="Industrial Production" stackId="b" fill="#8a2be2" />
+            <Bar dataKey="USA-sourced" stackId="a" fill="#2caffe" />
+            <Bar dataKey="South America-sourced" stackId="a" fill="#544fc5" />
+            <Bar dataKey="Australia-sourced" stackId="a" fill="#00e272" />
+            <Bar dataKey="Scientific Research" stackId="b" fill="#fe6a35" />
+            <Bar dataKey="Industrial Production" stackId="b" fill="#6c8abc" />
           </BarChart>
         </ResponsiveContainer>
       </div>

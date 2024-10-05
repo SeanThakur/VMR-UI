@@ -65,7 +65,7 @@ const CustomLegend: React.FC<LegendProps> = (props) => {
 
 export default function MarketValueByRegion() {
   return (
-    <div className="p-4 shadow-lg bg-white rounded-lg flex flex-col">
+    <div className="p-4 shadow-xl shadow-gray-300 bg-white rounded-lg flex flex-col">
       <div className="w-full h-64">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
@@ -91,7 +91,7 @@ export default function MarketValueByRegion() {
                 <stop offset="95%" stopColor="#1b5eae" />
               </linearGradient>
               <linearGradient id="colorEurope" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#3479c4" />{" "}
+                <stop offset="5%" stopColor="#3479c4" />
                 <stop offset="95%" stopColor="#3479c4" />
               </linearGradient>
               <linearGradient id="colorAP" x1="0" y1="0" x2="0" y2="1">
@@ -99,8 +99,8 @@ export default function MarketValueByRegion() {
                 <stop offset="95%" stopColor="#4287f5" />
               </linearGradient>
               <linearGradient id="colorLA" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#80b1f3" />
-                <stop offset="95%" stopColor="#80b1f3" />
+                <stop offset="5%" stopColor="#3B4ACC" />
+                <stop offset="95%" stopColor="#3B4ACC" />
               </linearGradient>
             </defs>
 
@@ -128,7 +128,7 @@ export default function MarketValueByRegion() {
             <Area
               type="monotone"
               dataKey="LatinAmerica"
-              stroke="#80b1f3"
+              stroke="#3B4ACC"
               fill="url(#colorLA)"
               stackId="1"
             />

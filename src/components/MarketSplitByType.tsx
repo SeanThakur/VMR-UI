@@ -39,7 +39,7 @@ const data = [
 
 export default function MarketSplitByType() {
   return (
-    <div className="p-4 shadow-lg bg-white rounded-lg flex flex-col">
+    <div className="p-4 shadow-xl shadow-gray-300 bg-white rounded-lg flex flex-col">
       <div className="w-full h-64">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart
@@ -57,13 +57,13 @@ export default function MarketSplitByType() {
               wrapperStyle={{ paddingBottom: "10px" }}
             />
 
-            <Bar dataKey="SouthAmericaSourced" barSize={20} fill="#00C49F" />
-            <Bar dataKey="AustraliaSourced" barSize={20} fill="#FFBB28" />
+            <Bar dataKey="SouthAmericaSourced" barSize={20} fill="#15c0d8" />
+            <Bar dataKey="AustraliaSourced" barSize={20} fill="#3b49cc" />
 
             <Line
               type="monotone"
               dataKey="USASourced"
-              stroke="#0088FE"
+              stroke="#000"
               strokeWidth={2}
               activeDot={{ r: 8 }}
             />
