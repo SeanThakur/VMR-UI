@@ -14,11 +14,11 @@ const RootPage: React.FC = () => {
   const carouselSettings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
   };
 
   const togglePasswordVisibility = () => {
@@ -36,7 +36,7 @@ const RootPage: React.FC = () => {
         <title>Login | InvoicePie</title>
       </Head>
       <div className="min-h-screen flex flex-col md:flex-row">
-        <div className="hidden md:block lg:w-3/5 bg-gray-100 h-full">
+        <div className="hidden md:block px-[33px] lg:w-3/5 bg-gray-100 h-full">
           <Slider {...carouselSettings} className="min-h-screen">
             <div className="relative min-h-screen">
               <Image
@@ -49,7 +49,7 @@ const RootPage: React.FC = () => {
             </div>
             <div className="relative min-h-screen">
               <Image
-                src="/images/carousel2.png"
+                src="/images/carousel2.gif"
                 alt="Image 2"
                 layout="fill"
                 objectFit="contain"
@@ -65,28 +65,10 @@ const RootPage: React.FC = () => {
                 className="w-full h-full"
               />
             </div>
-            <div className="relative min-h-screen">
-              <Image
-                src="/images/carousel4.png"
-                alt="Image 2"
-                layout="fill"
-                objectFit="contain"
-                className="w-full h-full"
-              />
-            </div>
-            <div className="relative min-h-screen">
-              <Image
-                src="/images/carousel5.png"
-                alt="Image 2"
-                layout="fill"
-                objectFit="contain"
-                className="w-full h-full"
-              />
-            </div>
           </Slider>
         </div>
 
-        <div className="w-full lg:w-2/5 bg-white flex flex-col justify-center p-4 sm:p-8 md:p-12 min-h-screen">
+        <div className="w-full lg:w-2/5 bg-white flex flex-col justify-center p-4 sm:p-8 md:p-12 min-h-screen shadow-lg shadow-gray-500">
           <div className="flex flex-col items-center justify-center mb-6">
             <div className="relative w-52 h-32">
               <Image
@@ -151,11 +133,15 @@ const RootPage: React.FC = () => {
             </p>
           </form>
 
-          <p className="text-center text-gray-500 mt-6">
-            By signing in you agree to our{" "}
-            <span className="text-blue-600">Terms & Conditions</span> and{" "}
-            <span className="text-blue-600">Privacy Policy</span>.
-          </p>
+          <div className="flex flex-col items-center">
+            <p className="text-center text-gray-500 text-sm">
+              Designed & Developed by{" "}
+            </p>
+            <p className="text-center text-gray-500 text-sm">
+              <span className="text-blue-600">Verified Market Research®</span>{" "}
+              All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </>
