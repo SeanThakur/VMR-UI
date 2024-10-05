@@ -1,41 +1,147 @@
 "use client";
-import BarChartComponent from "@/components/BarChartComponent";
-import LineChartComponent from "@/components/LineChartComponent";
-import MarketSplitByType from "@/components/MarketSplitByType";
-import PieChartComponent from "@/components/PieChartComponent";
 
-export default function Home() {
+import React, { useState } from "react";
+import Head from "next/head";
+import Slider from "react-slick";
+import { useRouter } from "next/navigation";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import Image from "next/image";
+
+const RootPage: React.FC = () => {
+  const router = useRouter();
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+
+  const carouselSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
+
+  const onFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push("/home");
+  };
+
   return (
-    <div className="bg-gray-100 min-h-screen py-10 px-4 sm:px-8 lg:px-24">
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-8">
-        <h1 className="text-xl sm:text-2xl font-light uppercase mb-4 sm:mb-0">
-          Quantitative Insights
-        </h1>
-        <span className="underline text-md font-bold cursor-pointer">
-          View all
-        </span>
-      </div>
+    <>
+      <Head>
+        <title>Login | InvoicePie</title>
+      </Head>
+      <div className="min-h-screen flex flex-col md:flex-row">
+        <div className="hidden md:block lg:w-3/5 bg-gray-100 h-full">
+          <Slider {...carouselSettings} className="min-h-screen">
+            <div className="relative min-h-screen">
+              <Image
+                src="/images/carousel1.png"
+                alt="Image 1"
+                layout="fill"
+                objectFit="contain"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="relative min-h-screen">
+              <Image
+                src="/images/carousel2.png"
+                alt="Image 2"
+                layout="fill"
+                objectFit="contain"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="relative min-h-screen">
+              <Image
+                src="/images/carousel3.png"
+                alt="Image 2"
+                layout="fill"
+                objectFit="contain"
+                className="w-full h-full"
+              />
+            </div>
+          </Slider>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div className="col-span-1">
-          <BarChartComponent />
-        </div>
-        <div className="col-span-1">
-          <PieChartComponent />
-        </div>
-      </div>
+        <div className="w-full lg:w-2/5 bg-white flex flex-col justify-center p-4 sm:p-8 md:p-12 min-h-screen">
+          <div className="flex flex-col items-center justify-center mb-6">
+            <div className="relative w-52 h-32">
+              <Image
+                src="/images/VMRLogo.png"
+                alt="Logo"
+                layout="fill"
+                objectFit="contain"
+                className="w-full h-full"
+              />
+            </div>
+            <h2 className="text-2xl font-semibold text-gray-800 text-center mt-4 mb-1">
+              Welcome
+            </h2>
+            <p className="text-lg text-gray-500 text-center">
+              Verified Market Intelligence
+            </p>
+            <div className="w-8 h-0.5 bg-gray-300 my-3"></div>
+            <p className="text-lg text-gray-600 text-center mb-2">
+              Get access to a repository of global market insights anytime,
+              anywhere.
+            </p>
+          </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-        <div className="col-span-1">
-          <MarketSplitByType />
-        </div>
-        <div className="col-span-1">
-          <MarketSplitByType />
-        </div>
-        <div className="col-span-1">
-          <LineChartComponent />
+          <form className="space-y-4" onSubmit={onFormSubmit}>
+            <div>
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                autoFocus={true}
+                required
+              />
+            </div>
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Password"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+              <button
+                type="button"
+                onClick={togglePasswordVisibility}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600"
+              >
+                {showPassword ? (
+                  <AiFillEyeInvisible size={20} />
+                ) : (
+                  <AiFillEye size={20} />
+                )}
+              </button>
+            </div>
+            <button
+              type="submit"
+              className="w-full py-2 bg-[#3b4acc] text-white rounded-md hover:bg-[#3241b0] transition duration-200"
+            >
+              Sign In
+            </button>
+
+            <p className="text-sm text-right text-blue-600 hover:underline cursor-pointer">
+              Forgot Password?
+            </p>
+          </form>
+
+          <p className="text-center text-gray-500 mt-6">
+            By signing in you agree to our{" "}
+            <span className="text-blue-600">Terms & Conditions</span> and{" "}
+            <span className="text-blue-600">Privacy Policy</span>.
+          </p>
         </div>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default RootPage;
