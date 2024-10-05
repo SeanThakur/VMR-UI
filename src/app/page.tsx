@@ -65,6 +65,24 @@ const RootPage: React.FC = () => {
                 className="w-full h-full"
               />
             </div>
+            <div className="relative min-h-screen">
+              <Image
+                src="/images/carousel4.png"
+                alt="Image 2"
+                layout="fill"
+                objectFit="contain"
+                className="w-full h-full"
+              />
+            </div>
+            <div className="relative min-h-screen">
+              <Image
+                src="/images/carousel5.png"
+                alt="Image 2"
+                layout="fill"
+                objectFit="contain"
+                className="w-full h-full"
+              />
+            </div>
           </Slider>
         </div>
 
