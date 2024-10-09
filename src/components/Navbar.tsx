@@ -1,37 +1,22 @@
 "use client";
 
+import { useTabStore } from "@/store/store";
 import Image from "next/image";
 import { useState } from "react";
 import { FaBell, FaSlidersH, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-interface Tab {
-  label: string;
-  isActive: boolean;
-  onClick: () => void;
-}
-
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<string>("Reports");
 
-  const tabs: Tab[] = [
-    {
-      label: "Reports",
-      isActive: activeTab === "Reports",
-      onClick: () => setActiveTab("Reports"),
-    },
-    {
-      label: "Insights",
-      isActive: activeTab === "Insights",
-      onClick: () => setActiveTab("Insights"),
-    },
-    {
-      label: "Organizations",
-      isActive: activeTab === "Organizations",
-      onClick: () => setActiveTab("Organizations"),
-    },
+  const { activeTab, setActiveTab } = useTabStore();
+
+  const tabs = [
+    { label: "Reports" },
+    { label: "Insights" },
+    { label: "Organizations" },
+    { label: "Consultations" },
   ];
 
   const toggleMenu = () => {
@@ -86,11 +71,11 @@ const Navbar: React.FC = () => {
               key={tab.label}
               href="#"
               className={`relative z-10 font-semibold px-8 py-2 ${
-                tab.isActive
+                activeTab === tab.label
                   ? "bg-[#3B4ACC] text-white absolute inset-0 h-full z-0"
                   : "text-gray-700 hover:text-blue-600"
               }`}
-              onClick={tab.onClick}
+              onClick={() => setActiveTab(tab.label)}
             >
               {tab.label}
             </a>
