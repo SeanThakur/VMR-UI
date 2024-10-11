@@ -8,7 +8,7 @@ const TableOfContent = () => {
 
   return (
     <div className="h-[480px] bg-white shadow-table-content border border-[#EEEEEE] flex flex-row">
-      <div className="w-[20%] h-full border-t-2 border-customBlue shadow-table-content">
+      <div className="w-[23%] h-full border-t-2 border-customBlue shadow-table-content">
         <div className="relative">
           <input
             className="bg-[#FFFFFF] px-10 text-[14px] text-[#979797] h-[36px] w-full border-t border-b border-l-0 border-r-0 border-solid border-[#EEEEEE]"
@@ -16,7 +16,7 @@ const TableOfContent = () => {
           />
           <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#0DAFBF]" />
         </div>
-        <div className="py-2 text-[#7F7F7F] text-[18px] font-medium">
+        <div className="py-2 text-[#7F7F7F] text-[18px] font-light">
           <p className="py-2 px-6">Chapters —</p>
           <hr />
           {tableOfContentData.map((data, index) => (
