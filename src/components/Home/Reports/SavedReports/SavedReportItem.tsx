@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const chipIcons = {
   requested: "/icons/requested.svg",
@@ -19,7 +20,10 @@ const SavedReportItem: React.FC<BookCardProps> = ({
   chipStyle,
 }) => {
   return (
-    <div className="flex flex-col items-start w-[150px] py-4 pr-4 cursor-pointer">
+    <Link
+      href={"/book"}
+      className="flex flex-col items-start w-[150px] py-4 pr-4 cursor-pointer"
+    >
       <div className="relative w-[133px] h-[182px] mb-3 shadow-saved-report">
         <Image src={image} alt="Book Cover" layout="fill" objectFit="cover" />
         <div className="absolute top-2 right-2 w-[15px] h-[15px] bg-[#0DAFBF] flex items-center justify-center rounded-sm">
@@ -50,7 +54,7 @@ const SavedReportItem: React.FC<BookCardProps> = ({
         </div>
       )}
       <p className="font-light text-[12px]">{title}</p>
-    </div>
+    </Link>
   );
 };
 

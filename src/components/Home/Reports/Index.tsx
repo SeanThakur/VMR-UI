@@ -9,7 +9,7 @@ const Reports = () => {
   return (
     <div className="bg-gray-100 min-h-screen mt-8 px-4 sm:px-8 lg:px-16">
       <div className="flex items-center justify-between">
-        <div className="text-md text-gray-800 font-bold">
+        <div className="text-md text-black text-[24px] font-medium">
           SAHIL’S PURCHASED / REQUESTED / SAVED REPORTS
         </div>
         <SecondaryInput label="Search Report" />

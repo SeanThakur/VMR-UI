@@ -1,16 +1,16 @@
 import React, { Fragment } from "react";
 import PieChartComponent from "@/components/PieChartComponent";
 import BarChartComponent from "@/components/BarChartComponent";
-import LineChartComponent from "@/components/LineChartComponent";
 import MarketEstimate from "@/components/MarketEstimate";
 import MarketSplitByType from "@/components/MarketSplitByType";
 import SearchInput from "../../SearchInput";
+import MarketValueByRegion from "@/components/MarketValueByRegion";
 
 const Insights = () => {
   return (
     <Fragment>
       <SearchInput />
-      <div className="bg-gray-100 min-h-screen py-4 px-4 sm:px-8 lg:px-16">
+      <div className="bg-gray-100 min-h-screen py-4 px-4 sm:px-8 lg:px-24">
         <div className="container mx-auto">
           <p className="text-md sm:text-2xl font-bold text-gray-600 text-center sm:text-left mb-4">
             Global Treasury And Risk Management Software Market
@@ -131,7 +131,7 @@ const Insights = () => {
           <h1 className="text-xl sm:text-2xl font-light uppercase mb-4 sm:mb-0">
             Quantitative Insights
           </h1>
-          <span className="underline text-md font-bold cursor-pointer">
+          <span className="underline text-md font-normal cursor-pointer">
             View all
           </span>
         </div>
@@ -153,7 +153,7 @@ const Insights = () => {
             <MarketSplitByType />
           </div>
           <div className="col-span-1">
-            <LineChartComponent />
+            <MarketValueByRegion />
           </div>
         </div>
       </div>

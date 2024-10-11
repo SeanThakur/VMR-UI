@@ -31,7 +31,7 @@ const VMRNexus = () => {
   return (
     <div className="my-14">
       <div className="flex items-center justify-between mb-6">
-        <div className="flex flex-col items-start w-[200px]">
+        <div className="flex flex-col items-start w-[250px]">
           <div className="text-[24px] text-black font-medium font-bold mb-2">
             VMR NEXUS —
           </div>

@@ -20,6 +20,7 @@ const config: Config = {
         "saved-report": "-34px 33px 47px -16px rgba(107, 106, 107, 1)",
         "related-report": "0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset",
         "nexus-card": "0px_4px_4px_0px_rgba(0,0,0,0.25)",
+        "table-content": "0px 4px 4px 0px #00000040",
       },
     },
   },

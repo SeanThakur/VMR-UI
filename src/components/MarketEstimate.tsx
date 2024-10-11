@@ -25,7 +25,7 @@ const data = [
   { year: "2030", value: 620, growth: 8.85 },
 ];
 
-const MarketSplitByType = () => {
+const MarketEstimate = () => {
   return (
     <div className="w-full h-full bg-white shadow-xl shadow-gray-300 rounded-lg p-6 flex flex-col">
       <ResponsiveContainer width="100%" height="100%">
@@ -79,4 +79,4 @@ const MarketSplitByType = () => {
   );
 };
 
-export default MarketSplitByType;
+export default MarketEstimate;

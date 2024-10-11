@@ -4,12 +4,12 @@ import React from "react";
 const Banner = () => {
   return (
     <div className="rounded-[10px] bg-[#3B4ACC] w-full h-[230px] py-6 px-4 mt-12 mb-12 flex flex-row items-start justify-between">
-      <div className="font-light text-white text-[32px] leading-[48px] flex flex-col ml-8">
+      <div className="font-light text-white text-[28px] leading-[48px] flex flex-col ml-8 fill-available justify-center items-start">
         <span className="font-light">Subscribe to access the entire VMR </span>
         <span className="font-bold">Electronics & Semiconductors</span>
         <span className="font-normal">repository of reports and insights</span>
       </div>
-      <div className="text-white">
+      <div className="text-white fill-available fill-available flex flex-col justify-center">
         <p className="font-bold text-[16px] mb-1">This repository includes:</p>
         <ul className="list-disc pl-8 text-[16px] font-normal">
           <li>1,478 Global market reports</li>
@@ -20,7 +20,7 @@ const Banner = () => {
           <li>103 Latin America market reports</li>
         </ul>
       </div>
-      <div className="flex items-center fill-available">
+      <div className="flex items-center fill-available flex flex-col justify-center">
         <ul className="list-disc text-white font-normal text-[14px]">
           <li>22,986 Company Profiles</li>
           <li>15,075 Infographics</li>

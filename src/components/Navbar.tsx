@@ -2,6 +2,7 @@
 
 import { useTabStore } from "@/store/store";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { FaBell, FaSlidersH, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
@@ -27,7 +28,10 @@ const Navbar: React.FC = () => {
     <div className="shadow-md">
       <div className="bg-[#3B4ACC] flex justify-between items-center px-4 md:px-6 py-3">
         <div className="flex items-center space-x-4 md:space-x-6">
-          <div className="relative w-24 h-10 md:w-28 md:h-12 lg:w-48 lg:h-14">
+          <Link
+            href={"/home"}
+            className="relative w-24 h-10 md:w-28 md:h-12 lg:w-48 lg:h-14"
+          >
             <Image
               src="/images/VMRWhiteLogo.png"
               alt="Logo"
@@ -35,7 +39,7 @@ const Navbar: React.FC = () => {
               objectFit="contain"
               className="w-full h-full"
             />
-          </div>
+          </Link>
 
           <div className="text-white hidden sm:block">
             <h1 className="text-[8px] font-semibold leading-tight uppercase mb-1">
@@ -69,8 +73,7 @@ const Navbar: React.FC = () => {
           {tabs.map((tab) => (
             <a
               key={tab.label}
-              href="#"
-              className={`relative z-10 font-semibold px-8 py-2 ${
+              className={`relative z-10 font-semibold px-8 py-2 cursor-pointer ${
                 activeTab === tab.label
                   ? "bg-[#3B4ACC] text-white absolute inset-0 h-full z-0"
                   : "text-gray-700 hover:text-blue-600"
@@ -84,38 +87,37 @@ const Navbar: React.FC = () => {
 
         {/* Right-side Icons */}
         <div className="flex space-x-4 text-blue-600 z-10 mr-8">
-          <FaSlidersH className="text-xl cursor-pointer" />
-          <FaBell className="text-xl cursor-pointer" />
+          <div className="w-[20px] h-[20px] mr-2 cursor-pointer">
+            <Image
+              src="/icons/preferences.svg"
+              alt="preferences"
+              width={20}
+              height={20}
+            />
+          </div>
+          <div className="w-[20px] h-[20px] mr-2 cursor-pointer">
+            <Image
+              src="/icons/notification-fill.svg"
+              alt="notification"
+              width={20}
+              height={20}
+            />
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="bg-white md:hidden px-4 py-3 space-y-2 shadow-md">
-          <a
-            href="#"
-            className="block text-gray-700 font-semibold hover:underline"
-          >
-            Reports
-          </a>
-          <a
-            href="#"
-            className="block text-gray-700 font-semibold hover:underline"
-          >
-            Insights
-          </a>
-          <a
-            href="#"
-            className="block text-gray-700 font-semibold hover:underline"
-          >
-            Organizations
-          </a>
-          <a
-            href="#"
-            className="block text-gray-700 font-semibold hover:underline"
-          >
-            Consultations <span className="ml-1">&#9662;</span>
-          </a>
+          {tabs.map((tab) => (
+            <a
+              key={tab.label}
+              className={`block text-gray-700 font-semibold hover:underline cursor-pointer`}
+              onClick={() => setActiveTab(tab.label)}
+            >
+              {tab.label}
+            </a>
+          ))}
 
           <button className="block w-full bg-teal-500 text-white py-2 rounded-md hover:bg-teal-600 transition duration-300 mt-2">
             SUBSCRIBE
