@@ -4,7 +4,7 @@ import { useTabStore } from "@/store/store";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaBell, FaSlidersH, FaBars } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
