@@ -1,5 +1,5 @@
+import { useTabStore } from "@/store/store";
 import Image from "next/image";
-import Link from "next/link";
 
 const chipIcons = {
   requested: "/icons/requested.svg",
@@ -19,10 +19,16 @@ const SavedReportItem: React.FC<BookCardProps> = ({
   chipText,
   chipStyle,
 }) => {
+  const { selectBook } = useTabStore();
+
+  const handleBookClick = () => {
+    selectBook(true);
+  };
+
   return (
-    <Link
-      href={"/book"}
+    <div
       className="flex flex-col items-start w-[150px] py-4 pr-4 cursor-pointer"
+      onClick={handleBookClick}
     >
       <div className="relative w-[133px] h-[182px] mb-3 shadow-saved-report">
         <Image src={image} alt="Book Cover" layout="fill" objectFit="cover" />
@@ -54,7 +60,7 @@ const SavedReportItem: React.FC<BookCardProps> = ({
         </div>
       )}
       <p className="font-light text-[12px]">{title}</p>
-    </Link>
+    </div>
   );
 };
 

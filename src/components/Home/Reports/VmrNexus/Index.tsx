@@ -77,10 +77,20 @@ const VMRNexus = () => {
           View 234 reports
         </p>
       </div>
-      <div className="flex flex-row gap-12 mb-12">
-        {nexusCard.map((item, idx) => (
-          <CardItem key={idx} title={item.title} />
-        ))}
+      <div className="mb-12 flex flex-row items-center justify-between">
+        <div className="flex flex-row gap-12">
+          {nexusCard.map((item, idx) => (
+            <CardItem key={idx} title={item.title} />
+          ))}
+        </div>
+        <div className="w-[16px] h-[16px] mr-2 cursor-pointer">
+          <Image
+            src="/icons/out_arrow-right.svg"
+            alt="arrow-right"
+            width={16}
+            height={16}
+          />
+        </div>
       </div>
       <div className="flex flex-row items-center justify-between mb-8">
         <p className="font-light font-black text-[24px]">
@@ -90,10 +100,20 @@ const VMRNexus = () => {
           View 184 reports
         </p>
       </div>
-      <div className="flex flex-row gap-12 mb-12">
-        {nexusCard.map((item, idx) => (
-          <CardItem key={idx} title={item.title} />
-        ))}
+      <div className="mb-12 flex flex-row items-center justify-between">
+        <div className="flex flex-row gap-12">
+          {nexusCard.map((item, idx) => (
+            <CardItem key={idx} title={item.title} />
+          ))}
+        </div>
+        <div className="w-[16px] h-[16px] mr-2 cursor-pointer">
+          <Image
+            src="/icons/out_arrow-right.svg"
+            alt="arrow-right"
+            width={16}
+            height={16}
+          />
+        </div>
       </div>
       <Banner />
       <div className="flex flex-row">
@@ -107,10 +127,20 @@ const VMRNexus = () => {
                 View 162 reports
               </p>
             </div>
-            <div className="flex flex-row gap-12 mb-12">
-              {nexusCard.slice(0, 3).map((item, idx) => (
-                <CardItem key={idx} title={item.title} />
-              ))}
+            <div className="mb-12 flex flex-row items-center justify-between">
+              <div className="flex flex-row gap-12">
+                {nexusCard.slice(0, 3).map((item, idx) => (
+                  <CardItem key={idx} title={item.title} />
+                ))}
+              </div>
+              <div className="w-[16px] h-[16px] mr-2 cursor-pointer ml-10">
+                <Image
+                  src="/icons/out_arrow-right.svg"
+                  alt="arrow-right"
+                  width={16}
+                  height={16}
+                />
+              </div>
             </div>
           </Fragment>
           <Fragment>
@@ -122,10 +152,20 @@ const VMRNexus = () => {
                 View 145 reports
               </p>
             </div>
-            <div className="flex flex-row gap-12 mb-12">
-              {nexusCard.slice(0, 3).map((item, idx) => (
-                <CardItem key={idx} title={item.title} />
-              ))}
+            <div className="mb-12 flex flex-row items-center justify-between">
+              <div className="flex flex-row gap-12">
+                {nexusCard.slice(0, 3).map((item, idx) => (
+                  <CardItem key={idx} title={item.title} />
+                ))}
+              </div>
+              <div className="w-[16px] h-[16px] mr-2 cursor-pointer ml-10">
+                <Image
+                  src="/icons/out_arrow-right.svg"
+                  alt="arrow-right"
+                  width={16}
+                  height={16}
+                />
+              </div>
             </div>
           </Fragment>
         </div>
@@ -141,10 +181,20 @@ const VMRNexus = () => {
           View 128 reports
         </p>
       </div>
-      <div className="flex flex-row gap-12 mb-12">
-        {nexusCard.map((item, idx) => (
-          <CardItem key={idx} title={item.title} />
-        ))}
+      <div className="mb-12 flex flex-row items-center justify-between">
+        <div className="flex flex-row gap-12">
+          {nexusCard.map((item, idx) => (
+            <CardItem key={idx} title={item.title} />
+          ))}
+        </div>
+        <div className="w-[16px] h-[16px] mr-2 cursor-pointer">
+          <Image
+            src="/icons/out_arrow-right.svg"
+            alt="arrow-right"
+            width={16}
+            height={16}
+          />
+        </div>
       </div>
     </div>
   );

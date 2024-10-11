@@ -1,5 +1,6 @@
 "use client";
 
+import Book from "@/components/Book/Index";
 import Consultations from "@/components/Home/Consultations/Index";
 import Insights from "@/components/Home/Insights/Index";
 import Organizations from "@/components/Home/Organizations/Index";
@@ -16,13 +17,17 @@ const componentMap: { [key: string]: React.FC } = {
 };
 
 export default function Home() {
-  const { activeTab } = useTabStore();
+  const { activeTab, bookSelected } = useTabStore();
   const ActiveComponent = componentMap[activeTab] || null;
 
   return (
     <Fragment>
       <Navbar />
-      {ActiveComponent && <ActiveComponent />}
+      {bookSelected && activeTab === "Reports" ? (
+        <Book />
+      ) : (
+        ActiveComponent && <ActiveComponent />
+      )}
     </Fragment>
   );
 }

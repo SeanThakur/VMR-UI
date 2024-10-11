@@ -1,5 +1,6 @@
 import React from "react";
 import SavedReportItem from "./SavedReportItem";
+import Image from "next/image";
 
 type Book = {
   image: string;
@@ -41,16 +42,26 @@ const SavedReports = () => {
   ];
 
   return (
-    <div className="flex flex-row gap-14 mt-3 mb-5">
-      {books.map((book, index) => (
-        <SavedReportItem
-          key={index}
-          image={book.image}
-          title={book.title}
-          chipText={book.chipText}
-          chipStyle={book.chipStyle}
+    <div className="flex flex-row justify-between items-center">
+      <div className="flex flex-row gap-14 mt-3 mb-5">
+        {books.map((book, index) => (
+          <SavedReportItem
+            key={index}
+            image={book.image}
+            title={book.title}
+            chipText={book.chipText}
+            chipStyle={book.chipStyle}
+          />
+        ))}
+      </div>
+      <div className="w-[16px] h-[16px] mr-2 cursor-pointer">
+        <Image
+          src="/icons/out_arrow-right.svg"
+          alt="arrow-right"
+          width={16}
+          height={16}
         />
-      ))}
+      </div>
     </div>
   );
 };
