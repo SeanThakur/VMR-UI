@@ -77,28 +77,31 @@ class ViewSDKClient {
       /* Initialize the AdobeDC View object */
       this.adobeDCView = new window.AdobeDC.View(config);
 
-      /* Invoke the file preview API on Adobe DC View object */
-      const previewFilePromise = this.adobeDCView.previewFile(
-        {
-          /* Pass information on how to access the file */
-          content: {
-            /* Location of file where it is hosted */
-            location: {
-              url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
+      /* Check if adobeDCView is defined before calling previewFile */
+      if (this.adobeDCView) {
+        /* Invoke the file preview API on Adobe DC View object */
+        const previewFilePromise = this.adobeDCView.previewFile(
+          {
+            /* Pass information on how to access the file */
+            content: {
+              /* Location of file where it is hosted */
+              location: {
+                url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
+              },
+            },
+            /* Pass meta data of file */
+            metaData: {
+              /* file name */
+              fileName: "Bodea Brochure.pdf",
+              /* file ID */
+              id: "6d07d124-ac85-43b3-a867-36930f502ac6",
             },
           },
-          /* Pass meta data of file */
-          metaData: {
-            /* file name */
-            fileName: "Bodea Brochure.pdf",
-            /* file ID */
-            id: "6d07d124-ac85-43b3-a867-36930f502ac6",
-          },
-        },
-        viewerConfig
-      );
+          viewerConfig
+        );
 
-      return previewFilePromise;
+        return previewFilePromise;
+      }
     }
   }
 
@@ -117,21 +120,23 @@ class ViewSDKClient {
       });
 
       /* Invoke the file preview API on Adobe DC View object */
-      this.adobeDCView.previewFile(
-        {
-          /* Pass information on how to access the file */
-          content: {
-            /* pass file promise which resolves to arrayBuffer */
-            promise: filePromise,
+      if (this.adobeDCView) {
+        this.adobeDCView.previewFile(
+          {
+            /* Pass information on how to access the file */
+            content: {
+              /* pass file promise which resolves to arrayBuffer */
+              promise: filePromise,
+            },
+            /* Pass meta data of file */
+            metaData: {
+              /* file name */
+              fileName: fileName,
+            },
           },
-          /* Pass meta data of file */
-          metaData: {
-            /* file name */
-            fileName: fileName,
-          },
-        },
-        {}
-      );
+          {}
+        );
+      }
     }
   }
 
