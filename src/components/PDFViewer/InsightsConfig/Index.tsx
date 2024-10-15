@@ -15,10 +15,10 @@ const InsightsConfig = () => {
       <div className="flex flex-row items-start justify-between gap-8">
         <div className="flex flex-col w-[75%] ">
           <div className="flex flex-col sm:flex-row justify-between items-center mt-4 mb-8">
-            <h1 className="text-black text-[32px] font-medium">
+            <h1 className="text-black text-[32px] font-medium font-roboto-serif">
               Quantitative Insights
             </h1>
-            <span className="underline text-[18px] font-normal cursor-pointer">
+            <span className="underline text-[18px] font-normal cursor-pointer font-inter">
               View all
             </span>
           </div>
@@ -37,7 +37,7 @@ const InsightsConfig = () => {
           </div>
         </div>
         <div className="flex flex-col w-[30%] mr-6">
-          <button className="px-4 py-4 mb-8 text-white bg-[#0DAFBF] rounded-[8px] font-medium text-[18px] flex flex-row items-center justify-center">
+          <button className="px-4 py-4 mb-8 text-white bg-[#0DAFBF] rounded-[8px] font-medium text-[18px] flex flex-row items-center justify-center font-inter">
             <div className="w-[28px] h-[28px] mr-2">
               <Image
                 src="/icons/unlocked.svg"
@@ -54,7 +54,7 @@ const InsightsConfig = () => {
         </div>
       </div>
       <div className="flex flex-row items-center justify-center py-12 w-[75%]">
-        <p className="text-navbarBlue text-[16px] font-semibold underline cursor-pointer">
+        <p className="text-navbarBlue text-[16px] font-semibold underline cursor-pointer font-inter">
           view more
         </p>
         <div className="w-[18px] h-[18px] ml-1">

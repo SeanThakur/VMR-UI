@@ -27,7 +27,7 @@ const TestimonialBanner = () => {
                 />
               </div>
               <div className="flex flex-col w-[70%]">
-                <p className="text-white text-[20px] font-semibold mb-2">
+                <p className="text-white text-[20px] font-semibold font-roboto-serif mb-2">
                   {item.title}
                 </p>
                 <span className="text-[#EFF0F6] text-[12px] font-normal">

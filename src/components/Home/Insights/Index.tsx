@@ -12,7 +12,7 @@ const Insights = () => {
       <SearchInput />
       <div className="bg-[#f0f0f0] min-h-screen py-4 px-4 sm:px-8 lg:px-24">
         <div className="container mx-auto">
-          <p className="text-md sm:text-2xl font-bold text-gray-600 text-center sm:text-left mb-4">
+          <p className="text-md sm:text-[32px] font-bold text-black font-roboto-serif text-center sm:text-left mb-4">
             Global Treasury And Risk Management Software Market
           </p>
 

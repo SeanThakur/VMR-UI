@@ -32,7 +32,7 @@ const SegmentAnalysis = () => {
 
   return (
     <div className="p-4 w-full shadow-xl shadow-gray-300 bg-white rounded-lg flex flex-col">
-      <div className="w-full h-[250px] bg-white rounded-lg p-4">
+      <div className="w-full h-[250px] bg-white rounded-lg">
         <h3 className="text-center text-xl mb-4 font-semibold">
           Top 3 Segment Analysis
         </h3>
@@ -52,14 +52,21 @@ const SegmentAnalysis = () => {
                 offset: -10,
               }}
             />
-            <YAxis dataKey="name" type="category" />
+            <YAxis
+              dataKey="name"
+              type="category"
+              style={{
+                fontSize: "12px",
+                fontWeight: "normal",
+                fontFamily: "roboto-serif",
+              }}
+            />
             <Tooltip />
             <Legend
               align="center"
               verticalAlign="bottom"
-              wrapperStyle={{ paddingTop: "20px" }}
+              wrapperStyle={{ paddingTop: "20px", paddingBottom: "20px" }}
             />
-            {/* Stack the bars by setting the same stackId */}
             <Bar dataKey="2023" fill="#544fc5" name="2023" stackId="a">
               <LabelList dataKey="2023" position="right" />
             </Bar>

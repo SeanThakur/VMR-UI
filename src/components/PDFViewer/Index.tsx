@@ -20,16 +20,16 @@ const PDFViewer = () => {
   return (
     <Fragment>
       <div className="px-4">
-        <p className="text-[#0000EE] text-[16px] font-light pt-6 pb-8">
+        <p className="text-[#0000EE] text-[16px] font-light font-roboto-condensed pt-6 pb-8">
           <span className="underline cursor-pointer" onClick={handleBookClick}>
             Home {">"} Reports {">"} Data Center & Networking
           </span>{" "}
           {">"}{" "}
-          <span className="font-medium">
+          <span className="font-normal">
             Global Treasury And Risk Management Software Market
           </span>
         </p>
-        <p className="text-black text-[32px] font-medium pb-8">
+        <p className="text-black text-[32px] font-medium pb-8 font-roboto-serif">
           Sample Qualitative Report
         </p>
         <div className="flex flex-row items-start justify-between gap-10 h-[726px]">

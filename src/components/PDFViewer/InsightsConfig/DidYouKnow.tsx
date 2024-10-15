@@ -8,7 +8,7 @@ const DidYouKnow = () => {
       </div>
       <div className="py-6 px-4 flex flex-col items-center justify-center ">
         <ul className="list-disc pl-6">
-          <li className="text-black font-normal text-[20px] py-2">
+          <li className="text-black font-normal text-[20px] font-inter py-2">
             Verified Market Research is rated 4.4/5 stars on Trustpilot by
             executives across 14+ industries.
           </li>

@@ -143,7 +143,7 @@ export const tableOfContentData = [
   {
     title: "Market Outlook",
     content: {
-      title: "3.1 Market Overview",
+      title: "3.2 Market Overview",
       description1:
         "The Advanced Materials market within the Electronics & Semiconductors industry is a rapidly evolving sector, projected to reach a value of USD 112.7 billion by 2032, growing at a Compound Annual Growth Rate (CAGR) of 6.27% from 2023 to 2032.",
       description2:
@@ -155,7 +155,7 @@ export const tableOfContentData = [
   {
     title: "Market, By Type",
     content: {
-      title: "3.1 Market Overview",
+      title: "3.3 Market Overview",
       description1:
         "The Advanced Materials market within the Electronics & Semiconductors industry is a rapidly evolving sector, projected to reach a value of USD 112.7 billion by 2032, growing at a Compound Annual Growth Rate (CAGR) of 6.27% from 2023 to 2032.",
       description2:
@@ -167,7 +167,7 @@ export const tableOfContentData = [
   {
     title: "Market, By Application",
     content: {
-      title: "3.1 Market Overview",
+      title: "3.4 Market Overview",
       description1:
         "The Advanced Materials market within the Electronics & Semiconductors industry is a rapidly evolving sector, projected to reach a value of USD 112.7 billion by 2032, growing at a Compound Annual Growth Rate (CAGR) of 6.27% from 2023 to 2032.",
       description2:
@@ -179,7 +179,7 @@ export const tableOfContentData = [
   {
     title: "Market, By Geography",
     content: {
-      title: "3.1 Market Overview",
+      title: "3.5 Market Overview",
       description1:
         "The Advanced Materials market within the Electronics & Semiconductors industry is a rapidly evolving sector, projected to reach a value of USD 112.7 billion by 2032, growing at a Compound Annual Growth Rate (CAGR) of 6.27% from 2023 to 2032.",
       description2:
@@ -191,7 +191,7 @@ export const tableOfContentData = [
   {
     title: "Company Profiles",
     content: {
-      title: "3.1 Market Overview",
+      title: "3.6 Market Overview",
       description1:
         "The Advanced Materials market within the Electronics & Semiconductors industry is a rapidly evolving sector, projected to reach a value of USD 112.7 billion by 2032, growing at a Compound Annual Growth Rate (CAGR) of 6.27% from 2023 to 2032.",
       description2:
@@ -203,7 +203,7 @@ export const tableOfContentData = [
   {
     title: "Competitive Landscape",
     content: {
-      title: "3.1 Market Overview",
+      title: "3.7 Market Overview",
       description1:
         "The Advanced Materials market within the Electronics & Semiconductors industry is a rapidly evolving sector, projected to reach a value of USD 112.7 billion by 2032, growing at a Compound Annual Growth Rate (CAGR) of 6.27% from 2023 to 2032.",
       description2:

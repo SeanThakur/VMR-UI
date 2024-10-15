@@ -70,10 +70,10 @@ const VMRNexus = () => {
         <SecondaryInput label="Search Keyword" />
       </div>
       <div className="flex flex-row items-center justify-between mb-8">
-        <p className="font-light font-black text-[24px]">
+        <p className="font-light text-black text-[24px]">
           Consumer Electronic Devices
         </p>
-        <p className="underline font-light font-black text-[18px] cursor-pointer">
+        <p className="underline font-light text-black text-[18px] cursor-pointer font-roboto-mono">
           View 234 reports
         </p>
       </div>
@@ -96,7 +96,7 @@ const VMRNexus = () => {
         <p className="font-light font-black text-[24px]">
           Chipset And Processors
         </p>
-        <p className="underline font-light font-black text-[18px] cursor-pointer">
+        <p className="underline font-light font-black text-[18px] cursor-pointer font-roboto-mono">
           View 184 reports
         </p>
       </div>
@@ -123,7 +123,7 @@ const VMRNexus = () => {
               <p className="font-light font-black text-[24px]">
                 Battery & Wireless Charging
               </p>
-              <p className="underline font-light font-black text-[18px] cursor-pointer">
+              <p className="underline font-light font-black text-[18px] cursor-pointer font-roboto-mono">
                 View 162 reports
               </p>
             </div>
@@ -148,7 +148,7 @@ const VMRNexus = () => {
               <p className="font-light font-black text-[24px]">
                 Data Center & Networking
               </p>
-              <p className="underline font-light font-black text-[18px] cursor-pointer">
+              <p className="underline font-light font-black text-[18px] cursor-pointer font-roboto-mono">
                 View 145 reports
               </p>
             </div>
@@ -177,7 +177,7 @@ const VMRNexus = () => {
         <p className="font-light font-black text-[24px]">
           Power Generation, Transmission & Distribution
         </p>
-        <p className="underline font-light font-black text-[18px] cursor-pointer">
+        <p className="underline font-light font-black text-[18px] cursor-pointer font-roboto-mono">
           View 128 reports
         </p>
       </div>

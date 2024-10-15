@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "roboto-mono": ["var(--font-roboto-mono)", "monospace"],
+        "roboto-serif": ["var(--font-roboto-serif)", "serif"],
+        inter: ["var(--font-inter)", "serif"],
+        "roboto-condensed": ["var(--font-roboto-condensed)", "serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

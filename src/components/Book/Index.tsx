@@ -30,7 +30,7 @@ const Book = () => {
   return (
     <Fragment>
       <div className="bg-[#f0f0f0] min-h-screen mt-8 px-4 sm:px-8 lg:px-16">
-        <p className="text-[#0000EE] text-[16px] font-light">
+        <p className="text-[#0000EE] text-[16px] font-light font-roboto-condensed">
           <span className="underline cursor-pointer" onClick={handleBookClick}>
             Home {">"} Reports {">"} Data Center & Networking
           </span>{" "}
@@ -43,7 +43,7 @@ const Book = () => {
           </p>
           <div className="flex flex-row items-center gap-6">
             <button
-              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center"
+              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal font-roboto-condensed text-[14px] flex flex-row items-center"
               onClick={onViewReport}
             >
               <div className="w-[18px] h-[18px] mr-2">
@@ -56,7 +56,7 @@ const Book = () => {
               </div>
               view pdf report
             </button>
-            <button className=" px-4 py-2 text-white bg-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center">
+            <button className=" px-4 py-2 text-white bg-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center font-roboto-condensed">
               <div className="w-[18px] h-[18px] mr-2">
                 <Image
                   src="/icons/file-download.svg"
@@ -101,10 +101,10 @@ const Book = () => {
             </div>
           </div>
           <div className="flex-grow bg-white shadow-xl shadow-gray-300 rounded-lg p-6 border-t-4 border-[#3B4ACC]">
-            <h2 className="font-normal text-[12px] leading-[14.06px] mb-2 text-[#7F7F7F] uppercase">
+            <h2 className="font-normal text-[12px] leading-[14.06px] mb-2 text-[#7F7F7F] uppercase font-roboto-condensed">
               Report Details
             </h2>
-            <p className="font-normal text-[12px] leading-[14.06px] mb-2 text-black">
+            <p className="font-normal text-[12px] leading-[14.06px] mb-2 text-black font-roboto-condensed">
               Global Treasury And Risk Management Software Market
             </p>
             <div className="h-[0.5px] w-[90%] bg-gray-300 my-4"></div>
@@ -196,7 +196,7 @@ const Book = () => {
           <p className="text-black text-[26px] font-normal">
             TABLE OF CONTENTS
           </p>
-          <button className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center">
+          <button className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center font-roboto-condensed">
             <div className="w-[18px] h-[18px] mr-2">
               <Image
                 src="/icons/info-filled.svg"

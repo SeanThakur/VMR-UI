@@ -11,18 +11,18 @@ const TableOfContent = () => {
       <div className="w-[23%] h-full border-t-2 border-customBlue shadow-table-content">
         <div className="relative">
           <input
-            className="bg-[#FFFFFF] px-10 text-[14px] text-[#979797] h-[36px] w-full border-t border-b border-l-0 border-r-0 border-solid border-[#EEEEEE]"
+            className="bg-[#FFFFFF] px-10 text-[14px] text-[#979797] h-[36px] w-full border-t border-b border-l-0 border-r-0 border-solid border-[#EEEEEE] font-roboto-mono"
             placeholder="Search Keyword"
           />
           <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#0DAFBF]" />
         </div>
         <div className="py-2 text-[#7F7F7F] text-[18px] font-light">
-          <p className="py-2 px-6">Chapters —</p>
+          <p className="py-2 px-6 font-roboto-condensed">Chapters —</p>
           <hr />
           {tableOfContentData.map((data, index) => (
             <Fragment key={index}>
               <p
-                className={`cursor-pointer py-2 w-full ${
+                className={`cursor-pointer py-2 w-full font-roboto-condensed ${
                   activeIndex === index
                     ? "bg-[#0DAFBF] text-white px-6"
                     : "bg-transparent text-black px-6"
@@ -46,7 +46,9 @@ const TableOfContent = () => {
           <p>{tableOfContentData[0].content.description3}</p>
         </div>
         <div className="absolute bottom-6 right-6 flex flex-row items-center">
-          <span className="font-light font-[18px] font-black">Next</span>
+          <span className="font-light font-[18px] font-black font-roboto-mono">
+            Next
+          </span>
           <div className="w-[26px] h-[26px] flex items-center justify-center rounded-sm">
             <Image
               src="/icons/arrow-right.svg"

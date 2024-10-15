@@ -13,7 +13,7 @@ const data = [
 const COLORS = ["#49e3bb", "#4c90fa", "#544fc5", "#b9c2fc", "#2c2cfe"];
 
 const PieChartComponent = () => {
-  const [radius, setRadius] = useState({ outer: 100, inner: 35 });
+  const [radius, setRadius] = useState({ outer: 100, inner: 25 });
 
   const updateRadius = () => {
     const screenWidth = window.innerWidth;
@@ -24,7 +24,7 @@ const PieChartComponent = () => {
     } else if (screenWidth < 1024) {
       setRadius({ outer: 140, inner: 30 });
     } else {
-      setRadius({ outer: 100, inner: 35 });
+      setRadius({ outer: 100, inner: 25 });
     }
   };
 
@@ -38,7 +38,7 @@ const PieChartComponent = () => {
   return (
     <div className="p-4 shadow-xl shadow-gray-300 bg-white rounded-lg flex flex-col md:flex-row">
       <div className="w-full md:w-3/4">
-        <h2 className="text-lg font-bold mb-4 text-center md:text-left">
+        <h2 className="text-[20px] font-light mb-4 text-center md:text-left font-roboto-serif">
           Market Share, By Region
         </h2>
         <ResponsiveContainer width="100%" height={300}>

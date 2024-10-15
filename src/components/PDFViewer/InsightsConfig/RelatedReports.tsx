@@ -9,12 +9,12 @@ const RelatedReports = () => {
         <div className="w-[24px] h-[24px] mr-2 ml-3">
           <Image src="/icons/copy.svg" alt="enter" width={24} height={24} />
         </div>
-        <p>Related Reports</p>
+        <p className="font-inter font-medium text-[16px]">Related Reports</p>
       </div>
       <div className="h-[500px] overflow-y-auto">
         {relatedReportsBook.map((item, idx) => (
           <Fragment key={idx}>
-            <div className="py-2 px-4 flex flex-row items-start">
+            <div className="py-3 px-4 flex flex-row items-start">
               <div className="relative w-[29px] h-[41px] rounded-[3px] mt-4">
                 <Image
                   src="/images/savedReportBook1.png"
@@ -24,7 +24,7 @@ const RelatedReports = () => {
                   className="shadow-table-content"
                 />
               </div>
-              <p className="font-light text-black text-[14px] ml-2 w-[90%]">
+              <p className="font-light text-black text-[14px] ml-3 w-[90%] font-inter">
                 {item.name}
               </p>
             </div>
@@ -33,7 +33,7 @@ const RelatedReports = () => {
         ))}
       </div>
       <div className="flex flex-row items-center justify-center py-3">
-        <p className="text-navbarBlue text-[16px] font-semibold underline cursor-pointer">
+        <p className="text-navbarBlue text-[16px] font-semibold underline cursor-pointer font-inter">
           view more
         </p>
         <div className="w-[18px] h-[18px] ml-1">

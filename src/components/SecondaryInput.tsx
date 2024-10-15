@@ -1,5 +1,5 @@
+import Image from "next/image";
 import React from "react";
-import { BiSearch } from "react-icons/bi";
 
 interface SecondaryInputProps {
   label: string;
@@ -7,21 +7,22 @@ interface SecondaryInputProps {
 
 const SecondaryInput: React.FC<SecondaryInputProps> = ({ label }) => {
   return (
-    <div className="mb-2">
-      <div className="relative">
+    <div className="mb-2 shadow-table-content rounded-5px">
+      <div className="relative flex flex-row items-center bg-white rounded-5px">
         <input
           type="text"
           placeholder={label}
-          className="w-[400px] pr-10 pl-4 py-2 border border-1 rounded-lg focus:outline-none focus:ring-0 transition duration-200 ease-in-out shadow-xl shadow-grey-300"
+          className="w-[400px] pr-4 pl-4 py-2 text-[#C3C3C3] text-[18px] font-light rounded-5px"
         />
-        <BiSearch className="absolute right-3 top-1/2 transform -translate-y-1/2" />
+        <div className="w-[20px] h-[20px] mr-2">
+          <Image
+            src="/icons/search-thin.svg"
+            alt="search"
+            width={20}
+            height={20}
+          />
+        </div>
       </div>
-      <style jsx>{`
-        input:focus {
-          border-width: 1px;
-          border-color: none;
-        }
-      `}</style>
     </div>
   );
 };

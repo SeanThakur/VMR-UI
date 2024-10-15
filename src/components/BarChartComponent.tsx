@@ -32,11 +32,11 @@ const BarChartComponent = () => {
   return (
     <div className="p-4 shadow-lg bg-white rounded-lg flex flex-col md:flex-row">
       <div className="w-full md:w-3/4">
-        <h2 className="text-lg font-bold mb-4 text-center md:text-left">
+        <h2 className="text-[20px] font-light mb-4 text-center md:text-left font-roboto-serif">
           Market Share, By Segment
         </h2>
         <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={data}>
+          <BarChart data={data} barSize={45}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />

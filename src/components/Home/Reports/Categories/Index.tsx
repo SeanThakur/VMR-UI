@@ -13,7 +13,7 @@ const Categories = () => {
           <CategoresItem key={idx} title={item.title} image={item.image} />
         ))}
       </div>
-      <p className="underline text-right font-light font-black text-[18px] cursor-pointer my-10">
+      <p className="underline text-right font-light font-black text-[18px] cursor-pointer my-10 font-roboto-mono">
         View 184 reports
       </p>
     </div>

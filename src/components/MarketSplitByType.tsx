@@ -54,7 +54,7 @@ export default function MarketSplitByType() {
               layout="horizontal"
               align="center"
               verticalAlign="top"
-              wrapperStyle={{ paddingBottom: "10px" }}
+              wrapperStyle={{ paddingBottom: "18px", fontSize: "10px" }}
             />
 
             <Bar dataKey="SouthAmericaSourced" barSize={20} fill="#15c0d8" />

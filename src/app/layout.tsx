@@ -1,7 +1,12 @@
 // "use client";
 
 import type { Metadata } from "next";
-import { Roboto_Serif } from "next/font/google";
+import {
+  Roboto_Serif,
+  Roboto_Mono,
+  Inter,
+  Roboto_Condensed,
+} from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
@@ -9,6 +14,24 @@ const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-roboto-serif",
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-roboto-mono",
+});
+
+const robotoCondensed = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-roboto-condensed",
+});
+
+const InterFont = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +46,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoSerif.variable} antialiased`}>{children}</body>
+      <body
+        className={`${robotoSerif.variable} ${robotoMono.variable} ${InterFont.variable} ${robotoCondensed.variable} antialiased`}
+      >
+        {children}
+      </body>
       <Script
         src="https://acrobatservices.adobe.com/view-sdk/viewer.js"
         strategy="afterInteractive"

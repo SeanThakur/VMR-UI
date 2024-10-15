@@ -7,12 +7,14 @@ const Infographics = () => {
   return (
     <Fragment>
       <div className="flex flex-col sm:flex-row justify-between items-center mb-12">
-        <h1 className="text-black text-[32px] font-medium">Infographics</h1>
+        <h1 className="text-black text-[32px] font-medium font-roboto-serif">
+          Infographics
+        </h1>
         <div className="flex flex-row items-center gap-12">
-          <span className="underline text-[18px] font-normal cursor-pointer">
+          <span className="underline text-[18px] font-normal cursor-pointer font-inter">
             View all
           </span>
-          <button className="px-4 py-4 text-white bg-[#0DAFBF] rounded-[8px] font-medium text-[18px] flex flex-row items-center justify-center">
+          <button className="px-4 py-4 font-inter text-white bg-[#0DAFBF] rounded-[8px] font-medium text-[18px] flex flex-row items-center justify-center">
             <div className="w-[28px] h-[28px] mr-2">
               <Image
                 src="/icons/unlocked.svg"

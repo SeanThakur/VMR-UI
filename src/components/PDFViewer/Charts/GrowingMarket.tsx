@@ -29,7 +29,7 @@ const FastestGrowingMarket = () => {
 
   return (
     <div className="p-4 w-full shadow-xl shadow-gray-300 bg-white rounded-lg flex flex-col">
-      <div className="w-full h-[250px] bg-white rounded-lg p-4">
+      <div className="w-full h-[250px] bg-white rounded-lg">
         <h3 className="text-center text-xl mb-2 font-semibold">
           Fastest Growing Market
         </h3>
@@ -49,12 +49,20 @@ const FastestGrowingMarket = () => {
                 offset: -10,
               }}
             />
-            <YAxis dataKey="name" type="category" />
+            <YAxis
+              dataKey="name"
+              type="category"
+              style={{
+                fontSize: "12px",
+                fontWeight: "normal",
+                fontFamily: "roboto-serif",
+              }}
+            />
             <Tooltip />
             <Legend
               align="center"
               verticalAlign="bottom"
-              wrapperStyle={{ paddingTop: "20px" }}
+              wrapperStyle={{ paddingTop: "20px", paddingBottom: "20px" }}
             />
             <Bar dataKey="value" fill="#2caffe" name="2022, 2023">
               <LabelList dataKey="value" position="insideRight" />
