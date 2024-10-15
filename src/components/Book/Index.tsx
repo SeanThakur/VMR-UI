@@ -17,10 +17,14 @@ import RelatedReportItem from "../Home/Reports/RelatedReports/RelatedReportItem"
 import CategoresItem from "../Home/Reports/Categories/CategoresItem";
 
 const Book = () => {
-  const { selectBook } = useTabStore();
+  const { selectBook, selectPdfViewer } = useTabStore();
 
   const handleBookClick = () => {
     selectBook(false);
+  };
+
+  const onViewReport = () => {
+    selectPdfViewer(true);
   };
 
   return (
@@ -38,7 +42,10 @@ const Book = () => {
             Trends (2030)
           </p>
           <div className="flex flex-row items-center gap-6">
-            <button className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center">
+            <button
+              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center"
+              onClick={onViewReport}
+            >
               <div className="w-[18px] h-[18px] mr-2">
                 <Image
                   src="/icons/pdf-open.svg"

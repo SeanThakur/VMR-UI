@@ -27,6 +27,10 @@ input {
   outline: none;
 }
 
+textarea {
+  outline: none;
+}
+
 .fill-available {
   height: -webkit-fill-available;
   height: fill-available;

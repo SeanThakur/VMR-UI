@@ -12,6 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         customBlue: "#3B4ACCAB",
+        navbarBlue: "#3B4ACC",
       },
       borderRadius: {
         "5px": "5px",
@@ -21,6 +22,7 @@ const config: Config = {
         "related-report": "0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset",
         "nexus-card": "0px_4px_4px_0px_rgba(0,0,0,0.25)",
         "table-content": "0px 4px 4px 0px #00000040",
+        avatar: "0px 4px 4px 0px #00000040",
       },
     },
   },

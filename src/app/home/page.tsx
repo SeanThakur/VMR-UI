@@ -6,6 +6,7 @@ import Insights from "@/components/Home/Insights/Index";
 import Organizations from "@/components/Home/Organizations/Index";
 import Reports from "@/components/Home/Reports/Index";
 import Navbar from "@/components/Navbar";
+import PDFViewer from "@/components/PDFViewer/Index";
 import { useTabStore } from "@/store/store";
 import { Fragment } from "react";
 
@@ -16,18 +17,28 @@ const componentMap: { [key: string]: React.FC } = {
   Consultations: Consultations,
 };
 
+function getActiveComponent(
+  activeTab: string,
+  bookSelected: boolean,
+  pdfViewerSelected: boolean
+) {
+  if (bookSelected && activeTab === "Reports") {
+    return <Book />;
+  }
+  if (pdfViewerSelected && activeTab === "Insights") {
+    return <PDFViewer />;
+  }
+  const ActiveComponent = componentMap[activeTab];
+  return ActiveComponent ? <ActiveComponent /> : null;
+}
+
 export default function Home() {
-  const { activeTab, bookSelected } = useTabStore();
-  const ActiveComponent = componentMap[activeTab] || null;
+  const { activeTab, bookSelected, pdfViewerSelected } = useTabStore();
 
   return (
     <Fragment>
       <Navbar />
-      {bookSelected && activeTab === "Reports" ? (
-        <Book />
-      ) : (
-        ActiveComponent && <ActiveComponent />
-      )}
+      {getActiveComponent(activeTab, bookSelected, pdfViewerSelected)}
     </Fragment>
   );
 }

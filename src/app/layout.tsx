@@ -1,6 +1,9 @@
+// "use client";
+
 import type { Metadata } from "next";
 import { Roboto_Serif } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
@@ -21,6 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoSerif.variable} antialiased`}>{children}</body>
+      <Script
+        src="https://acrobatservices.adobe.com/view-sdk/viewer.js"
+        strategy="afterInteractive"
+      />{" "}
     </html>
   );
 }
