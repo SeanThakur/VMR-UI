@@ -65,7 +65,7 @@ class ViewSDKClient {
   ): Promise<void> | undefined {
     const config: { clientId: string; divId?: string } = {
       /* Pass your registered client id */
-      clientId: "56e28b187e4646f4bba0f16063cc523c",
+      clientId: "d9f9f78cb8e6418281a9e67579168b19",
     };
     if (divId) {
       /* Optional only for Light Box embed mode */
@@ -114,7 +114,7 @@ class ViewSDKClient {
       /* Initialize the AdobeDC View object */
       this.adobeDCView = new window.AdobeDC.View({
         /* Pass your registered client id */
-        clientId: "56e28b187e4646f4bba0f16063cc523c",
+        clientId: "d9f9f78cb8e6418281a9e67579168b19",
         /* Pass the div id in which PDF should be rendered */
         divId,
       });
