@@ -11,25 +11,6 @@ import {
   YAxis,
 } from "recharts";
 
-const RoundedBar = (props: any) => {
-  const { x, y, width, height } = props;
-  const radius = 5;
-
-  return (
-    <g>
-      <rect
-        x={x}
-        y={y}
-        width={width}
-        height={height}
-        rx={radius}
-        ry={radius}
-        fill={props.fill}
-      />
-    </g>
-  );
-};
-
 const FastestGrowingMarket = () => {
   const barDataFastestGrowing = [
     {
@@ -75,12 +56,7 @@ const FastestGrowingMarket = () => {
               verticalAlign="bottom"
               wrapperStyle={{ paddingTop: "20px" }}
             />
-            <Bar
-              dataKey="value"
-              fill="#2caffe"
-              name="2022, 2023"
-              shape={<RoundedBar />}
-            >
+            <Bar dataKey="value" fill="#2caffe" name="2022, 2023">
               <LabelList dataKey="value" position="insideRight" />
             </Bar>
           </BarChart>
