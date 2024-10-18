@@ -10,7 +10,7 @@ const Insights = () => {
   return (
     <Fragment>
       <SearchInput />
-      <div className="bg-[#f0f0f0] min-h-screen py-4 px-4 sm:px-8 lg:px-24">
+      <div className="bg-[#f0f0f0] min-h-screen pt-8 px-4 sm:px-8 lg:px-16">
         <div className="container mx-auto">
           <p className="text-md sm:text-[32px] font-bold text-black font-roboto-serif text-center sm:text-left mb-4">
             Global Treasury And Risk Management Software Market

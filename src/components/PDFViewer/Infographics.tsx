@@ -6,7 +6,7 @@ import MarketSplitByType from "../MarketSplitByType";
 const Infographics = () => {
   return (
     <Fragment>
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-12">
+      <div className="flex flex-col sm:flex-row justify-between items-start gap-4 lg:gap-0 lg:items-center mb-12">
         <h1 className="text-black text-[32px] font-medium font-roboto-serif">
           Infographics
         </h1>
@@ -32,7 +32,7 @@ const Infographics = () => {
           <MarketValueByRegion />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-10 mb-28">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-28">
         <div className="col-span-1">
           <MarketSplitByType />
         </div>

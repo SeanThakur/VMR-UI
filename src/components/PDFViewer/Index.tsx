@@ -20,7 +20,7 @@ const PDFViewer = () => {
   return (
     <Fragment>
       <div className="px-4">
-        <p className="text-[#0000EE] text-[16px] font-light font-roboto-condensed pt-6 pb-8">
+        <p className="text-[#0000EE] text-[14px] md:text-[16px] font-light font-roboto-condensed pt-6 pb-8">
           <span className="underline cursor-pointer" onClick={handleBookClick}>
             Home {">"} Reports {">"} Data Center & Networking
           </span>{" "}
@@ -29,14 +29,14 @@ const PDFViewer = () => {
             Global Treasury And Risk Management Software Market
           </span>
         </p>
-        <p className="text-black text-[32px] font-medium pb-8 font-roboto-serif">
+        <p className="text-black text-[18px] md:text-[32px] font-medium pb-8 font-roboto-serif">
           Sample Qualitative Report
         </p>
-        <div className="flex flex-row items-start justify-between gap-10 h-[726px]">
-          <div className="w-[65%] h-full">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-10 h-auto lg:h-[726px]">
+          <div className="w-full lg:w-[65%] h-[500px] lg:h-full">
             <PDFAnnotationTools />
           </div>
-          <div className="w-[35%] mr-6 flex flex-col items-start justify-between fill-available">
+          <div className="w-full lg:w-[35%] mb-10 mr-6 flex flex-col items-start justify-between fill-available">
             <PurchaseOption />
             <ReportForm />
           </div>

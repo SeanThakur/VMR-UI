@@ -46,69 +46,72 @@ const TabluarData = () => {
     <Fragment>
       <p className="mt-8 text-black font-normal text-[20px]">Tabular Data</p>
       <div className="container py-4 my-4 bg-white">
-        <table className="min-w-full bg-white">
-          <thead>
-            <tr>
-              {[
-                "Region",
-                "Country",
-                "Segment",
-                "Sub-Segment",
-                "2022",
-                "2023",
-                "7yr CAGR%",
-              ].map((header, index) => (
-                <th
-                  key={index}
-                  onClick={() =>
-                    handleSort(
-                      header
-                        .toLowerCase()
-                        .replace(/\s+/g, "") as keyof TableData
-                    )
-                  }
-                  className="py-2 px-4 cursor-pointer text-left border-b border-gray-200"
-                >
-                  {header}{" "}
-                  {sortColumn === header.toLowerCase().replace(/\s+/g, "") &&
-                    (sortOrder === "asc" ? "▲" : "▼")}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {currentItems.map((item, index) => (
-              <tr
-                key={index}
-                className={`${index % 2 === 0 ? "bg-gray-100" : "bg-white"}`}
-              >
-                <td className="py-2 px-4 border-b border-gray-200">
-                  {item.region}
-                </td>
-                <td className="py-2 px-4 border-b border-gray-200">
-                  {item.country}
-                </td>
-                <td className="py-2 px-4 border-b border-gray-200">
-                  {item.segment}
-                </td>
-                <td className="py-2 px-4 border-b border-gray-200">
-                  {item.subSegment}
-                </td>
-                <td className="py-2 px-4 border-b border-gray-200">
-                  {item.year2022}
-                </td>
-                <td className="py-2 px-4 border-b border-gray-200">
-                  {item.year2023}
-                </td>
-                <td className="py-2 px-4 border-b border-gray-200">
-                  {item.cagr}
-                </td>
+        {/* Added a div with overflow-x-auto for horizontal scrolling */}
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white">
+            <thead>
+              <tr>
+                {[
+                  "Region",
+                  "Country",
+                  "Segment",
+                  "Sub-Segment",
+                  "2022",
+                  "2023",
+                  "7yr CAGR%",
+                ].map((header, index) => (
+                  <th
+                    key={index}
+                    onClick={() =>
+                      handleSort(
+                        header
+                          .toLowerCase()
+                          .replace(/\s+/g, "") as keyof TableData
+                      )
+                    }
+                    className="py-2 px-4 cursor-pointer text-left border-b border-gray-200"
+                  >
+                    {header}{" "}
+                    {sortColumn === header.toLowerCase().replace(/\s+/g, "") &&
+                      (sortOrder === "asc" ? "▲" : "▼")}
+                  </th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <div className="flex justify-between items-center mt-4 px-4">
-          <div>
+            </thead>
+            <tbody>
+              {currentItems.map((item, index) => (
+                <tr
+                  key={index}
+                  className={`${index % 2 === 0 ? "bg-gray-100" : "bg-white"}`}
+                >
+                  <td className="py-2 px-4 border-b border-gray-200">
+                    {item.region}
+                  </td>
+                  <td className="py-2 px-4 border-b border-gray-200">
+                    {item.country}
+                  </td>
+                  <td className="py-2 px-4 border-b border-gray-200">
+                    {item.segment}
+                  </td>
+                  <td className="py-2 px-4 border-b border-gray-200">
+                    {item.subSegment}
+                  </td>
+                  <td className="py-2 px-4 border-b border-gray-200">
+                    {item.year2022}
+                  </td>
+                  <td className="py-2 px-4 border-b border-gray-200">
+                    {item.year2023}
+                  </td>
+                  <td className="py-2 px-4 border-b border-gray-200">
+                    {item.cagr}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="flex justify-center lg:justify-between items-center mt-4 px-4">
+          <div className="hidden lg:block">
             Showing {indexOfFirstItem + 1} to{" "}
             {Math.min(indexOfLastItem, tableData.length)} of {tableData.length}{" "}
             entries

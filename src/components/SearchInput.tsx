@@ -3,7 +3,7 @@ import { BiSearch } from "react-icons/bi";
 
 const SearchInput = () => {
   return (
-    <div className="mt-8 mb-2 mx-12">
+    <div className="bg-[#f0f0f0] pt-8 px-4 sm:px-8 lg:px-16">
       <div className="relative">
         <input
           type="text"
