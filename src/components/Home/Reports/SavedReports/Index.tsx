@@ -42,8 +42,8 @@ const SavedReports = () => {
   ];
 
   return (
-    <div className="flex flex-row justify-between items-center">
-      <div className="flex flex-row gap-14 mt-3 mb-5">
+    <div className="flex flex-col sm:flex-row sm:justify-between items-center">
+      <div className="flex flex-wrap gap-6 sm:gap-14 mt-3 mb-5 justify-start">
         {books.map((book, index) => (
           <SavedReportItem
             key={index}
@@ -54,7 +54,7 @@ const SavedReports = () => {
           />
         ))}
       </div>
-      <div className="w-[16px] h-[16px] mr-2 cursor-pointer">
+      <div className="w-[16px] h-[16px] mr-2 mt-3 sm:mt-0 cursor-pointer hidden md:block">
         <Image
           src="/icons/out_arrow-right.svg"
           alt="arrow-right"

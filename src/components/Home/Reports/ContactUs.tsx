@@ -32,7 +32,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-[#FAF8FF] rounded-[10px] py-6 px-10 h-[94%] ml-6">
+    <div className="bg-[#FAF8FF] rounded-[10px] py-6 px-10 h-[94%] ml-0 lg:ml-6">
       <p className="text-black text-[20px] font-light mb-2">
         Can’t find what you’re looking for?
       </p>

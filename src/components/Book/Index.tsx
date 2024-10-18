@@ -30,20 +30,20 @@ const Book = () => {
   return (
     <Fragment>
       <div className="bg-[#f0f0f0] min-h-screen mt-8 px-4 sm:px-8 lg:px-16">
-        <p className="text-[#0000EE] text-[16px] font-light font-roboto-condensed">
+        <p className="text-[#0000EE] text-[14px] lg:text-[16px] font-light font-roboto-condensed">
           <span className="underline cursor-pointer" onClick={handleBookClick}>
             Home {">"} Reports {">"} Data Center & Networking
           </span>{" "}
           {">"} Global Treasury And Risk Management Software Market
         </p>
-        <div className="flex flex-row items-center justify-between my-8">
-          <p className="text-black text-[32px] font-medium w-[60%]">
+        <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row items-start lg:items-center justify-between my-8">
+          <p className="text-black text-[18px] lg:text-[32px] font-medium w-full lg:w-[60%]">
             Global Treasury And Risk Management Software Market Size, Forecast &
             Trends (2030)
           </p>
           <div className="flex flex-row items-center gap-6">
             <button
-              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal font-roboto-condensed text-[14px] flex flex-row items-center"
+              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal font-roboto-condensed text-[12px] md:text-[14px] flex flex-row items-center"
               onClick={onViewReport}
             >
               <div className="w-[18px] h-[18px] mr-2">
@@ -56,7 +56,7 @@ const Book = () => {
               </div>
               view pdf report
             </button>
-            <button className=" px-4 py-2 text-white bg-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center font-roboto-condensed">
+            <button className=" px-4 py-2 text-white bg-[#0DAFBF] rounded-[5px] uppercase font-normal text-[12px] md:text-[14px] flex flex-row items-center font-roboto-condensed">
               <div className="w-[18px] h-[18px] mr-2">
                 <Image
                   src="/icons/file-download.svg"
@@ -69,17 +69,19 @@ const Book = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-row mb-24">
-          <div className="w-[70%] flex flex-row gap-12">
-            <div className="relative w-[167px] h-[231px] mb-3 shadow-saved-report">
-              <Image
-                src="/images/BookDetails1.png"
-                alt="book"
-                layout="fill"
-                objectFit="cover"
-              />
+        <div className="flex flex-col lg:flex-row mb-24">
+          <div className="w-full mt-8 lg:mt-0 lg:w-[70%] flex flex-col lg:flex-row gap-6 lg:gap-12">
+            <div className="flex items-center justify-center w-full lg:flex-none lg:items-start lg:justify-start lg:w-auto">
+              <div className="relative w-[167px] h-[231px] mb-3 shadow-saved-report">
+                <Image
+                  src="/images/BookDetails1.png"
+                  alt="book"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
             </div>
-            <div className="text-black text-[18px] font-light flex flex-col gap-4 mr-12 w-[80%]">
+            <div className="text-black text-[18px] font-light flex flex-col gap-4 mr-12 lg:w-[80%]">
               <p>
                 The Advanced Materials market within the Electronics &
                 Semiconductors industry is a rapidly evolving sector, projected
@@ -100,7 +102,7 @@ const Book = () => {
               </p>
             </div>
           </div>
-          <div className="flex-grow bg-white shadow-xl shadow-gray-300 rounded-lg p-6 border-t-4 border-[#3B4ACC]">
+          <div className="mt-12 lg:mt-12 flex-grow bg-white shadow-xl shadow-gray-300 rounded-lg p-6 border-t-4 border-[#3B4ACC]">
             <h2 className="font-normal text-[12px] leading-[14.06px] mb-2 text-[#7F7F7F] uppercase font-roboto-condensed">
               Report Details
             </h2>
@@ -192,7 +194,7 @@ const Book = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-center justify-between mb-6">
+        <div className="flex flex-col gap-5 lg:gap-0 lg:flex-row items-start lg:items-center justify-between mb-6">
           <p className="text-black text-[26px] font-normal">
             TABLE OF CONTENTS
           </p>
@@ -243,8 +245,8 @@ const Book = () => {
             KEY PLAYERS
           </p>
           <div className="mt-16">
-            <div className="flex flex-row items-center justify-between">
-              <div className="grid grid-cols-3 gap-8 w-full">
+            <div className="flex flex-col items-center justify-between">
+              <div className="grid place-items-center lg:place-items-start grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 w-full">
                 {keyPlayersItemData.map((data, idx) => (
                   <KeyPlayersItem
                     key={idx}
@@ -253,7 +255,7 @@ const Book = () => {
                   />
                 ))}
               </div>
-              <div className="w-[26px] h-[26px] cursor-pointer">
+              <div className="w-[26px] h-[26px] cursor-pointer hidden lg:block mt-4">
                 <Image
                   src="/icons/arrow-right.svg"
                   alt="arrow-right"
@@ -266,12 +268,12 @@ const Book = () => {
         </div>
         <div className="mb-12">
           <div className="flex flex-row items-center justify-between">
-            <p className="text-black text-[26px] font-normal uppercase">
+            <p className="text-black text-[18px] md:text-[26px] font-normal uppercase">
               CHARTS & FIGURES
             </p>
             <button
               type="submit"
-              className="mt-8 px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center"
+              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center"
             >
               <div className="w-[20px] h-[20px] mr-2">
                 <Image
@@ -284,8 +286,8 @@ const Book = () => {
               View All Charts
             </button>
           </div>
-          <div className="flex flex-col pb-6 md:flex-row mt-10">
-            <div className="w-full md:w-3/5 rounded-lg flex flex-col">
+          <div className="flex flex-col gap-6 lg:gap-0 pb-6 md:flex-row mt-10">
+            <div className="w-full md:w-3/5 rounded-lg flex flex-col hidden md:block">
               <MarketEstimate />
             </div>
             <div className="w-full md:w-2/5 rounded-lg flex flex-col space-y-8 md:ml-8">
@@ -312,15 +314,15 @@ const Book = () => {
           ))}
         </div>
         <div className="my-8">
-          <div className="flex flex-row items-center justify-between">
-            <p className="text-[26px] text-black font-light mb-6">
+          <div className="flex flex-col gap-2 md:gap-0 md:flex-row items-start md:items-center justify-between mb-6">
+            <p className="text-[26px] text-black font-light">
               RELATED CATEGORIES
             </p>
-            <p className="underline text-right font-light font-black text-[18px] cursor-pointer my-10">
+            <p className="underline text-right font-light font-black text-[18px] cursor-pointer">
               View 184 reports
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-8 mb-6">
+          <div className="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6">
             {categoriesItem.slice(0, 3).map((item, idx) => (
               <CategoresItem key={idx} title={item.title} image={item.image} />
             ))}

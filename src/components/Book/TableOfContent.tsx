@@ -8,7 +8,7 @@ const TableOfContent = () => {
 
   return (
     <div className="h-[480px] bg-white shadow-table-content border border-[#EEEEEE] flex flex-row">
-      <div className="w-[23%] h-full border-t-2 border-customBlue shadow-table-content">
+      <div className="w-[45%] md:w-[23%] h-full border-t-2 border-customBlue shadow-table-content">
         <div className="relative">
           <input
             className="bg-[#FFFFFF] px-10 text-[14px] text-[#979797] h-[36px] w-full border-t border-b border-l-0 border-r-0 border-solid border-[#EEEEEE] font-roboto-mono"
@@ -16,7 +16,7 @@ const TableOfContent = () => {
           />
           <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#0DAFBF]" />
         </div>
-        <div className="py-2 text-[#7F7F7F] text-[18px] font-light">
+        <div className="py-2 text-[#7F7F7F] text-[12px] md:text-[14px] lg:text-[18px] font-light">
           <p className="py-2 px-6 font-roboto-condensed">Chapters —</p>
           <hr />
           {tableOfContentData.map((data, index) => (
@@ -37,10 +37,10 @@ const TableOfContent = () => {
         </div>
       </div>
       <div className="w-[80%] relative p-8">
-        <span className="text-[#3B4ACC] font-bold text-[24px]">
+        <span className="text-[#3B4ACC] font-bold text-[18px] md:text-[24px]">
           {tableOfContentData[0].content.title}
         </span>
-        <div className="mt-12 text-[18px] font-light flex flex-col gap-4 blur-sm">
+        <div className="mt-12 text-[10px] md:text-[16px] lg:text-[24px] font-light flex flex-col gap-4 blur-sm">
           <p>{tableOfContentData[0].content.description1}</p>
           <p>{tableOfContentData[0].content.description2}</p>
           <p>{tableOfContentData[0].content.description3}</p>

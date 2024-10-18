@@ -7,7 +7,7 @@ interface CardItemProp {
 
 const CardItem: React.FC<CardItemProp> = ({ title }) => {
   return (
-    <div className="w-[205px] relative bg-[#DDE1E3] px-3 py-4 rounded-[10px] flex flex-col items-center cursor-pointer">
+    <div className="w-auto md:w-[180px] lg:w-[205px] relative bg-[#DDE1E3] px-3 py-4 rounded-[10px] flex flex-col items-center cursor-pointer">
       <div className="shadow-nexus-card relative w-[90px] h-[130px] mb-1">
         <Image
           src="/images/BookCardItem.png"
