@@ -4,9 +4,9 @@ import RelatedReportItem from "../Home/Reports/RelatedReports/RelatedReportItem"
 import { categoriesItem, relatedReports } from "@/utils/data";
 import ContactUs from "../Home/Reports/ContactUs";
 import CardItem from "../Home/Reports/VmrNexus/CardItem";
-import Pagination from "../pagination";
-import RepoBanner from "../PDFViewer/RepoBanner";
 import CategoresItem from "../Home/Reports/Categories/CategoresItem";
+import Pagination from "../Pagination";
+import CategorialBanner from "./CategorialBanner";
 
 type Card = {
   title: string;
@@ -111,7 +111,7 @@ const CategoriesListing = () => {
             <ContactUs />
           </div>
         </div>
-        <RepoBanner />
+        <CategorialBanner />
         <div className="mb-8">
           <p className="text-[24px] text-black font-medium font-roboto mb-8">
             SEARCH RELATED MARKET CATEGORIES
