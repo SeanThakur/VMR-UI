@@ -40,7 +40,7 @@ const TableOfContent = () => {
         <span className="text-[#3B4ACC] font-bold text-[18px] md:text-[24px]">
           {tableOfContentData[0].content.title}
         </span>
-        <div className="mt-12 text-[10px] md:text-[16px] lg:text-[24px] font-light flex flex-col gap-4 blur-sm">
+        <div className="md:mt-12 mt-4 text-[9px] md:text-[14px] lg:text-[20px] font-light flex flex-col gap-4 blur-sm">
           <p>{tableOfContentData[0].content.description1}</p>
           <p>{tableOfContentData[0].content.description2}</p>
           <p>{tableOfContentData[0].content.description3}</p>
