@@ -1,6 +1,7 @@
 "use client";
 
 import Book from "@/components/Book/Index";
+import CategoriesListing from "@/components/Categories/Index";
 import Consultations from "@/components/Home/Consultations/Index";
 import Insights from "@/components/Home/Insights/Index";
 import Organizations from "@/components/Home/Organizations/Index";
@@ -20,10 +21,14 @@ const componentMap: { [key: string]: React.FC } = {
 function getActiveComponent(
   activeTab: string,
   bookSelected: boolean,
-  pdfViewerSelected: boolean
+  pdfViewerSelected: boolean,
+  categoriesSelected: boolean
 ) {
   if (bookSelected && activeTab === "Reports") {
     return <Book />;
+  }
+  if (categoriesSelected && activeTab === "Reports") {
+    return <CategoriesListing />;
   }
   if (pdfViewerSelected && activeTab === "Insights") {
     return <PDFViewer />;
@@ -33,12 +38,18 @@ function getActiveComponent(
 }
 
 export default function Home() {
-  const { activeTab, bookSelected, pdfViewerSelected } = useTabStore();
+  const { activeTab, bookSelected, pdfViewerSelected, categoriesSelected } =
+    useTabStore();
 
   return (
     <Fragment>
       <Navbar />
-      {getActiveComponent(activeTab, bookSelected, pdfViewerSelected)}
+      {getActiveComponent(
+        activeTab,
+        bookSelected,
+        pdfViewerSelected,
+        categoriesSelected
+      )}
     </Fragment>
   );
 }

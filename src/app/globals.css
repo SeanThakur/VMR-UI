@@ -21,7 +21,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-roboto-serif), var(--font-roboto-mono),
-    var(--font-inter), var(--font-roboto-condensed), sans-serif;
+    var(--font-inter), var(--font-roboto-condensed), var(--font-roboto),
+    sans-serif;
 }
 
 input {

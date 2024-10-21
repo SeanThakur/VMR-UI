@@ -13,6 +13,7 @@ const config: Config = {
         "roboto-serif": ["var(--font-roboto-serif)", "serif"],
         inter: ["var(--font-inter)", "serif"],
         "roboto-condensed": ["var(--font-roboto-condensed)", "serif"],
+        roboto: ["var(--font-roboto)", "serif"],
       },
       colors: {
         background: "var(--background)",

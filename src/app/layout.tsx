@@ -6,6 +6,7 @@ import {
   Roboto_Mono,
   Inter,
   Roboto_Condensed,
+  Roboto,
 } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
@@ -14,6 +15,11 @@ const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-roboto-serif",
+});
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  variable: "--font-roboto",
 });
 
 const robotoMono = Roboto_Mono({
@@ -47,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoSerif.variable} ${robotoMono.variable} ${InterFont.variable} ${robotoCondensed.variable} antialiased`}
+        className={`${robotoSerif.variable} ${robotoMono.variable} ${InterFont.variable} ${robotoCondensed.variable} ${roboto.variable} antialiased`}
       >
         {children}
       </body>
