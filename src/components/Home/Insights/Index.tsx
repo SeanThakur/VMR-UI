@@ -161,6 +161,7 @@ const Insights = () => {
         <NewsList />
         <PlayersList />
       </div>
+      <div className="bg-[#3B4ACC] w-full h-[96px]" />
     </Fragment>
   );
 };
