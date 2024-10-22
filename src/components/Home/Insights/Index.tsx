@@ -5,6 +5,8 @@ import MarketEstimate from "@/components/MarketEstimate";
 import MarketSplitByType from "@/components/MarketSplitByType";
 import SearchInput from "../../SearchInput";
 import MarketValueByRegion from "@/components/MarketValueByRegion";
+import NewsList from "./News/NewsList";
+import PlayersList from "./KeyPlayersList/PlayersList";
 
 const Insights = () => {
   return (
@@ -156,6 +158,8 @@ const Insights = () => {
             <MarketValueByRegion />
           </div>
         </div>
+        <NewsList />
+        <PlayersList />
       </div>
     </Fragment>
   );
