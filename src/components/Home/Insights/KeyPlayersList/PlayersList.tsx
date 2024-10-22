@@ -7,8 +7,13 @@ const PlayersList = () => {
       <p className="font-roboto text-[26px] font-light leading-[30px] text-black mb-4">
         Key Players
       </p>
-      <div className="bg-[#FCFCFC] rounded-[5px] flex flex-col items-start p-4">
-        <PlayersItem />
+      <div className="bg-[#FCFCFC] flex flex-col md:flex-row items-start h-[400px] md:h-[800px] overflow-y-scroll">
+        <div className="w-full md:w-[50%] rounded-[5px] h-full">
+          {[0, 1, 2, 3, 4, 5, 6].map((_, idx) => (
+            <PlayersItem key={idx} bgColor={idx % 2 ? "#FFF" : "#F7F7F7"} />
+          ))}
+        </div>
+        <div className="w-full md:w-[50%] bg-[#FFFFFF] shadow-table-content h-full"></div>
       </div>
     </div>
   );
