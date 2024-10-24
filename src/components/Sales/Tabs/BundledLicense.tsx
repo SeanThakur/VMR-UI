@@ -135,7 +135,7 @@ const BundledLicense = () => {
           </Fragment>
         ))}
       </div>
-      <div className="mb-16 px-24 flex flex-col">
+      {/* <div className="mb-16 px-24 flex flex-col">
         <div className="relative flex flex-row items">
           <input
             type="text"
@@ -172,18 +172,31 @@ const BundledLicense = () => {
           </div>
           <div className="h-[799px] overflow-y-scroll border border-[#B0B0B0] rounded-br-[0px] rounded-[20px]">
             <div className="bg-[#3B4ACC] h-[45px] flex felx-row items-center justify-between py-2 px-12 rounded-t-[20px]">
-              <span className="uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
+              <span className="w-[30%] uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
                 REPORT TITLE & DESCRIPTION
               </span>
-              <span className="uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
+              <span className="w-[20%] uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
                 COMPANY PROFILES
               </span>
-              <span className="uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
+              <span className="w-[20%] uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
                 SEGMENTATION
               </span>
-              <span className="uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
-                STANDARD PRICE
-              </span>
+              <div className="w-[20%] flex flex-row items-center">
+                <span className="uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
+                  STANDARD PRICE
+                </span>
+                <div className="w-[12px] h-[12px] mb-[18px]">
+                  <Image
+                    src="/icons/info-outline.svg"
+                    alt="slider"
+                    width={12}
+                    height={12}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="py-3 px-2">
+
             </div>
           </div>
           <div className="flex flex-row items">
@@ -280,7 +293,7 @@ const BundledLicense = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div
         className="h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-24 bg-cover bg-center flex flex-row"
         style={{ backgroundImage: "url('/images/sales-benefits-cover.png')" }}
