@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         "roboto-mono": ["var(--font-roboto-mono)", "monospace"],
-        "roboto-serif": ["var(--font-roboto-serif)", "serif"],
+        "roboto-serif": ["var(--font-roboto-serif)"],
         inter: ["var(--font-inter)", "serif"],
         "roboto-condensed": ["var(--font-roboto-condensed)", "serif"],
         roboto: ["var(--font-roboto)", "serif"],
