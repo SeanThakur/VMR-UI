@@ -104,11 +104,11 @@ const ResearchFilter = () => {
 
   return (
     <div className="flex flex-col height-fill-available">
-      <div className="w-full mb-16 px-12 lg:px-24">
+      <div className="w-full mb-16 px-8 md:px-12 lg:px-24">
         <h2 className="text-[24px] font-roboto-serif text-black leading-[33px] font-medium mb-12 uppercase">
           Select Your Research Criteria
         </h2>
-        <div className="flex flex-row justify-between items-start  gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start  gap-6">
           <div>
             <h3 className="font-normal font-roboto-serif text-[#666666] text-[14px] lg:text-[18px] leading-[25px] mb-8">
               Regions
@@ -219,7 +219,7 @@ const ResearchFilter = () => {
         </div>
       </div>
       <div className="mb-24">
-        <div className="bg-[#3B4ACC] px-12 lg:px-24 py-16 relative">
+        <div className="bg-[#3B4ACC] px-8 md:px-12 lg:px-24 py-16 relative">
           <div className="w-[280px] h-[90px] absolute top-0 right-0">
             <Image
               src={"/images/research-cover.png"}
@@ -232,7 +232,7 @@ const ResearchFilter = () => {
             <p className="font-roboto-serif font-semibold text-white text-[18px] lg:text-[24px] leading-[33px] mb-12">
               SPECIFY YOUR RESEARCH GOALS
             </p>
-            <div className="flex flex-row w-full items-start gap-8 justify-between">
+            <div className="flex flex-col md:flex-row w-full items-start gap-8 justify-between">
               <div className="flex flex-col gap-12">
                 <div className="flex flex-col">
                   <p className="font-roboto-serif font-normal text-[14px] lg:text-[18px] text-[#EAEAEA] leading-[21px]">
@@ -392,7 +392,7 @@ const ResearchFilter = () => {
           </div>
         </div>
         <div className="flex flex-row items">
-          <div className="w-[50%] lg:w-full px-6 lg:px-12 flex flex-col gap-6">
+          <div className="hidden md:flex w-[50%] lg:w-full px-6 lg:px-12 flex flex-col gap-6">
             <div className="flex flex-row items-end justify-between">
               <div className="flex flex-col items-start justify-between mt-6">
                 <p className="font-roboto-serif font-light text-[#666666] text-[10px] lg:text-[16px] leading-[18px] w-[90%] mb-2">
@@ -475,7 +475,7 @@ const ResearchFilter = () => {
         </div>
       </div>
       <div
-        className="h-[442px] bg-[#72bf0f] rounded-[10px] mx-12 lg:mx-24 py-16 bg-cover bg-center flex flex-row"
+        className="hidden md:flex h-[442px] bg-[#72bf0f] rounded-[10px] mx-12 lg:mx-24 py-16 bg-cover bg-center flex flex-row"
         style={{ backgroundImage: "url('/images/sales-benefits-cover.png')" }}
       >
         <div className="flex flex-col">

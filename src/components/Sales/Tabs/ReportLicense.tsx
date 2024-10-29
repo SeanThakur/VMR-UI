@@ -50,7 +50,7 @@ const ReportLicense = () => {
   ];
   return (
     <div className="flex flex-col height-fill-available">
-      <div className="flex flex-row justify-center items-center pb-14 gap-8">
+      <div className="flex flex-row justify-center items-center pb-14 gap-4 md:gap-8">
         <label className="flex items-center space-x-2">
           <input
             type="radio"
@@ -64,7 +64,7 @@ const ReportLicense = () => {
             checked={formData.level === "GLOBAL-LEVEL"}
             onChange={handleChange}
           />
-          <span className="font-normal font-roboto leading-[25px] text-[18px] text-black">
+          <span className="font-normal font-roboto leading-[25px] text-[12px] md:text-[18px] text-black">
             GLOBAL-LEVEL
           </span>
         </label>
@@ -81,7 +81,7 @@ const ReportLicense = () => {
             checked={formData.level === "REGIONAL-LEVEL"}
             onChange={handleChange}
           />
-          <span className="font-normal font-roboto leading-[25px] text-[18px] text-black">
+          <span className="font-normal font-roboto leading-[25px] text-[12px] md:text-[18px] text-black">
             REGIONAL-LEVEL
           </span>
         </label>
@@ -98,7 +98,7 @@ const ReportLicense = () => {
             checked={formData.level === "COUNTRY-LEVEL"}
             onChange={handleChange}
           />
-          <span className="font-normal font-roboto leading-[25px] text-[18px] text-black">
+          <span className="font-normal font-roboto leading-[25px] text-[12px] md:text-[18px] text-black">
             COUNTRY-LEVEL
           </span>
         </label>
@@ -179,7 +179,7 @@ const ReportLicense = () => {
           </div>
         ))}
       </div>
-      <div className="my-16 px-12 lg:px-24 md:flex-row md:flex-wrap sm:flex-wrap flex lg:flex-row items-center justify-between lg:gap-0 gap-8">
+      <div className="my-16 px-8 md:px-12 lg:px-24 md:flex-row md:flex-wrap flex-wrap flex lg:flex-row items-center justify-between lg:gap-0 gap-8">
         <div className="flex flex-col">
           <p className="font-roboto-serif font-light text-[#666666] text-[16px] leading-[18px] mb-2">
             Verified Market Research is a member of:
@@ -235,7 +235,7 @@ const ReportLicense = () => {
         </div>
       </div>
       <div
-        className="h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-12 lg:mx-24 bg-cover bg-center flex flex-row"
+        className="hidden md:flex h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-8 md:mx-12 lg:mx-24 bg-cover bg-center flex flex-row"
         style={{ backgroundImage: "url('/images/sales-benefits-cover.png')" }}
       >
         <div className="flex flex-col">

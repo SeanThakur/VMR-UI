@@ -299,7 +299,7 @@ const BundledLicense = () => {
         </div>
       </div> */}
       <div
-        className="h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-12 lg:mx-24 bg-cover bg-center flex flex-row"
+        className="hidden md:flex h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-12 lg:mx-24 bg-cover bg-center flex flex-row"
         style={{ backgroundImage: "url('/images/sales-benefits-cover.png')" }}
       >
         <div className="flex flex-col">

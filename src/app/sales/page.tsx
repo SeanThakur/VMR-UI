@@ -15,7 +15,7 @@ const page = () => {
     <div className="flex flex-col fill-available w-full bg-cover bg-center">
       <SalesNav />
       <div
-        className="h-full flex flex-col lg:flex-row items-start justify-between py-12 px-12 lg:px-24"
+        className="h-full flex flex-col lg:flex-row items-start justify-between py-12 px-8 md:px-12 lg:px-24"
         style={{ backgroundImage: "url('/images/salesCover.png')" }}
       >
         <div className="flex flex-col w-full lg:w-[85%] mr-4">
@@ -32,7 +32,7 @@ const page = () => {
               Return to Report Description
             </p>
           </div>
-          <div className="flex flex-row">
+          <div className="flex flex-col gap-4 items-center md:items-start md:gap-0 md:flex-row">
             <div className="flex items-center justify-start lg:flex-none lg:items-start lg:justify-start lg:w-auto mr-8">
               <div className="relative w-[135px] h-[184px] shadow-saved-report">
                 <Image
@@ -44,11 +44,11 @@ const page = () => {
               </div>
             </div>
             <div className="flex flex-col justify-start lg:justify-between">
-              <p className="text-black text-[18px] lg:text-[32px] font-roboto-serif font-medium w-full leading-[44px]">
+              <p className="text-black text-[18px] lg:text-[32px] font-roboto-serif font-medium w-full leading-[34px] md:leading-[44px]">
                 Global Treasury And Risk Management Software Market Size,
                 Forecast & Trends (2023-2031) Report
               </p>
-              <div className="flex flex-row items-center mt-6 lg:mt-0 gap-2 lg:gap-12">
+              <div className="flex flex-row items-center mt-2 md:mt-6 lg:mt-4 gap-2 lg:gap-12">
                 <div className="flex flex-row items-center">
                   <span className="font-roboto-condensed font-light text-[14px] lg:text-[20px] leading-[28px] text-[#7F7F7F] mr-1">
                     Pages:
@@ -187,7 +187,7 @@ const page = () => {
       </div>
       <TabComponent />
       <div
-        className="bg-white h-[525px] lg:h-[825px] w-full"
+        className="bg-white h-[200px] md:h-[525px] lg:h-[825px] w-full"
         style={{
           backgroundImage: "url('/images/swatch.png')",
           backgroundRepeat: "no-repeat",
@@ -221,7 +221,7 @@ const page = () => {
             View 184 reports
           </p>
         </div>
-        <div className="grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6">
+        <div className="grid place-items-center grid-cols-1 lg:grid-cols-3 gap-8 mb-6">
           {categoriesItem.slice(0, 3).map((item, idx) => (
             <CategoresItem key={idx} title={item.title} image={item.image} />
           ))}
