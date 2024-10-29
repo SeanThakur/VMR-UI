@@ -38,6 +38,11 @@ textarea {
   height: fill-available;
 }
 
+.height-fill-available {
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -2,9 +2,9 @@
 
 import CategoresItem from "@/components/Home/Reports/Categories/CategoresItem";
 import RelatedReportItem from "@/components/Home/Reports/RelatedReports/RelatedReportItem";
-import Navbar from "@/components/Navbar";
 import CustomerTestimonials from "@/components/Sales/CustomerTestimonials/Index";
 import SalesFAQS from "@/components/Sales/FAQs/Index";
+import SalesNav from "@/components/Sales/SalesNav";
 import TabComponent from "@/components/Sales/Tabs/TabComponent";
 import { categoriesItem, relatedReports } from "@/utils/data";
 import Image from "next/image";
@@ -13,12 +13,12 @@ import React from "react";
 const page = () => {
   return (
     <div className="flex flex-col fill-available w-full bg-cover bg-center">
-      <Navbar />
+      <SalesNav />
       <div
-        className="h-full flex flex-row items-start justify-between py-12 px-24"
+        className="h-full flex flex-col lg:flex-row items-start justify-between py-12 px-12 lg:px-24"
         style={{ backgroundImage: "url('/images/salesCover.png')" }}
       >
-        <div className="flex flex-col w-[85%] mr-4">
+        <div className="flex flex-col w-full lg:w-[85%] mr-4">
           <div className="flex flex-row items-center mb-6 cursor-pointer">
             <div className="w-[18px] h-[18px] mr-2">
               <Image
@@ -33,7 +33,7 @@ const page = () => {
             </p>
           </div>
           <div className="flex flex-row">
-            <div className="flex items-center justify-center w-full lg:flex-none lg:items-start lg:justify-start lg:w-auto mr-8">
+            <div className="flex items-center justify-start lg:flex-none lg:items-start lg:justify-start lg:w-auto mr-8">
               <div className="relative w-[135px] h-[184px] shadow-saved-report">
                 <Image
                   src="/images/BookDetails1.png"
@@ -43,22 +43,22 @@ const page = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col justify-start lg:justify-between">
               <p className="text-black text-[18px] lg:text-[32px] font-roboto-serif font-medium w-full leading-[44px]">
                 Global Treasury And Risk Management Software Market Size,
                 Forecast & Trends (2023-2031) Report
               </p>
-              <div className="flex flex-row items-center gap-12">
+              <div className="flex flex-row items-center mt-6 lg:mt-0 gap-2 lg:gap-12">
                 <div className="flex flex-row items-center">
-                  <span className="font-roboto-condensed font-light text-[20px] leading-[28px] text-[#7F7F7F] mr-1">
+                  <span className="font-roboto-condensed font-light text-[14px] lg:text-[20px] leading-[28px] text-[#7F7F7F] mr-1">
                     Pages:
                   </span>
-                  <span className="font-roboto-condensed font-light text-[20px] leading-[28px] text-black">
+                  <span className="font-roboto-condensed font-light text-[14px] lg:text-[20px] leading-[28px] text-black">
                     202
                   </span>
                 </div>
                 <div className="flex flex-row items-center">
-                  <span className="font-roboto-condensed font-light text-[20px] leading-[28px] text-[#7F7F7F] mr-1">
+                  <span className="font-roboto-condensed font-light text-[14px] lg:text-[20px] leading-[28px] text-[#7F7F7F] mr-1">
                     Format:
                   </span>
                   <div className="flex flex-row items-center">
@@ -89,10 +89,10 @@ const page = () => {
                   </div>
                 </div>
                 <div className="flex flex-row items-center">
-                  <span className="font-roboto-condensed font-light text-[20px] leading-[28px] text-[#7F7F7F] mr-1">
+                  <span className="font-roboto-condensed font-light text-[14px] lg:text-[20px] leading-[28px] text-[#7F7F7F] mr-1">
                     Published:
                   </span>
-                  <span className="font-roboto-condensed font-light text-[20px] leading-[28px] text-black">
+                  <span className="font-roboto-condensed font-light text-[14px] lg:text-[20px] leading-[28px] text-black">
                     Feb 2024
                   </span>
                 </div>
@@ -100,7 +100,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex mt-8 lg:mt-0 w-full lg:w-auto flex-col justify-center items-center">
           <div className="flex flex-row items-center gap-6 mb-6">
             <button className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal font-roboto-condensed text-[12px] md:text-[14px] flex flex-row items-center">
               <div className="w-[18px] h-[18px] mr-2">
@@ -187,8 +187,13 @@ const page = () => {
       </div>
       <TabComponent />
       <div
-        className="bg-white h-[825px] w-full"
-        style={{ backgroundImage: "url('/images/swatch.png')" }}
+        className="bg-white h-[525px] lg:h-[825px] w-full"
+        style={{
+          backgroundImage: "url('/images/swatch.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
       />
       <SalesFAQS />
       <CustomerTestimonials />

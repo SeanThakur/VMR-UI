@@ -13,7 +13,7 @@ const SalesFAQS = () => {
     "What is the cost structure, and are there any discounts available for bulk purchases?",
   ];
   return (
-    <div className="bg-white px-24 py-24">
+    <div className="bg-white px-12 lg:px-24 py-24">
       <div className="mb-10">
         <p className="font-inter font-bold text-black text-[36px] leading-[43px]">
           Frequently Asked Questions (FAQs)

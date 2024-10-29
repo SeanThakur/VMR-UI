@@ -23,10 +23,10 @@ const TabComponent = () => {
         {tabs.map((tab) => (
           <button
             key={tab}
-            className={`px-6 py-2 transition-all duration-300 w-[400px] ${
+            className={`px-4 lg:px-6 py-1 lg:py-2 transition-all duration-300 w-[200px] lg:w-[400px] ${
               activeTab === tab
-                ? "bg-white rounded-t-[12px] font-inter text-black font-medium text-[24px] leading-[29px]"
-                : "text-white font-bold text-[24px] leading-[29px]"
+                ? "bg-white rounded-t-[12px] font-inter text-black font-medium text-[16px] lg:text-[24px] leading-[29px]"
+                : "text-white font-bold text-[16px] lg:text-[24px] leading-[29px]"
             }`}
             onClick={() => setActiveTab(tab)}
           >

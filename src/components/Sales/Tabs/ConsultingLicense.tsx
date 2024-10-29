@@ -103,14 +103,14 @@ const ResearchFilter = () => {
   };
 
   return (
-    <div className="flex flex-col">
-      <div className="w-full mb-16 px-24">
+    <div className="flex flex-col height-fill-available">
+      <div className="w-full mb-16 px-12 lg:px-24">
         <h2 className="text-[24px] font-roboto-serif text-black leading-[33px] font-medium mb-12 uppercase">
           Select Your Research Criteria
         </h2>
         <div className="flex flex-row justify-between items-start  gap-6">
           <div>
-            <h3 className="font-normal font-roboto-serif text-[#666666] text-[18px] leading-[25px] mb-8">
+            <h3 className="font-normal font-roboto-serif text-[#666666] text-[14px] lg:text-[18px] leading-[25px] mb-8">
               Regions
             </h3>
             {selectedRegions.map((region) => (
@@ -126,7 +126,7 @@ const ResearchFilter = () => {
                   className="mr-2"
                 />
                 <label
-                  className="font-roboto font-normal text-black text-[18px] leading-[25px]"
+                  className="font-roboto font-normal text-black text-[14px] lg:text-[18px] leading-[25px]"
                   htmlFor={region.id}
                 >
                   {region.label}
@@ -135,7 +135,7 @@ const ResearchFilter = () => {
             ))}
           </div>
           <div>
-            <h3 className="text-center font-normal font-roboto-serif text-[#666666] text-[18px] leading-[25px] mb-8">
+            <h3 className="text-center font-normal font-roboto-serif text-[#666666] text-[14px] lg:text-[18px] leading-[25px] mb-8">
               Countries
             </h3>
             <div className="relative flex flex-row items">
@@ -167,7 +167,7 @@ const ResearchFilter = () => {
                     className="mr-2"
                   />
                   <label
-                    className="font-roboto font-normal text-black text-[18px] leading-[25px]"
+                    className="font-roboto font-normal text-black text-[14px] lg:text-[18px] leading-[25px]"
                     htmlFor={country.id}
                   >
                     {country.label}
@@ -190,7 +190,7 @@ const ResearchFilter = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-normal font-roboto-serif text-[#666666] text-[18px] leading-[25px] mb-8">
+            <h3 className="font-normal font-roboto-serif text-[#666666] text-[14px] lg:text-[18px] leading-[25px] mb-8">
               Segmentation
             </h3>
             {selectedSegmentations.map((segmentation) => (
@@ -208,7 +208,7 @@ const ResearchFilter = () => {
                   className="mr-2"
                 />
                 <label
-                  className="font-roboto font-normal text-black text-[18px] leading-[25px]"
+                  className="font-roboto font-normal text-black text-[14px] lg:text-[18px] leading-[25px]"
                   htmlFor={segmentation.id}
                 >
                   {segmentation.label}
@@ -219,7 +219,7 @@ const ResearchFilter = () => {
         </div>
       </div>
       <div className="mb-24">
-        <div className="bg-[#3B4ACC] px-24 py-16 relative">
+        <div className="bg-[#3B4ACC] px-12 lg:px-24 py-16 relative">
           <div className="w-[280px] h-[90px] absolute top-0 right-0">
             <Image
               src={"/images/research-cover.png"}
@@ -229,18 +229,18 @@ const ResearchFilter = () => {
             />
           </div>
           <div className="flex flex-col items-start">
-            <p className="font-roboto-serif font-semibold text-white text-[24px] leading-[33px] mb-12">
+            <p className="font-roboto-serif font-semibold text-white text-[18px] lg:text-[24px] leading-[33px] mb-12">
               SPECIFY YOUR RESEARCH GOALS
             </p>
-            <div className="flex flex-row w-full items-center justify-between">
+            <div className="flex flex-row w-full items-start gap-8 justify-between">
               <div className="flex flex-col gap-12">
                 <div className="flex flex-col">
-                  <p className="font-roboto-serif font-normal text-[18px] text-[#EAEAEA] leading-[21px]">
+                  <p className="font-roboto-serif font-normal text-[14px] lg:text-[18px] text-[#EAEAEA] leading-[21px]">
                     What are your <span className="font-bold">primary</span>{" "}
                     objectives from this research project?
                   </p>
                   <div className="flex flex-col gap-2 mt-5">
-                    <span className="font-roboto-condensed font-normal text-[16px] leading-[18px] text-[#EAEAEA]">
+                    <span className="font-roboto-condensed font-normal text-[14px] lg:text-[16px] leading-[18px] text-[#EAEAEA]">
                       Select all that apply
                     </span>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2">
@@ -262,7 +262,7 @@ const ResearchFilter = () => {
                             className="mr-2"
                           />
                           <label
-                            className="font-roboto font-normal text-white text-[18px] leading-[25px]"
+                            className="font-roboto font-normal text-white text-[14px] lg:text-[18px] leading-[20px] lg:leading-[25px]"
                             htmlFor={segmentation.id}
                           >
                             {segmentation.label}
@@ -273,11 +273,11 @@ const ResearchFilter = () => {
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <p className="font-roboto-serif font-normal text-[18px] text-[#EAEAEA] leading-[21px]">
+                  <p className="font-roboto-serif font-normal text-[14px] lg:text-[18px] text-[#EAEAEA] leading-[21px]">
                     Research Methodology Preferences
                   </p>
                   <div className="flex flex-col gap-2 mt-5">
-                    <span className="font-roboto-condensed font-normal text-[16px] leading-[18px] text-[#EAEAEA]">
+                    <span className="font-roboto-condensed font-normal text-[14px] lg:text-[16px] leading-[18px] text-[#EAEAEA]">
                       Select all that apply
                     </span>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2">
@@ -299,7 +299,7 @@ const ResearchFilter = () => {
                             className="mr-2"
                           />
                           <label
-                            className="font-roboto font-normal text-white text-[18px] leading-[25px]"
+                            className="font-roboto font-normal text-white text-[14px] lg:text-[18px] leading-[20px] lg:leading-[25px]"
                             htmlFor={segmentation.id}
                           >
                             {segmentation.label}
@@ -312,13 +312,13 @@ const ResearchFilter = () => {
               </div>
               <div className="flex flex-col gap-12">
                 <div className="flex flex-col">
-                  <p className="font-roboto-serif font-normal text-[18px] text-[#EAEAEA] leading-[21px]">
+                  <p className="font-roboto-serif font-normal text-[14px] lg:text-[18px] text-[#EAEAEA] leading-[21px]">
                     What are your{" "}
                     <span className="font-bold">secondary objectives</span> from
                     this research project?
                   </p>
                   <div className="flex flex-col gap-2 mt-5">
-                    <span className="font-roboto-condensed font-normal text-[16px] leading-[18px] text-[#EAEAEA]">
+                    <span className="font-roboto-condensed font-normal text-[14px] lg:text-[16px] leading-[18px] text-[#EAEAEA]">
                       Select all that apply
                     </span>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2">
@@ -340,7 +340,7 @@ const ResearchFilter = () => {
                             className="mr-2"
                           />
                           <label
-                            className="font-roboto font-normal text-white text-[18px] leading-[25px]"
+                            className="font-roboto font-normal text-white text-[14px] lg:text-[18px] leading-[20px] lg:leading-[25px]"
                             htmlFor={segmentation.id}
                           >
                             {segmentation.label}
@@ -351,11 +351,11 @@ const ResearchFilter = () => {
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <p className="font-roboto-serif font-normal text-[18px] text-[#EAEAEA] leading-[21px]">
+                  <p className="font-roboto-serif font-normal text-[14px] lg:text-[18px] text-[#EAEAEA] leading-[21px]">
                     Timeline Preferences
                   </p>
                   <div className="flex flex-col gap-2 mt-5">
-                    <span className="font-roboto-condensed font-normal text-[16px] leading-[18px] text-[#EAEAEA]">
+                    <span className="font-roboto-condensed font-normal text-[14px] lg:text-[16px] leading-[18px] text-[#EAEAEA]">
                       Select all that apply
                     </span>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2">
@@ -377,7 +377,7 @@ const ResearchFilter = () => {
                             className="mr-2"
                           />
                           <label
-                            className="font-roboto font-normal text-white text-[18px] leading-[25px]"
+                            className="font-roboto font-normal text-white text-[14px] lg:text-[18px] leading-[20px] lg:leading-[25px]"
                             htmlFor={segmentation.id}
                           >
                             {segmentation.label}
@@ -392,13 +392,13 @@ const ResearchFilter = () => {
           </div>
         </div>
         <div className="flex flex-row items">
-          <div className="w-full px-12 flex flex-col gap-6">
+          <div className="w-[50%] lg:w-full px-6 lg:px-12 flex flex-col gap-6">
             <div className="flex flex-row items-end justify-between">
               <div className="flex flex-col items-start justify-between mt-6">
-                <p className="font-roboto-serif font-light text-[#666666] text-[16px] leading-[18px] w-[90%] mb-2">
+                <p className="font-roboto-serif font-light text-[#666666] text-[10px] lg:text-[16px] leading-[18px] w-[90%] mb-2">
                   Verified Market Research is a member of:
                 </p>
-                <div className="w-[235px] h-[70px]">
+                <div className="w-[140px] lg:w-[235px] h-[70px]">
                   <Image
                     src={"/images/ESOMAR-2024-logo.png"}
                     alt="esomar"
@@ -407,7 +407,7 @@ const ResearchFilter = () => {
                   />
                 </div>
               </div>
-              <div className="w-[92px] h-[73px]">
+              <div className="w-[60px] lg:w-[92px] h-[73px]">
                 <Image
                   src={"/images/pci-logo.png"}
                   alt="pci"
@@ -475,34 +475,34 @@ const ResearchFilter = () => {
         </div>
       </div>
       <div
-        className="h-[442px] bg-[#72bf0f] rounded-[10px] mx-24 py-16 bg-cover bg-center flex flex-row"
+        className="h-[442px] bg-[#72bf0f] rounded-[10px] mx-12 lg:mx-24 py-16 bg-cover bg-center flex flex-row"
         style={{ backgroundImage: "url('/images/sales-benefits-cover.png')" }}
       >
         <div className="flex flex-col">
-          <p className="font-inter text-white font-extrabold text-[36px] leading-[54px] mb-4 pl-10 w-[70%]">
+          <p className="font-inter text-white font-extrabold text-[22px] lg:text-[36px] leading-[34px] lg:leading-[54px] mb-4 pl-10 w-[70%]">
             BENEFITS OF LICENSE TYPES
           </p>
           <div className="flex flex-col items-start gap-1">
             <div className="pr-2 pl-10 py-1">
-              <p className="text-white font-inter font-normal text-[24px] leading-[36px]">
+              <p className="text-white font-inter font-normal text-[18px] lg:text-[24px] leading-[26px] lg:leading-[36px]">
                 1-Report License
               </p>
             </div>
             <div className="pr-2 pl-10 py-1">
-              <p className="text-white font-inter font-normal text-[24px] leading-[36px]">
+              <p className="text-white font-inter font-normal text-[18px] lg:text-[24px] leading-[26px] lg:leading-[36px]">
                 Bundled License
               </p>
             </div>
             <div className="bg-white shadow-table-content px-2 py-1 w-full">
-              <p className="text-[#71BF0D] font-inter font-semibold text-[24px] leading-[36px] pl-10">
+              <p className="text-[#71BF0D] font-inter font-semibold text-[18px] lg:text-[24px] leading-[26px] lg:leading-[36px] pl-10">
                 Consulting License
               </p>
             </div>
           </div>
         </div>
         <div className="flex flex-row items-center justify-between gap-6 pr-10">
-          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-1 shadow-table-content w-[250px] h-[324px] text-center">
-            <div className="w-[100px] h-[100px] mb-4">
+          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-1 shadow-table-content w-[140px] h-[240px] lg:w-[250px] lg:h-[324px] text-center">
+            <div className="w-[55px] h-[55px] lg:w-[100px] lg:h-[100px] mb-4">
               <Image
                 src={"/icons/tap.svg"}
                 alt="tap"
@@ -510,16 +510,16 @@ const ResearchFilter = () => {
                 height={100}
               />
             </div>
-            <p className="text-black text-[20px] leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
+            <p className="text-black text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
               Client-specific Insights
             </p>
-            <p className="font-roboto-condensed font-light text-[16px] leading-[24px] text-black">
+            <p className="font-roboto-condensed font-light text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] text-black">
               Get segmentation and market analysis insights based on your
               research objectives.
             </p>
           </div>
-          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[250px] h-[324px] text-center">
-            <div className="w-[100px] h-[100px] mb-4">
+          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[140px] h-[240px] lg:w-[250px] lg:h-[324px] text-center">
+            <div className="w-[55px] h-[55px] lg:w-[100px] lg:h-[100px] mb-4">
               <Image
                 src={"/icons/target-audience.svg"}
                 alt="target-audience.svg"
@@ -527,16 +527,16 @@ const ResearchFilter = () => {
                 height={100}
               />
             </div>
-            <p className="text-black text-[20px] leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
+            <p className="text-black text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
               Strategic Competitor Analysis
             </p>
-            <p className="font-roboto-condensed font-light text-[16px] leading-[24px] text-black">
+            <p className="font-roboto-condensed font-light text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] text-black">
               Get business, operations, financial & customer intel on your
               selected competitors.
             </p>
           </div>
-          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[250px] h-[324px] text-center">
-            <div className="w-[100px] h-[100px] mb-4">
+          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[140px] h-[240px] lg:w-[250px] lg:h-[324px] text-center">
+            <div className="w-[55px] h-[55px] lg:w-[100px] lg:h-[100px] mb-4">
               <Image
                 src={"/icons/help.svg"}
                 alt="help"
@@ -544,10 +544,10 @@ const ResearchFilter = () => {
                 height={100}
               />
             </div>
-            <p className="text-black text-[20px] leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
+            <p className="text-black text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
               Ongoing Analyst Support
             </p>
-            <p className="font-roboto-condensed font-light text-[16px] leading-[24px] text-black">
+            <p className="font-roboto-condensed font-light text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] text-black">
               Get post-purchase support throughout the duration of the
               consulting project.
             </p>

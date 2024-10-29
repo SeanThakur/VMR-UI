@@ -42,11 +42,15 @@ const BundledLicense = () => {
   ];
 
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row items-end justify-center mb-16">
+    <div className="flex flex-col height-fill-available">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:items-end lg:justify-center lg:gap-0 mb-16">
         {plans.map((plan, index) => (
           <Fragment key={index}>
-            <div className="relative z-[2] flex justify-center">
+            <div
+              className={`relative z-[2] flex justify-center ${
+                index === 1 ? "mt-8" : "mt-0"
+              }`}
+            >
               {index === 1 && (
                 <div className="absolute z-[-1] h-[100px] w-full top-[-35px] bg-[#FFF27C] text-center rounded-t-[10px] rounded-b-[10px] mx-auto">
                   <p className="font-roboto-serif font-normal text-[20px] text-black leading-[40px] italic">
@@ -80,7 +84,7 @@ const BundledLicense = () => {
                       height={30}
                     />
                   </div>
-                  <h3 className="text-[32px] font-bold leading-[40px]">
+                  <h3 className="text-[18px] lg:text-[32px] font-bold leading-[40px]">
                     {plan.name}
                   </h3>
                 </div>
@@ -295,34 +299,34 @@ const BundledLicense = () => {
         </div>
       </div> */}
       <div
-        className="h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-24 bg-cover bg-center flex flex-row"
+        className="h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-12 lg:mx-24 bg-cover bg-center flex flex-row"
         style={{ backgroundImage: "url('/images/sales-benefits-cover.png')" }}
       >
         <div className="flex flex-col">
-          <p className="font-inter text-white font-extrabold text-[36px] leading-[54px] mb-4 pl-10 w-[70%]">
+          <p className="font-inter text-white font-extrabold text-[22px] lg:text-[36px] leading-[34px] lg:leading-[54px] mb-4 pl-10 w-[70%]">
             BENEFITS OF LICENSE TYPES
           </p>
           <div className="flex flex-col items-start gap-1">
             <div className="pr-2 pl-10 py-1">
-              <p className="text-white font-inter font-normal text-[24px] leading-[36px]">
+              <p className="text-white font-inter font-normal text-[18px] lg:text-[24px] leading-[26px] lg:leading-[36px]">
                 1-Report License
               </p>
             </div>
             <div className="bg-white shadow-table-content px-2 py-1 w-full">
-              <p className="text-[#71BF0D] font-inter font-semibold text-[24px] leading-[36px] pl-10">
+              <p className="text-[#71BF0D] font-inter font-semibold text-[18px] lg:text-[24px] leading-[26px] lg:leading-[36px] pl-10">
                 Bundled License
               </p>
             </div>
             <div className="pr-2 pl-10 py-1">
-              <p className="text-white font-inter font-normal text-[24px] leading-[36px]">
+              <p className="text-white font-inter font-normal text-[18px] lg:text-[24px] leading-[26px] lg:leading-[36px]">
                 Consulting License
               </p>
             </div>
           </div>
         </div>
         <div className="flex flex-row items-center justify-between gap-6 pr-10">
-          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-1 shadow-table-content w-[250px] h-[324px] text-center">
-            <div className="w-[100px] h-[100px] mb-4">
+          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-1 shadow-table-content w-[140px] h-[240px] lg:w-[250px] lg:h-[324px] text-center">
+            <div className="w-[55px] h-[55px] lg:w-[100px] lg:h-[100px] mb-4">
               <Image
                 src={"/icons/supplier.svg"}
                 alt="market-insight"
@@ -330,16 +334,16 @@ const BundledLicense = () => {
                 height={100}
               />
             </div>
-            <p className="text-black text-[20px] leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
+            <p className="text-black text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
               Industry-wide Insights
             </p>
-            <p className="font-roboto-condensed font-light text-[16px] leading-[24px] text-black">
+            <p className="font-roboto-condensed font-light text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] text-black">
               Get segmentation and market analysis across sub-markets of the
               industry.
             </p>
           </div>
-          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[250px] h-[324px] text-center">
-            <div className="w-[100px] h-[100px] mb-4">
+          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[140px] h-[240px] lg:w-[250px] lg:h-[324px] text-center">
+            <div className="w-[55px] h-[55px] lg:w-[100px] lg:h-[100px] mb-4">
               <Image
                 src={"/icons/segmentation.svg"}
                 alt="analysis"
@@ -347,16 +351,16 @@ const BundledLicense = () => {
                 height={100}
               />
             </div>
-            <p className="text-black text-[20px] leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
+            <p className="text-black text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
               Competitive Landscape Analysis
             </p>
-            <p className="font-roboto-condensed font-light text-[16px] leading-[24px] text-black">
+            <p className="font-roboto-condensed font-light text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] text-black">
               Get SWOT analysis, product benchmarking & financial insights
               across the industry.
             </p>
           </div>
-          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[250px] h-[324px] text-center">
-            <div className="w-[100px] h-[100px] mb-4">
+          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[140px] h-[240px] lg:w-[250px] lg:h-[324px] text-center">
+            <div className="w-[55px] h-[55px] lg:w-[100px] lg:h-[100px] mb-4">
               <Image
                 src={"/icons/help.svg"}
                 alt="help"
@@ -364,10 +368,10 @@ const BundledLicense = () => {
                 height={100}
               />
             </div>
-            <p className="text-black text-[20px] leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
+            <p className="text-black text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] font-normal font-roboto-serif mb-2 mx-6">
               12 month Analyst Support
             </p>
-            <p className="font-roboto-condensed font-light text-[16px] leading-[24px] text-black">
+            <p className="font-roboto-condensed font-light text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] text-black">
               Get upto 12 months post-purchase support from our Analysts.
             </p>
           </div>

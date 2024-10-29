@@ -3,7 +3,7 @@ import React from "react";
 
 const CustomerTestimonials = () => {
   return (
-    <div className="bg-white px-24 pt-14 pb-8">
+    <div className="bg-white px-12 lg:px-24 pt-14 pb-8">
       <div className="mb-10">
         <p className="font-inter font-bold text-black text-[36px] leading-[43px]">
           Customer Testimonials
@@ -56,7 +56,7 @@ const CustomerTestimonials = () => {
           </div>
         </div>
       </div>
-      <div className="my-20 bg-[#0DAFBF] rounded-[14px] h-[420px] w-full p-24 flex flex-row justify-between gap-6">
+      <div className="my-20 bg-[#0DAFBF] rounded-[14px] h-full lg:h-[420px] w-full p-12 lg:p-24 flex flex-col lg:flex-row justify-between gap-6">
         <div className="flex flex-col w-full">
           <p className="font-roboto-serif font-bold text-[48px] leading-[72px] text-white">
             Need answers?
@@ -103,7 +103,7 @@ const CustomerTestimonials = () => {
           <textarea
             placeholder="Type your message"
             rows={8}
-            className="p-6 rounded-5px text-[18px] text-[#C4C4C4] font-light leading-[27px]"
+            className="p-6 rounded-5px text-[18px] text-black font-light leading-[27px]"
           />
           <div className="flex flex-row items-center justify-end mt-4">
             <button className="bg-white text-[#0DAFBF] rounded-5px py-2 px-10 text-[16px] font-inter font-bold shadow-table-content">

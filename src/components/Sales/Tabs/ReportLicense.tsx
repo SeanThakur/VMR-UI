@@ -1,7 +1,18 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const ReportLicense = () => {
+  const [formData, setFormData] = useState({
+    level: "GLOBAL-LEVEL",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const plans = [
     {
       name: "Single User",
@@ -38,8 +49,61 @@ const ReportLicense = () => {
     },
   ];
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row items-end justify-center">
+    <div className="flex flex-col height-fill-available">
+      <div className="flex flex-row justify-center items-center pb-14 gap-8">
+        <label className="flex items-center space-x-2">
+          <input
+            type="radio"
+            name="level"
+            value="GLOBAL-LEVEL"
+            className={`w-4 h-4 border-black border-2 outline-none focus:outline-none focus:ring-0 ${
+              formData.level === "GLOBAL-LEVEL"
+                ? "bg-[#3B4ACC] border-0"
+                : "bg-white border-black"
+            }`}
+            checked={formData.level === "GLOBAL-LEVEL"}
+            onChange={handleChange}
+          />
+          <span className="font-normal font-roboto leading-[25px] text-[18px] text-black">
+            GLOBAL-LEVEL
+          </span>
+        </label>
+        <label className="flex items-center space-x-2">
+          <input
+            type="radio"
+            name="level"
+            value="REGIONAL-LEVEL"
+            className={`w-4 h-4 border-black border-2 outline-none focus:outline-none focus:ring-0 ${
+              formData.level === "REGIONAL-LEVEL"
+                ? "bg-[#3B4ACC] border-0"
+                : "bg-white border-black"
+            }`}
+            checked={formData.level === "REGIONAL-LEVEL"}
+            onChange={handleChange}
+          />
+          <span className="font-normal font-roboto leading-[25px] text-[18px] text-black">
+            REGIONAL-LEVEL
+          </span>
+        </label>
+        <label className="flex items-center space-x-2">
+          <input
+            type="radio"
+            name="level"
+            value="COUNTRY-LEVEL"
+            className={`w-4 h-4 border-black border-2 outline-none focus:outline-none focus:ring-0 ${
+              formData.level === "COUNTRY-LEVEL"
+                ? "bg-[#3B4ACC] border-0"
+                : "bg-white border-black"
+            }`}
+            checked={formData.level === "COUNTRY-LEVEL"}
+            onChange={handleChange}
+          />
+          <span className="font-normal font-roboto leading-[25px] text-[18px] text-black">
+            COUNTRY-LEVEL
+          </span>
+        </label>
+      </div>
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:items-end lg:justify-center lg:gap-0">
         {plans.map((plan, index) => (
           <div
             key={plan.name}
@@ -102,7 +166,7 @@ const ReportLicense = () => {
                       />
                     </div>
                     <span
-                      className={`mr-2 font-inter text-[18px] leading-[21px] font-normal ${
+                      className={`mr-2 text-left font-inter text-[18px] leading-[21px] font-normal ${
                         index == 1 ? "text-white" : "text-[#35353F]"
                       }`}
                     >
@@ -115,9 +179,9 @@ const ReportLicense = () => {
           </div>
         ))}
       </div>
-      <div className="my-16 px-24 flex flex-row items-center justify-between">
+      <div className="my-16 px-12 lg:px-24 md:flex-row md:flex-wrap sm:flex-wrap flex lg:flex-row items-center justify-between lg:gap-0 gap-8">
         <div className="flex flex-col">
-          <p className="font-roboto-serif font-light text-[#666666] text-[16px] leading-[18ps] mb-2">
+          <p className="font-roboto-serif font-light text-[#666666] text-[16px] leading-[18px] mb-2">
             Verified Market Research is a member of:
           </p>
           <div className="w-[235px] h-[70px]">
@@ -171,34 +235,34 @@ const ReportLicense = () => {
         </div>
       </div>
       <div
-        className="h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-24 bg-cover bg-center flex flex-row"
+        className="h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-12 lg:mx-24 bg-cover bg-center flex flex-row"
         style={{ backgroundImage: "url('/images/sales-benefits-cover.png')" }}
       >
         <div className="flex flex-col">
-          <p className="font-inter text-white font-extrabold text-[36px] leading-[54px] mb-4 pl-10 w-[70%]">
+          <p className="font-inter text-white font-extrabold text-[22px] lg:text-[36px] leading-[34px] lg:leading-[54px] mb-4 pl-10 w-[70%]">
             BENEFITS OF LICENSE TYPES
           </p>
           <div className="flex flex-col items-start gap-1">
             <div className="bg-white shadow-table-content px-2 py-1 w-full">
-              <p className="text-[#71BF0D] font-inter font-semibold text-[24px] leading-[36px] pl-10">
+              <p className="text-[#71BF0D] font-inter font-semibold text-[18px] lg:text-[24px] leading-[26px] lg:leading-[36px] pl-10">
                 1-Report License
               </p>
             </div>
             <div className="pr-2 pl-10 py-1">
-              <p className="text-white font-inter font-normal text-[24px] leading-[36px]">
+              <p className="text-white font-inter font-normal text-[18px] lg:text-[24px] leading-[26px] lg:leading-[36px]">
                 Bundled License
               </p>
             </div>
             <div className="pr-2 pl-10 py-1">
-              <p className="text-white font-inter font-normal text-[24px] leading-[36px]">
+              <p className="text-white font-inter font-normal text-[18px] lg:text-[24px] leading-[26px] lg:leading-[36px]">
                 Consulting License
               </p>
             </div>
           </div>
         </div>
         <div className="flex flex-row items-center justify-between gap-6 pr-10">
-          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-1 shadow-table-content w-[250px] h-[324px] text-center">
-            <div className="w-[100px] h-[100px] mb-4">
+          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-1 shadow-table-content w-[140px] h-[240px] lg:w-[250px] lg:h-[324px] text-center">
+            <div className="w-[55px] h-[55px] lg:w-[100px] lg:h-[100px] mb-4">
               <Image
                 src={"/icons/insights.svg"}
                 alt="market-insight"
@@ -206,15 +270,15 @@ const ReportLicense = () => {
                 height={100}
               />
             </div>
-            <p className="text-black text-[20px] leading-[30px] font-normal font-roboto-serif mb-2 mx-4">
+            <p className="text-black text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] font-normal font-roboto-serif mb-2 mx-4">
               Targeted Market Insights
             </p>
-            <p className="font-roboto-condensed font-light text-[16px] leading-[24px] text-black">
+            <p className="font-roboto-condensed font-light text-[12px] lg:text-[16px] leading-[16px] lg:leading-[24px] text-black">
               Get report-specific segmentation and market analysis.{" "}
             </p>
           </div>
-          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[250px] h-[324px] text-center">
-            <div className="w-[100px] h-[100px] mb-4">
+          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[140px] h-[240px] lg:w-[250px] lg:h-[324px] text-center">
+            <div className="w-[55px] h-[55px] lg:w-[100px] lg:h-[100px] mb-4">
               <Image
                 src={"/icons/analysis.svg"}
                 alt="analysis"
@@ -222,15 +286,15 @@ const ReportLicense = () => {
                 height={100}
               />
             </div>
-            <p className="text-black text-[20px] leading-[30px] font-normal font-roboto-serif mb-2">
+            <p className="text-black text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] font-normal font-roboto-serif mb-2">
               Hyper-focused Competitor Analysis
             </p>
-            <p className="font-roboto-condensed font-light text-[16px] leading-[24px] text-black">
+            <p className="font-roboto-condensed font-light lg:text-[16px] leading-[16px] lg:leading-[24px] text-black">
               Get SWOT analysis, product benchmarking & financial insights.
             </p>
           </div>
-          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[250px] h-[324px] text-center">
-            <div className="w-[100px] h-[100px] mb-4">
+          <div className="bg-white rounded-[10px] flex flex-col items-center justify-center py-6 px-2 shadow-table-content w-[140px] h-[240px] lg:w-[250px] lg:h-[324px] text-center">
+            <div className="w-[55px] h-[55px] lg:w-[100px] lg:h-[100px] mb-4">
               <Image
                 src={"/icons/help.svg"}
                 alt="help"
@@ -238,10 +302,10 @@ const ReportLicense = () => {
                 height={100}
               />
             </div>
-            <p className="text-black text-[20px] leading-[30px] font-normal font-roboto-serif mb-2">
+            <p className="text-black text-[16px] lg:text-[20px] leading-[24px] lg:leading-[30px] font-normal font-roboto-serif mb-2">
               1/3/6 month Analyst Support
             </p>
-            <p className="font-roboto-condensed font-light text-[16px] leading-[24px] text-black">
+            <p className="font-roboto-condensed font-light lg:text-[16px] leading-[16px] lg:leading-[24px] text-black">
               Get upto 6 months post-purchase support from our Analysts.
             </p>
           </div>
