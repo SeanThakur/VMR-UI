@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { Fragment } from "react";
 
 const BundledLicense = () => {
+  const router = useRouter();
   const plans = [
     {
       name: "3 Reports Bundle",
@@ -97,6 +99,7 @@ const BundledLicense = () => {
                       ? "bg-[#0DAFBF] text-white"
                       : "bg-white text-[#0DAFBF]"
                   }`}
+                  onClick={() => router.push("/invoice")}
                 >
                   Build Bundle
                 </button>

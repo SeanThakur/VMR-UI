@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface FilterOption {
@@ -71,6 +72,7 @@ const researchObjective: FilterOption[] = [
 ];
 
 const ResearchFilter = () => {
+  const router = useRouter();
   const [selectedRegions, setSelectedRegions] = useState(regions);
   const [selectedCountries, setSelectedCountries] = useState(countries);
   const [selectedSegmentations, setSelectedSegmentations] =
@@ -468,7 +470,10 @@ const ResearchFilter = () => {
                 $7,550
               </span>
             </div>
-            <button className="text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content">
+            <button
+              className="text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content"
+              onClick={() => router.push("/invoice")}
+            >
               Request Final Price
             </button>
           </div>
