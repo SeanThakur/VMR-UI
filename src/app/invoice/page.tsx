@@ -33,7 +33,7 @@ const InvoicePage = () => {
           <div className="w-full absolute top-1/4 left-1/2 transform -translate-x-1/2 overflow-hidden fle flex-col">
             <div className="mx-auto max-w-6xl overflow-hidden mt-6 mb-16 flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6">
               {/* Left Column */}
-              <div className="lg:w-[775px] pt-6 space-y-6">
+              <div className="lg:w-[775px] pt-6 space-y-6 px-6 md:px-8 lg:px-0">
                 {/* Invoice Section */}
                 <div
                   className="flex flex-row items-center gap-1 cursor-pointer"
@@ -88,8 +88,8 @@ const InvoicePage = () => {
                   </div>
 
                   {/* Invoice Actions */}
-                  <div className="p-6 flex justify-between items-center">
-                    <button className="flex flex-row items-center bg-[#3B4ACC] text-white shadow-table-content py-4 px-8 rounded-[5px] font-bold font-inter text-[16px] leading-[19px]">
+                  <div className="p-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <button className="flex w-full md:w-[200px] h-[51px] flex-row items-center justify-center bg-[#3B4ACC] text-white shadow-table-content rounded-[5px] font-bold font-inter text-[16px] leading-[19px]">
                       <div className="w-[18px] h-[18px] mr-2">
                         <Image
                           src="/icons/arrow-right-back-circle.svg"
@@ -100,7 +100,7 @@ const InvoicePage = () => {
                       </div>
                       Proceed to Pay
                     </button>
-                    <button className="flex flex-row items-center text-[#3B4ACC] border border-[#3B4ACC] shadow-table-content py-4 px-8 rounded-[5px] font-bold font-inter text-[16px] leading-[19px]">
+                    <button className="flex w-full md:w-[200px] h-[51px] flex-row items-center justify-center text-[#3B4ACC] border border-[#3B4ACC] shadow-table-content rounded-[5px] font-bold font-inter text-[16px] leading-[19px]">
                       <div className="w-[18px] h-[18px] mr-2">
                         <Image
                           src="/icons/send-link-blue.svg"
@@ -111,7 +111,7 @@ const InvoicePage = () => {
                       </div>
                       Email Invoice
                     </button>
-                    <button className="flex flex-row items-center text-[#3B4ACC] border border-[#3B4ACC] shadow-table-content py-4 px-8 rounded-[5px] font-bold font-inter text-[16px] leading-[19px]">
+                    <button className="flex w-full md:w-[200px] h-[51px] flex-row items-center justify-center text-[#3B4ACC] border border-[#3B4ACC] shadow-table-content rounded-[5px] font-bold font-inter text-[16px] leading-[19px]">
                       <div className="w-[18px] h-[18px] mr-2">
                         <Image
                           src="/icons/download-blue.svg"
@@ -262,7 +262,7 @@ const InvoicePage = () => {
               </div>
 
               {/* Right Column */}
-              <div className="lg:w-[423px] pt-[4.2rem] flex flex-col gap-6">
+              <div className="lg:w-[423px] pt-[4.2rem] flex flex-col gap-6 px-6 md:px-8 lg:px-0">
                 {/* Customer Details */}
                 <div className="bg-white text-black shadow-table-content rounded-[15px] p-6">
                   <h3 className="text-[24px] font-bold font-inter leading-[29px] text-black mb-4">
@@ -457,7 +457,7 @@ const InvoicePage = () => {
               </div>
             </div>
             <div className="bg-white w-full pt-12">
-              <div className="mx-auto max-w-6xl my-12 md:flex-row md:flex-wrap flex-wrap flex lg:flex-row items-center justify-between lg:gap-0 gap-8">
+              <div className="px-6 md:px-8 lg:px-0 mx-auto max-w-6xl my-12 md:flex-row md:flex-wrap flex-wrap flex lg:flex-row items-center justify-between lg:gap-0 gap-8">
                 <div className="flex flex-col">
                   <p className="font-roboto-serif font-light text-[#666666] text-[16px] leading-[18px] mb-2">
                     Verified Market Research is a member of:
