@@ -71,12 +71,72 @@ const researchObjective: FilterOption[] = [
   { id: "others", label: "Others", checked: false },
 ];
 
+const methodologyObjective: FilterOption[] = [
+  { id: "8", label: "Top-down Research", checked: false },
+  { id: "bottom", label: "Bottom-up Research", checked: false },
+  {
+    id: "expert",
+    label: "Expert Interviews",
+    checked: false,
+  },
+  { id: "market", label: "Competitive Benchmarking", checked: false },
+  { id: "pricing", label: "Surveys & Questionnaires", checked: false },
+  { id: "demand", label: "SWOT Analysis", checked: false },
+  { id: "othersasdfasfs", label: "Others", checked: false },
+];
+
+const secondaryObjective: FilterOption[] = [
+  {
+    id: "1",
+    label: "Partnership Opportunities",
+    checked: false,
+  },
+  {
+    id: "2",
+    label: "Customer Behavior Analysis",
+    checked: false,
+  },
+  {
+    id: "3",
+    label: "Innovation Trends",
+    checked: false,
+  },
+  { id: "4", label: "Supply Chain Analysis", checked: false },
+  { id: "5", label: "Market Entry Barriers", checked: false },
+  { id: "6", label: "Others", checked: false },
+];
+
+const timeLinePreference: FilterOption[] = [
+  {
+    id: "11",
+    label: "As soon as possible (ASAP)",
+    checked: false,
+  },
+  {
+    id: "12",
+    label: "2-3 weeks",
+    checked: false,
+  },
+  {
+    id: "13",
+    label: "3-5 weeks",
+    checked: false,
+  },
+  { id: "14", label: "Flexible", checked: false },
+];
+
 const ResearchFilter = () => {
   const router = useRouter();
   const [selectedRegions, setSelectedRegions] = useState(regions);
   const [selectedCountries, setSelectedCountries] = useState(countries);
   const [selectedSegmentations, setSelectedSegmentations] =
     useState(segmentations);
+  const [selectedResearch, setSelectedResearch] = useState(researchObjective);
+  const [selectedMethodology, setSelectedMethodology] =
+    useState(methodologyObjective);
+  const [selectedSecondary, setSelectedSecondary] =
+    useState(secondaryObjective);
+  const [selectedTimeline, setSelectedTimeline] = useState(timeLinePreference);
 
   const handleFilterChange = (id: string, category: string) => {
     if (category === "region") {
@@ -102,6 +162,38 @@ const ResearchFilter = () => {
         )
       );
     }
+  };
+
+  const handleResearchChange = (id: string) => {
+    setSelectedResearch((prev) =>
+      prev.map((seg) =>
+        seg.id === id ? { ...seg, checked: !seg.checked } : seg
+      )
+    );
+  };
+
+  const handleMethodolyChange = (id: string) => {
+    setSelectedMethodology((prev) =>
+      prev.map((seg) =>
+        seg.id === id ? { ...seg, checked: !seg.checked } : seg
+      )
+    );
+  };
+
+  const handleSecondaryChange = (id: string) => {
+    setSelectedSecondary((prev) =>
+      prev.map((seg) =>
+        seg.id === id ? { ...seg, checked: !seg.checked } : seg
+      )
+    );
+  };
+
+  const handleTimelineChange = (id: string) => {
+    setSelectedTimeline((prev) =>
+      prev.map((seg) =>
+        seg.id === id ? { ...seg, checked: !seg.checked } : seg
+      )
+    );
   };
 
   return (
@@ -238,15 +330,16 @@ const ResearchFilter = () => {
               <div className="flex flex-col gap-12">
                 <div className="flex flex-col">
                   <p className="font-roboto-serif font-normal text-[14px] lg:text-[18px] text-[#EAEAEA] leading-[21px]">
-                    What are your <span className="font-bold">primary</span>{" "}
-                    objectives from this research project?
+                    What are your{" "}
+                    <span className="font-bold">primary objectives</span> from
+                    this research project?
                   </p>
                   <div className="flex flex-col gap-2 mt-5">
                     <span className="font-roboto-condensed font-normal text-[14px] lg:text-[16px] leading-[18px] text-[#EAEAEA]">
                       Select all that apply
                     </span>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2">
-                      {researchObjective.map((segmentation) => (
+                      {selectedResearch.map((segmentation) => (
                         <div
                           key={segmentation.id}
                           className="flex items-center cursor-pointer"
@@ -256,10 +349,7 @@ const ResearchFilter = () => {
                             type="checkbox"
                             checked={segmentation.checked}
                             onChange={() =>
-                              handleFilterChange(
-                                segmentation.id,
-                                "segmentation"
-                              )
+                              handleResearchChange(segmentation.id)
                             }
                             className="mr-2"
                           />
@@ -283,7 +373,7 @@ const ResearchFilter = () => {
                       Select all that apply
                     </span>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2">
-                      {researchObjective.map((segmentation) => (
+                      {selectedMethodology.map((segmentation) => (
                         <div
                           key={segmentation.id}
                           className="flex items-center cursor-pointer"
@@ -293,10 +383,7 @@ const ResearchFilter = () => {
                             type="checkbox"
                             checked={segmentation.checked}
                             onChange={() =>
-                              handleFilterChange(
-                                segmentation.id,
-                                "segmentation"
-                              )
+                              handleMethodolyChange(segmentation.id)
                             }
                             className="mr-2"
                           />
@@ -324,7 +411,7 @@ const ResearchFilter = () => {
                       Select all that apply
                     </span>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2">
-                      {researchObjective.map((segmentation) => (
+                      {selectedSecondary.map((segmentation) => (
                         <div
                           key={segmentation.id}
                           className="flex items-center cursor-pointer"
@@ -334,10 +421,7 @@ const ResearchFilter = () => {
                             type="checkbox"
                             checked={segmentation.checked}
                             onChange={() =>
-                              handleFilterChange(
-                                segmentation.id,
-                                "segmentation"
-                              )
+                              handleSecondaryChange(segmentation.id)
                             }
                             className="mr-2"
                           />
@@ -360,8 +444,8 @@ const ResearchFilter = () => {
                     <span className="font-roboto-condensed font-normal text-[14px] lg:text-[16px] leading-[18px] text-[#EAEAEA]">
                       Select all that apply
                     </span>
-                    <div className="grid grid-cols-2 gap-x-6 gap-y-2">
-                      {researchObjective.map((segmentation) => (
+                    <div className="grid grid-cols-1 gap-x-6 gap-y-2">
+                      {selectedTimeline.map((segmentation) => (
                         <div
                           key={segmentation.id}
                           className="flex items-center cursor-pointer"
@@ -371,10 +455,7 @@ const ResearchFilter = () => {
                             type="checkbox"
                             checked={segmentation.checked}
                             onChange={() =>
-                              handleFilterChange(
-                                segmentation.id,
-                                "segmentation"
-                              )
+                              handleTimelineChange(segmentation.id)
                             }
                             className="mr-2"
                           />

@@ -12,46 +12,46 @@ const CustomerTestimonials = () => {
       </div>
       <div className="bg-[#FAFAFA] rounded-[10px] h-[787px] overflow-y-scroll p-6 flex flex-row justify-between gap-6">
         <div className="flex flex-col gap-6 w-full">
-          <div className="relative w-full h-[530px]">
+          <div className="relative w-[553px] h-[530px]">
             <Image
               src="/images/customer-review-1.png"
               alt="book"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
             />
           </div>
-          <div className="relative w-full h-[276px]">
+          <div className="relative w-[553px] h-[276px]">
             <Image
               src="/images/customer-review-2.png"
               alt="book"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
             />
           </div>
         </div>
         <div className="flex flex-col gap-6 w-full">
-          <div className="relative w-full h-[276px]">
+          <div className="relative w-[567px] h-[210px]">
             <Image
-              src="/images/customer-review-2.png"
+              src="/images/customer-review-4.png"
               alt="book"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
             />
           </div>
-          <div className="relative w-full h-[276px]">
+          <div className="relative w-[567px] h-[276px]">
             <Image
               src="/images/customer-review-3.png"
               alt="book"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
             />
           </div>
-          <div className="relative w-full h-[276px]">
+          <div className="relative w-[567px] h-[276px]">
             <Image
               src="/images/customer-review-3.png"
               alt="book"
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
             />
           </div>
         </div>

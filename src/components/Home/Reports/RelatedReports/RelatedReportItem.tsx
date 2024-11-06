@@ -11,16 +11,8 @@ const RelatedReportItem: React.FC<RelatedReportBookProps> = ({
   image,
   title,
 }) => {
-  const { selectCategoriesListing } = useTabStore();
-
-  const onCategoriesSelect = () => {
-    selectCategoriesListing(true);
-  };
   return (
-    <div
-      onClick={onCategoriesSelect}
-      className="flex flex-col items-start w-[165px] py-4 pr-4 cursor-pointer"
-    >
+    <div className="flex flex-col items-start w-[165px] py-4 pr-4 cursor-pointer">
       <div className="relative w-[163px] h-[222px] mb-3 shadow-saved-report">
         <Image src={image} alt="Book Cover" layout="fill" objectFit="cover" />
         <div className="absolute top-2 right-2 w-[15px] h-[15px] bg-[#0DAFBF] flex items-center justify-center rounded-sm">

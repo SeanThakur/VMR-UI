@@ -273,7 +273,7 @@ const Book = () => {
             </p>
             <button
               type="submit"
-              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center"
+              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-roboto-condensed font-normal text-[14px] leading-[16px] flex flex-row items-center"
             >
               <div className="w-[20px] h-[20px] mr-2">
                 <Image
