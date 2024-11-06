@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const page = () => {
+const Sales = () => {
   const router = useRouter();
   return (
     <div className="flex flex-col fill-available w-full bg-cover bg-center">
@@ -237,4 +237,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Sales;
