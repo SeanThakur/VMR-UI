@@ -142,12 +142,12 @@ const BundledLicense = () => {
           </Fragment>
         ))}
       </div>
-      {/* <div className="mb-16 px-24 flex flex-col">
+      <div className="hidden md:flex mb-32 px-8 md:px-12 lg:px-24 flex flex-col">
         <div className="relative flex flex-row items">
           <input
             type="text"
-            placeholder="Search Country"
-            className="mb-4 pl-14 bg-white w-full rounded-[7px] border-[3px] border-[#C4C4C4] px-3 py-2 font-roboto-condensed font-normal text-[20px] text-[#AAAAAA] leading-[23px]"
+            placeholder="Search Related Markets or Companies"
+            className="mb-4 h-[43px] pl-14 bg-white w-full rounded-[7px] border-[3px] border-[#C4C4C4] px-3 font-roboto-condensed font-normal text-[20px] text-[#AAAAAA] leading-[23px]"
           />
           <div className="w-[27px] h-[27px] absolute left-3 top-[36%] transform -translate-y-1/2">
             <Image
@@ -159,7 +159,7 @@ const BundledLicense = () => {
           </div>
         </div>
         <div className="mt-2">
-          <div className="flex flex-row justify-between mb-4">
+          <div className="flex flex-row items-center justify-between mb-4">
             <div className="flex flex-row gap-1 items-center cursor-pointer">
               <div className="w-[32px] h-[32px]">
                 <Image
@@ -169,27 +169,47 @@ const BundledLicense = () => {
                   height={32}
                 />
               </div>
-              <span className="text-black font-roboto font-medium text-[18px] leading-[21px] underline">
+              <span className="text-black ml-1 font-roboto font-medium text-[18px] leading-[21px] underline">
                 Filter Results
               </span>
+            </div>
+            <div className="w-[65%] flex flex-row gap-4">
+              <div className="flex flex-row gap-1 items-center justify-center h-[40px] w-[90px] bg-[#0DAFBF] rounded-[35px]">
+                <span className="text-white font-roboto-condensed font-medium text-[16px] leading-[18px]">
+                  Global
+                </span>
+                <div className="w-[12px] h-[12px] cursor-pointer">
+                  <Image
+                    src="/icons/cancel-grey.svg"
+                    alt="calcel"
+                    width={12}
+                    height={12}
+                  />
+                </div>
+              </div>
+              <div className="flex flex-row gap-1 items-center justify-center h-[40px] w-[90px] bg-[#0DAFBF] rounded-[35px]">
+                <span className="text-white font-roboto-condensed font-medium text-[16px] leading-[18px]">
+                  TSMC
+                </span>
+              </div>
             </div>
             <p className="font-roboto font-normal text-[16px] text-black leading-[18px]">
               Total Reports Available: 33
             </p>
           </div>
           <div className="h-[799px] overflow-y-scroll border border-[#B0B0B0] rounded-br-[0px] rounded-[20px]">
-            <div className="bg-[#3B4ACC] h-[45px] flex felx-row items-center justify-between py-2 px-12 rounded-t-[20px]">
-              <span className="w-[30%] uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
+            <div className="bg-[#3B4ACC] gap-8 h-[45px] flex felx-row items-center justify-between py-2 px-10 rounded-t-[20px]">
+              <span className="w-[30%] lg:w-[32%] uppercase font-inter font-medium text-white text-[10px] lg:text-[14px] leading-[16px]">
                 REPORT TITLE & DESCRIPTION
               </span>
-              <span className="w-[20%] uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
+              <span className="w-[15%] uppercase font-inter font-medium text-white text-[10px] lg:text-[14px] leading-[16px]">
                 COMPANY PROFILES
               </span>
-              <span className="w-[20%] uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
+              <span className="w-[15%] uppercase font-inter font-medium text-white text-[10px] lg:text-[14px] leading-[16px]">
                 SEGMENTATION
               </span>
-              <div className="w-[20%] flex flex-row items-center">
-                <span className="uppercase font-inter font-medium text-white text-[14px] leading-[16px]">
+              <div className="w-[20%] lg:w-[15%] flex flex-row items-center">
+                <span className="uppercase font-inter font-medium text-white text-[10px] lg:text-[14px] leading-[16px]">
                   STANDARD PRICE
                 </span>
                 <div className="w-[12px] h-[12px] mb-[18px]">
@@ -201,13 +221,1009 @@ const BundledLicense = () => {
                   />
                 </div>
               </div>
+              <div id="actions" className="w-[5%] lg:w-[10%]"></div>
             </div>
-            <div className="py-3 px-2">
-
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6 bg-[#F0F0F0]">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6 bg-[#F0F0F0]">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6 bg-[#F0F0F0]">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6 bg-[#F0F0F0]">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6 bg-[#F0F0F0]">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-row items-start lg:items-center justify-between gap-8 px-4 py-6 bg-[#F0F0F0]">
+                <div
+                  id="title-desc"
+                  className="flex flex-row items-center gap-1 w-[40%] lg:w-[34%]"
+                >
+                  <div id="checkbox">
+                    <input type="checkbox" checked={false} className="mr-2" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="font-roboto-condensed font-normal text-[14px] lg:text-[18px] leading-[18px] lg:leading-[21px] text-black">
+                      Global Wafer Cleaning Equipment Market
+                    </p>
+                    <div className="flex flex-row gap-2 lg:gap-4">
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Published: November 2023
+                      </p>
+                      <p className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px]">
+                        Pages: 202
+                      </p>
+                      <div className="flex flex-row">
+                        <span className="font-roboto-condensed font-light text-[10px] lg:text-[11px] text-black leading-[12px] mr-1">
+                          Type:
+                        </span>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-pdf.svg"
+                            alt="pdf"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                        <div className="w-[12px] h-[12px]">
+                          <Image
+                            src="/icons/file-type-excel.svg"
+                            alt="excel"
+                            width={12}
+                            height={12}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <p className="font-roboto font-light text-black text-[10px] lg:text-[12px] leading-[14px] mt-1">
+                      Wafer Cleaning Equipment Market size was valued at USD
+                      10.1 Billion in 2023 and is projected to reach USD 20.18
+                      Billion by 2030, growing at a CAGR of 10.4% during the
+                      forecast period 2024-2030.
+                    </p>
+                  </div>
+                </div>
+                <div id="company-profile" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>Applied Materials, Inc.</li>
+                    <li>TSMC</li>
+                    <li>Veeco Instruments Inc..</li>
+                    <li>SCREEN Holdings Co., Ltd.</li>
+                    <li>& 7 others</li>
+                  </ul>
+                </div>
+                <div id="segment" className="w-[15%]">
+                  <ul className="list-disc font-roboto-condensed font-light text-[10px] lg:text-[14px] text-black leading-[14px] lg:leading-[16px]">
+                    <li>By Product Type</li>
+                    <li>By Technology</li>
+                    <li>By Application</li>
+                    <li>By Geography</li>
+                  </ul>
+                </div>
+                <div id="price" className="w-[10%]">
+                  <p className="font-roboto text-[14px] lg:text-[18px] font-normal leading-[21px] text-black">
+                    $7,550
+                  </p>
+                </div>
+                <div
+                  id="action"
+                  className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
+                >
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                    SELECT
+                  </button>
+                  <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
+                    View Sample
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex flex-row items">
-            <div className="w-full px-12 flex flex-col gap-6">
+            <div className="hidden md:flex w-[50%] lg:w-full px-6 lg:px-12 flex flex-col gap-6">
               <div className="flex flex-row items-end justify-between">
                 <div className="flex flex-col items-start justify-between mt-6">
                   <p className="font-roboto-serif font-light text-[#666666] text-[16px] leading-[18px] w-[90%] mb-2">
@@ -300,7 +1316,7 @@ const BundledLicense = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       <div
         className="hidden md:flex h-[442px] bg-[#72bf0f] rounded-[10px] py-16 mx-12 lg:mx-24 bg-cover bg-center flex flex-row"
         style={{ backgroundImage: "url('/images/sales-benefits-cover.png')" }}
