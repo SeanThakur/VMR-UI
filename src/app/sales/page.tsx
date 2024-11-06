@@ -8,9 +8,11 @@ import SalesNav from "@/components/Sales/SalesNav";
 import TabComponent from "@/components/Sales/Tabs/TabComponent";
 import { categoriesItem, relatedReports } from "@/utils/data";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const page = () => {
+  const router = useRouter();
   return (
     <div className="flex flex-col fill-available w-full bg-cover bg-center">
       <SalesNav />
@@ -19,7 +21,10 @@ const page = () => {
         style={{ backgroundImage: "url('/images/salesCover.png')" }}
       >
         <div className="flex flex-col w-full lg:w-[85%] mr-4">
-          <div className="flex flex-row items-center mb-6 cursor-pointer">
+          <div
+            className="flex flex-row items-center mb-6 cursor-pointer"
+            onClick={() => router.push("/home")}
+          >
             <div className="w-[18px] h-[18px] mr-2">
               <Image
                 src="/icons/arrow-back-circle.svg"
