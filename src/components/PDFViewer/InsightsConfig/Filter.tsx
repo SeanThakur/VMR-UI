@@ -53,7 +53,7 @@ const YearFilter: React.FC<YearFilterProps> = ({
             ))}
           </div>
           <div className="flex flex-row items-center justify-center mb-6">
-            <button className="p-[11px] text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] font-medium text-[14px] flex flex-row items-center justify-center">
+            <button className="p-[11px] text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] font-medium text-[14px] flex flex-row items-center justify-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE] hover:text-white hover:border-0">
               Filter Data
             </button>
           </div>

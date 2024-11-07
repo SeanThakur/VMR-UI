@@ -37,7 +37,7 @@ const InsightsConfig = () => {
           </div>
         </div>
         <div className="flex flex-col w-full lg:w-[30%] mr-6">
-          <button className="px-4 py-4 mb-8 text-white bg-[#0DAFBF] rounded-[8px] font-medium text-[18px] flex flex-row items-center justify-center font-inter">
+          <button className="px-4 py-4 mb-8 text-white bg-[#0DAFBF] rounded-[8px] font-medium text-[18px] flex flex-row items-center justify-center font-inter transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE] hover:text-white">
             <div className="w-[28px] h-[28px] mr-2">
               <Image
                 src="/icons/unlocked.svg"

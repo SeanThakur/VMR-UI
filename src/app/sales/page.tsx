@@ -107,7 +107,7 @@ const Sales = () => {
         </div>
         <div className="flex mt-8 lg:mt-0 w-full lg:w-auto flex-col justify-center items-center">
           <div className="flex flex-row items-center gap-6 mb-6">
-            <button className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal font-roboto-condensed text-[12px] md:text-[14px] flex flex-row items-center">
+            <button className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal font-roboto-condensed text-[12px] md:text-[14px] flex flex-row items-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE] hover:border-0 hover:text-white">
               <div className="w-[18px] h-[18px] mr-2">
                 <Image
                   src="/icons/file_preview.svg"
@@ -118,7 +118,7 @@ const Sales = () => {
               </div>
               View Sample
             </button>
-            <button className=" px-4 py-2 text-[#3B4ACC] bg-white border border-[#3B4ACC] rounded-[5px] uppercase font-normal text-[12px] md:text-[14px] flex flex-row items-center font-roboto-condensed">
+            <button className=" px-4 py-2 text-[#3B4ACC] bg-white border border-[#3B4ACC] rounded-[5px] uppercase font-normal text-[12px] md:text-[14px] flex flex-row items-center font-roboto-condensed transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0DAFBF] hover:border-0 hover:text-white">
               <div className="w-[18px] h-[18px] mr-2">
                 <Image
                   src="/icons/purple_download.svg"

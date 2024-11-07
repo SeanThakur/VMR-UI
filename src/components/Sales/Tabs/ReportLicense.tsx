@@ -142,9 +142,9 @@ const ReportLicense = () => {
             <button
               className={`w-full border border-[#0DAFBF] shadow-table-content font-bold text-[16px] font-inter leading-[19px] px-6 py-4 rounded-[5px] mb-4 ${
                 index === 1
-                  ? "bg-[#0DAFBF] text-white"
-                  : "bg-white text-[#0DAFBF]"
-              }`}
+                  ? "bg-[#0DAFBF] text-white hover:bg-white hover:text-[#0DAFBF]"
+                  : "bg-white text-[#0DAFBF] hover:bg-[#0DAFBF] hover:text-white"
+              } transform transition-transform duration-300 hover:-translate-y-1`}
               onClick={() => router.push("/invoice")}
             >
               Proceed to Buy

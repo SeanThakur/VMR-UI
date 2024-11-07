@@ -96,9 +96,9 @@ const BundledLicense = () => {
                 <button
                   className={`w-full border border-[#0DAFBF] shadow-table-content font-bold text-[16px] font-inter leading-[19px] px-6 py-4 rounded-[5px] mb-4 ${
                     index === 1
-                      ? "bg-[#0DAFBF] text-white"
-                      : "bg-white text-[#0DAFBF]"
-                  }`}
+                      ? "bg-[#0DAFBF] text-white hover:bg-white hover:text-[#0DAFBF]"
+                      : "bg-white text-[#0DAFBF] hover:bg-[#0DAFBF] hover:text-white"
+                  } transform transition-transform duration-300 hover:-translate-y-1`}
                   onClick={() => router.push("/invoice")}
                 >
                   Build Bundle
@@ -160,7 +160,7 @@ const BundledLicense = () => {
         </div>
         <div className="mt-2">
           <div className="flex flex-row items-center justify-between mb-4">
-            <div className="flex flex-row gap-1 items-center cursor-pointer">
+            <div className="flex flex-row gap-1 items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-1">
               <div className="w-[32px] h-[32px]">
                 <Image
                   src="/icons/slider.svg"
@@ -299,7 +299,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#3B4ACC] hover:text-white">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -382,7 +382,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="bg-[#3B4ACC] text-white transform transition-transform duration-300 hover:-translate-y-1 hover:bg-white hover:border hover:border-[#3B4ACC] hover:text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -465,7 +465,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#3B4ACC] hover:text-white">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -548,7 +548,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="bg-[#3B4ACC] text-white transform transition-transform duration-300 hover:-translate-y-1 hover:bg-white hover:border hover:border-[#3B4ACC] hover:text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -631,7 +631,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#3B4ACC] hover:text-white">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -714,7 +714,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="bg-[#3B4ACC] text-white transform transition-transform duration-300 hover:-translate-y-1 hover:bg-white hover:border hover:border-[#3B4ACC] hover:text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -797,7 +797,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#3B4ACC] hover:text-white">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -880,7 +880,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="bg-[#3B4ACC] text-white transform transition-transform duration-300 hover:-translate-y-1 hover:bg-white hover:border hover:border-[#3B4ACC] hover:text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -963,7 +963,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#3B4ACC] hover:text-white">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -1046,7 +1046,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="bg-[#3B4ACC] text-white transform transition-transform duration-300 hover:-translate-y-1 hover:bg-white hover:border hover:border-[#3B4ACC] hover:text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -1129,7 +1129,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#3B4ACC] hover:text-white">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -1212,7 +1212,7 @@ const BundledLicense = () => {
                   id="action"
                   className="flex flex-col items-center gap-2 mr-0 lg:mr-12"
                 >
-                  <button className="border border-[#3B4ACC] text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
+                  <button className="bg-[#3B4ACC] text-white transform transition-transform duration-300 hover:-translate-y-1 hover:bg-white hover:border hover:border-[#3B4ACC] hover:text-[#3B4ACC] rounded-[7px] w-[120px] h-[43px] flex items-center justify-center">
                     SELECT
                   </button>
                   <span className="underline text-[#3B4ACC] font-roboto-condensed font-normal text-[14px] leading-[16px]">
@@ -1312,7 +1312,7 @@ const BundledLicense = () => {
               </div>
               <button
                 onClick={() => router.push("/invoice")}
-                className="text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content"
+                className="text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content transform transition-transform duration-300 hover:-translate-y-1 hover:border-[#0DAFBF] hover:bg-white hover:text-[#0DAFBF]"
               >
                 Proceed to Buy
               </button>

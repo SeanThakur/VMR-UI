@@ -106,7 +106,7 @@ const CustomerTestimonials = () => {
             className="p-4 md:p-6 rounded-5px text-[18px] text-black font-light leading-[27px]"
           />
           <div className="flex flex-row items-center justify-end mt-4">
-            <button className="bg-white text-[#0DAFBF] rounded-5px py-2 px-10 text-[16px] font-inter font-bold shadow-table-content">
+            <button className="bg-white text-[#0DAFBF] rounded-5px py-2 px-10 text-[16px] font-inter font-bold shadow-table-content transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE] hover:border-0 hover:text-white">
               Submit
             </button>
           </div>

@@ -45,7 +45,7 @@ const Book = () => {
           </p>
           <div className="flex flex-row items-center gap-6">
             <button
-              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal font-roboto-condensed text-[12px] md:text-[14px] flex flex-row items-center"
+              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal font-roboto-condensed text-[12px] md:text-[14px] flex flex-row items-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE] hover:text-white hover:border-0"
               onClick={onViewReport}
             >
               <div className="w-[18px] h-[18px] mr-2">
@@ -60,7 +60,7 @@ const Book = () => {
             </button>
             <button
               onClick={() => router.push("/sales")}
-              className=" px-4 py-2 text-white bg-[#0DAFBF] rounded-[5px] uppercase font-normal text-[12px] md:text-[14px] flex flex-row items-center font-roboto-condensed"
+              className=" px-4 py-2 text-white bg-[#0DAFBF] rounded-[5px] uppercase font-normal text-[12px] md:text-[14px] flex flex-row items-center font-roboto-condensed transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE]"
             >
               <div className="w-[18px] h-[18px] mr-2">
                 <Image
@@ -203,7 +203,7 @@ const Book = () => {
           <p className="text-black text-[26px] font-normal">
             TABLE OF CONTENTS
           </p>
-          <button className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center font-roboto-condensed">
+          <button className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center font-roboto-condensed transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE] hover:text-white hover:border-0">
             <div className="w-[18px] h-[18px] mr-2">
               <Image
                 src="/icons/info-filled.svg"
@@ -250,7 +250,7 @@ const Book = () => {
             KEY PLAYERS
           </p>
           <div className="mt-16">
-            <div className="flex flex-col items-center justify-between">
+            <div className="flex flex-row items-center justify-between">
               <div className="grid place-items-center lg:place-items-start grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 w-full">
                 {keyPlayersItemData.map((data, idx) => (
                   <KeyPlayersItem
@@ -278,7 +278,7 @@ const Book = () => {
             </p>
             <button
               type="submit"
-              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-roboto-condensed font-normal text-[14px] leading-[16px] flex flex-row items-center"
+              className="px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-roboto-condensed font-normal text-[14px] leading-[16px] flex flex-row items-center transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE] hover:text-white hover:border-0"
             >
               <div className="w-[20px] h-[20px] mr-2">
                 <Image

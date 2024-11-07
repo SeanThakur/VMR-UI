@@ -552,7 +552,7 @@ const ResearchFilter = () => {
               </span>
             </div>
             <button
-              className="text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content"
+              className="text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content transform transition-transform duration-300 hover:-translate-y-1 hover:border-[#0DAFBF] hover:bg-white hover:text-[#0DAFBF]"
               onClick={() => router.push("/invoice")}
             >
               Request Final Price

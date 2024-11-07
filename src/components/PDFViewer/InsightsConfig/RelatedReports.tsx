@@ -32,7 +32,7 @@ const RelatedReports = () => {
           </Fragment>
         ))}
       </div>
-      <div className="flex flex-row items-center justify-center py-3">
+      <div className="flex flex-row items-center justify-center py-3 cursor-pointer transform transition-transform duration-300 hover:-translate-y-1">
         <p className="text-navbarBlue text-[16px] font-semibold underline cursor-pointer font-inter">
           view more
         </p>

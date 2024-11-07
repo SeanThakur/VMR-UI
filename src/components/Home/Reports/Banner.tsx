@@ -37,7 +37,7 @@ const Banner = () => {
           </div>
           Explore
         </button>
-        <div className="flex flex-row items-center cursor-pointer">
+        <div className="flex flex-row items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-1">
           <div className="w-[12px] lg:w-[14px] h-[12px] lg:h-[14px] mr-1">
             <Image
               src="/icons/email-unread.svg"

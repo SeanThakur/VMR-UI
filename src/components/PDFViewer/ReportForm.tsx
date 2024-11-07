@@ -59,7 +59,7 @@ const ReportForm = () => {
           className="p-2 rounded-5px text-[14px]"
         />
         <div className="flex flex-row items-center justify-end mt-2">
-          <button className="bg-navbarBlue text-white rounded-2xl py-1 px-4 text-[14px]">
+          <button className="bg-navbarBlue text-white rounded-2xl py-1 px-4 text-[14px] transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0DAFBF]">
             Submit
           </button>
         </div>

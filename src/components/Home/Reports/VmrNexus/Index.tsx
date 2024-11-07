@@ -36,7 +36,7 @@ const VMRNexus = () => {
             VMR NEXUS —
           </div>
           <div className="flex flex-row justify-between items-center w-full">
-            <div className="flex flex-row cursor-pointer">
+            <div className="flex flex-row cursor-pointer transform transition-transform duration-300 hover:-translate-y-1">
               <span className="font-normal text-[14px] md:text-[16px] text-[#4E4E4E] mr-2">
                 Filter
               </span>
@@ -56,13 +56,14 @@ const VMRNexus = () => {
                 alt="sort"
                 width={18}
                 height={12}
-                className="mr-2"
+                className="mr-2 transform transition-transform duration-300 hover:-translate-y-1"
               />
               <Image
                 src="/icons/table-view.svg"
                 alt="table"
                 width={18}
                 height={12}
+                className="transform transition-transform duration-300 hover:-translate-y-1"
               />
             </div>
           </div>

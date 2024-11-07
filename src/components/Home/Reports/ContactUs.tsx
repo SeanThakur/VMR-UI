@@ -167,7 +167,7 @@ const ContactUs = () => {
         <div className="fill-available flex justify-end">
           <button
             type="submit"
-            className="mt-8 px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center"
+            className="mt-8 px-4 py-2 text-[#0DAFBF] bg-white border border-[#0DAFBF] transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE] hover:text-white hover:border-0 rounded-[5px] uppercase font-normal text-[14px] flex flex-row items-center"
           >
             <div className="w-[18px] h-[18px] mr-2">
               <Image src="/icons/send.svg" alt="enter" width={18} height={18} />
