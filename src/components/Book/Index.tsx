@@ -15,9 +15,11 @@ import {
 import MarketEstimate from "../MarketEstimate";
 import RelatedReportItem from "../Home/Reports/RelatedReports/RelatedReportItem";
 import CategoresItem from "../Home/Reports/Categories/CategoresItem";
+import { useRouter } from "next/navigation";
 
 const Book = () => {
   const { selectBook, selectPdfViewer } = useTabStore();
+  const router = useRouter();
 
   const handleBookClick = () => {
     selectBook(false);
@@ -56,7 +58,10 @@ const Book = () => {
               </div>
               view pdf report
             </button>
-            <button className=" px-4 py-2 text-white bg-[#0DAFBF] rounded-[5px] uppercase font-normal text-[12px] md:text-[14px] flex flex-row items-center font-roboto-condensed">
+            <button
+              onClick={() => router.push("/sales")}
+              className=" px-4 py-2 text-white bg-[#0DAFBF] rounded-[5px] uppercase font-normal text-[12px] md:text-[14px] flex flex-row items-center font-roboto-condensed"
+            >
               <div className="w-[18px] h-[18px] mr-2">
                 <Image
                   src="/icons/file-download.svg"
