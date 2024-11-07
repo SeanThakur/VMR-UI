@@ -89,7 +89,7 @@ const InvoicePage = () => {
 
                   {/* Invoice Actions */}
                   <div className="p-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <button className="flex w-full md:w-[200px] h-[51px] flex-row items-center justify-center bg-[#3B4ACC] text-white shadow-table-content rounded-[5px] font-bold font-inter text-[16px] leading-[19px]">
+                    <button className="flex w-full md:w-[200px] h-[51px] flex-row items-center justify-center bg-[#3B4ACC] text-white shadow-table-content rounded-[5px] font-bold font-inter text-[16px] leading-[19px] transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0DAFBF]">
                       <div className="w-[18px] h-[18px] mr-2">
                         <Image
                           src="/icons/arrow-right-back-circle.svg"
@@ -100,7 +100,7 @@ const InvoicePage = () => {
                       </div>
                       Proceed to Pay
                     </button>
-                    <button className="flex w-full md:w-[200px] h-[51px] flex-row items-center justify-center text-[#3B4ACC] border border-[#3B4ACC] shadow-table-content rounded-[5px] font-bold font-inter text-[16px] leading-[19px]">
+                    <button className="flex w-full md:w-[200px] h-[51px] flex-row items-center justify-center text-[#3B4ACC] border border-[#3B4ACC] shadow-table-content rounded-[5px] font-bold font-inter text-[16px] leading-[19px] transform transition-transform duration-300 hover:-translate-y-1 hover:border-[#0DAFBF] hover:bg-[#0DAFBF] hover:text-white">
                       <div className="w-[18px] h-[18px] mr-2">
                         <Image
                           src="/icons/send-link-blue.svg"
@@ -111,7 +111,7 @@ const InvoicePage = () => {
                       </div>
                       Email Invoice
                     </button>
-                    <button className="flex w-full md:w-[200px] h-[51px] flex-row items-center justify-center text-[#3B4ACC] border border-[#3B4ACC] shadow-table-content rounded-[5px] font-bold font-inter text-[16px] leading-[19px]">
+                    <button className="flex w-full md:w-[200px] h-[51px] flex-row items-center justify-center text-[#3B4ACC] border border-[#3B4ACC] shadow-table-content rounded-[5px] font-bold font-inter text-[16px] leading-[19px] transform transition-transform duration-300 hover:-translate-y-1 hover:border-[#0DAFBF] hover:bg-[#0DAFBF] hover:text-white">
                       <div className="w-[18px] h-[18px] mr-2">
                         <Image
                           src="/icons/download-blue.svg"
@@ -245,7 +245,7 @@ const InvoicePage = () => {
                           conditions.
                         </span>
                       </label>
-                      <button className="flex flex-row items-center justify-center mb-2 mt-8 text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content">
+                      <button className="flex flex-row items-center justify-center mb-2 mt-8 text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#3B4ACC]">
                         <div className="w-[18px] h-[18px] mr-2">
                           <Image
                             src="/icons/arrow-right-back-circle.svg"
@@ -403,7 +403,7 @@ const InvoicePage = () => {
                       </div>
                     </div>
                   </div>
-                  <button className="flex flex-row items-center justify-center mb-2 mt-8 text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content">
+                  <button className="flex flex-row items-center justify-center mb-2 mt-8 text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#3B4ACC]">
                     <div className="w-[18px] h-[18px] mr-2">
                       <Image
                         src="/icons/edit-light-blue.svg"
@@ -442,7 +442,7 @@ const InvoicePage = () => {
                   <p className="font-roboto-condensed font-normal text-[16px] leading-[18px] ftext-[#666666] mt-4">
                     Your question isn’t listed? — Drop us a message!
                   </p>
-                  <button className="flex flex-row items-center justify-center mt-6 w-full shadow-table-content border border-[#0DAFBF] bg-white text-[#0DAFBF] py-3 rounded-[5px]">
+                  <button className="flex flex-row items-center justify-center mt-6 w-full shadow-table-content border border-[#0DAFBF] bg-white text-[#0DAFBF] py-3 rounded-[5px] transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#3B4ACC] hover:text-white hover:border-0">
                     <div className="w-[18px] h-[18px] mr-2">
                       <Image
                         src="/icons/question-line.svg"

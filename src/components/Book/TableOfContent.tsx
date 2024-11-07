@@ -5,6 +5,13 @@ import { BiSearch } from "react-icons/bi";
 
 const TableOfContent = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [showText, setShowText] = useState<boolean>(true);
+
+  const onTableContentChange = (idx: number) => {
+    if (!showText) {
+      setActiveIndex(idx);
+    }
+  };
 
   return (
     <div className="h-[480px] bg-white shadow-table-content border border-[#EEEEEE] flex flex-row">
@@ -27,7 +34,7 @@ const TableOfContent = () => {
                     ? "bg-[#0DAFBF] text-white px-6"
                     : "bg-transparent text-black px-6"
                 }`}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => onTableContentChange(index)}
               >
                 {data.title}
               </p>
@@ -38,14 +45,44 @@ const TableOfContent = () => {
       </div>
       <div className="w-[80%] relative p-8">
         <span className="text-[#3B4ACC] font-bold text-[18px] md:text-[24px]">
-          {tableOfContentData[0].content.title}
+          {tableOfContentData[activeIndex].content.title}
         </span>
-        <div className="md:mt-12 mt-4 text-[9px] md:text-[14px] lg:text-[20px] font-light flex flex-col gap-4 blur-sm">
-          <p>{tableOfContentData[0].content.description1}</p>
-          <p>{tableOfContentData[0].content.description2}</p>
-          <p>{tableOfContentData[0].content.description3}</p>
+        <div className="relative">
+          <div
+            className={`${
+              showText ? "blur-sm select-none" : ""
+            } md:mt-12 mt-4 text-[9px] md:text-[14px] lg:text-[20px] font-light flex flex-col gap-4`}
+          >
+            <p>{tableOfContentData[activeIndex].content.description1}</p>
+            <p>{tableOfContentData[activeIndex].content.description2}</p>
+            <p>{tableOfContentData[activeIndex].content.description3}</p>
+          </div>
+          <div
+            className={`${
+              !showText ? "hidden" : "block"
+            } absolute top-1/2 left-1/2 transform -translate-x-1/2`}
+          >
+            <button
+              onClick={() => setShowText(false)}
+              className="px-8 py-2 text-white bg-[#0DAFBF] rounded-[5px] font-normal text-[16px] flex flex-row items-center font-roboto-condensed transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE] hover:text-white"
+            >
+              <div className="w-[18px] h-[18px] mr-2">
+                <Image
+                  src="/icons/locked.svg"
+                  alt="enter"
+                  width={18}
+                  height={18}
+                />
+              </div>
+              Unlock Premium
+            </button>
+          </div>
         </div>
-        <div className="absolute bottom-6 right-6 flex flex-row items-center">
+        <div
+          className={`${
+            showText ? "select-none cursor-not-allowed " : "cursor-pointer"
+          } absolute bottom-6 right-6 flex flex-row items-center`}
+        >
           <span className="font-light font-[18px] font-black font-roboto-mono">
             Next
           </span>
