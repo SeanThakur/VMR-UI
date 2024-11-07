@@ -16,7 +16,7 @@ const CategoresItem: React.FC<CategoresItemProps> = ({ image, title }) => {
   return (
     <div
       onClick={onCategoriesSelect}
-      className="relative rounded-lg w-[360px] h-[300px] cursor-pointer"
+      className="relative rounded-lg w-[360px] h-[300px] cursor-pointer transform transition-transform duration-300 hover:-translate-y-2"
     >
       <Image src={image} alt="cover" layout="fill" objectFit="cover" />
       <div className="absolute top-6 bg-customBlue w-[90%] px-4 py-2">

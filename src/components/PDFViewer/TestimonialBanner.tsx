@@ -39,7 +39,7 @@ const TestimonialBanner = () => {
         </div>
       </div>
       <div className="flex flex-col items-center ml-6">
-        <div className="bg-white cursor-pointer flex items-end w-[150px] h-[85px] lg:w-[300px] lg:h-[131px] rounded-[14px] mb-8">
+        <div className="bg-white cursor-pointer flex items-end w-[150px] h-[85px] lg:w-[300px] lg:h-[131px] rounded-[14px] mb-8 transform transition-transform duration-300 hover:-translate-y-2">
           <div className="flex flex-row items-center px-8 py-6">
             <p className="text-[#77BB20] text-[17px] font-bold w-[55%] mr-4">
               Read full testimonials

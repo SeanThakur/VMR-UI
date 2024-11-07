@@ -19,7 +19,7 @@ const RepoBanner = () => {
         </p>
       </div>
       <div className="flex flex-row gap-4 w-full lg:w-[45%]">
-        <div className="bg-white cursor-pointer flex items-center lg:items-end w-[150px] h-[85px] lg:w-[350px] lg:h-[131px] rounded-[14px]">
+        <div className="bg-white cursor-pointer flex items-center lg:items-end w-[150px] h-[85px] lg:w-[350px] lg:h-[131px] rounded-[14px] transform transition-transform duration-300 hover:-translate-y-2">
           <div className="flex flex-row items-center p-6 lg:px-8 lg:py-6">
             <p className="text-[#4A3AFF] text-[12px] lg:text-[17px] font-bold w-[55%] mr-4">
               Customize your report(s)
@@ -34,7 +34,7 @@ const RepoBanner = () => {
             </div>
           </div>
         </div>
-        <div className="border-solid cursor-pointer flex  items-center lg:items-end w-[150px] h-[85px] border-[1px] border-white rounded-[14px] lg:w-[350px] lg:h-[131px]">
+        <div className="border-solid cursor-pointer flex  items-center lg:items-end w-[150px] h-[85px] border-[1px] border-white rounded-[14px] lg:w-[350px] lg:h-[131px] transform transition-transform duration-300 hover:-translate-y-2">
           <div className="flex flex-row items-center p-6 lg:px-8 lg:py-6">
             <p className="text-white text-[12px] lg:text-[17px] font-bold w-[55%] mr-4">
               Browse our repository

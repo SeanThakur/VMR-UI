@@ -1310,7 +1310,10 @@ const BundledLicense = () => {
                   $12,479
                 </span>
               </div>
-              <button className="text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content">
+              <button
+                onClick={() => router.push("/invoice")}
+                className="text-white text-[16px] font-bold font-inter leading-[19px] w-full rounded-5px bg-[#0DAFBF] py-4 shadow-table-content"
+              >
                 Proceed to Buy
               </button>
             </div>

@@ -27,7 +27,7 @@ const SavedReportItem: React.FC<BookCardProps> = ({
 
   return (
     <div
-      className="flex flex-col items-start w-[150px] py-4 pr-4 cursor-pointer"
+      className="flex flex-col items-start w-[150px] py-4 pr-4 cursor-pointer transform transition-transform duration-300 hover:-translate-y-2"
       onClick={handleBookClick}
     >
       <div className="relative w-[133px] h-[182px] mb-3 shadow-saved-report">
