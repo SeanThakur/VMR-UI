@@ -1,3 +1,4 @@
+import { useTabStore } from "@/store/store";
 import Image from "next/image";
 import React from "react";
 
@@ -10,8 +11,16 @@ const RelatedReportItem: React.FC<RelatedReportBookProps> = ({
   image,
   title,
 }) => {
+  const { selectBook } = useTabStore();
+
+  const handleBookClick = () => {
+    selectBook(true);
+  };
   return (
-    <div className="flex flex-col items-start w-[165px] py-4 pr-4 cursor-pointer transform transition-transform duration-300 hover:-translate-y-2">
+    <div
+      onClick={handleBookClick}
+      className="flex flex-col items-start w-[165px] py-4 pr-4 cursor-pointer transform transition-transform duration-300 hover:-translate-y-2"
+    >
       <div className="relative w-[163px] h-[222px] mb-3 shadow-saved-report">
         <Image src={image} alt="Book Cover" layout="fill" objectFit="cover" />
         <div className="absolute top-2 right-2 w-[15px] h-[15px] bg-[#0DAFBF] flex items-center justify-center rounded-sm">

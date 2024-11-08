@@ -1,3 +1,4 @@
+import { useRouter } from "next/navigation";
 import React, { Fragment, useState } from "react";
 
 interface Option {
@@ -7,6 +8,7 @@ interface Option {
 
 const PurchaseOption = () => {
   const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number>(0);
+  const router = useRouter();
 
   const options: Option[] = [
     { value: "Single User", description: "Description for Option 1" },
@@ -50,7 +52,10 @@ const PurchaseOption = () => {
           ))}
         </div>
         <div className="flex items-center justify-center pb-4">
-          <button className="bg-[#0DAFBF] text-white text-[14px] px-6 py-1 rounded-2xl transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE]">
+          <button
+            onClick={() => router.push("/sales")}
+            className="bg-[#0DAFBF] text-white text-[14px] px-6 py-1 rounded-2xl transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE]"
+          >
             Proceed
           </button>
         </div>
