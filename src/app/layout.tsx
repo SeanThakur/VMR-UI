@@ -10,6 +10,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import ScrollToTop from "@/hook/ScrollToTop";
 
 const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
@@ -55,6 +56,7 @@ export default function RootLayout({
       <body
         className={`${robotoSerif.variable} ${robotoMono.variable} ${InterFont.variable} ${robotoCondensed.variable} ${roboto.variable} antialiased`}
       >
+        <ScrollToTop />
         {children}
       </body>
       <Script

@@ -9,7 +9,7 @@ import Reports from "@/components/Home/Reports/Index";
 import Navbar from "@/components/Navbar";
 import PDFViewer from "@/components/PDFViewer/Index";
 import { useTabStore } from "@/store/store";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 
 const componentMap: { [key: string]: React.FC } = {
   Reports: Reports,
@@ -40,6 +40,11 @@ function getActiveComponent(
 export default function Home() {
   const { activeTab, bookSelected, pdfViewerSelected, categoriesSelected } =
     useTabStore();
+
+  useEffect(() => {
+    // Scroll to top whenever any of these state values change
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [activeTab, bookSelected, pdfViewerSelected, categoriesSelected]);
 
   return (
     <Fragment>
