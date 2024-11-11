@@ -27,7 +27,15 @@ const RootPage: React.FC = () => {
 
   const onFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // try {
+    //   const response = axiosInstance.post('/login_api.php', {email, password})
+    //   localStorage.setItem("auth_token", token);
+    //   document.cookie = `auth_token=${token}; path=/; secure; samesite=strict`;
+    //   setLoggedIn(true);
     router.push("/home");
+    // } catch (error) {
+    //   console.error('Login failed:', error);
+    // }
   };
 
   return (
