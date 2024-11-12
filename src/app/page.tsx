@@ -6,7 +6,7 @@ import Slider from "react-slick";
 // import { useRouter } from "next/navigation";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Image from "next/image";
-// import axiosInstance from "@/utils/axiosInstance";
+import axiosInstance from "@/utils/axiosInstance";
 
 const RootPage: React.FC = () => {
   // const router = useRouter();
@@ -33,11 +33,11 @@ const RootPage: React.FC = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      // const response = axiosInstance.post("/login_api.php", {
-      //   email,
-      //   password,
-      // });
-      // console.log("login response", { response });
+      const response = axiosInstance.post("/login_api.php", {
+        email,
+        password,
+      });
+      console.log("login response", { response });
       // localStorage.setItem("auth_token", token);
       // document.cookie = `auth_token=${token}; path=/; secure; samesite=strict`;
       // setLoggedIn(true);
