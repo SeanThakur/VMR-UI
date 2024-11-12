@@ -3,13 +3,17 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Slider from "react-slick";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Image from "next/image";
+// import axiosInstance from "@/utils/axiosInstance";
 
 const RootPage: React.FC = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const carouselSettings = {
     dots: false,
@@ -27,15 +31,24 @@ const RootPage: React.FC = () => {
 
   const onFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // try {
-    //   const response = axiosInstance.post('/login_api.php', {email, password})
-    //   localStorage.setItem("auth_token", token);
-    //   document.cookie = `auth_token=${token}; path=/; secure; samesite=strict`;
-    //   setLoggedIn(true);
-    router.push("/home");
-    // } catch (error) {
-    //   console.error('Login failed:', error);
-    // }
+    try {
+      setLoading(true);
+      // const response = axiosInstance.post("/login_api.php", {
+      //   email,
+      //   password,
+      // });
+      // console.log("login response", { response });
+      // localStorage.setItem("auth_token", token);
+      // document.cookie = `auth_token=${token}; path=/; secure; samesite=strict`;
+      // setLoggedIn(true);
+      // router.push("/home");
+    } catch (error) {
+      console.error("Login failed:", error);
+    } finally {
+      setLoading(false);
+      setEmail("");
+      setPassword("");
+    }
   };
 
   return (
@@ -105,14 +118,18 @@ const RootPage: React.FC = () => {
               <input
                 type="email"
                 placeholder="Email"
+                value={email}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 autoFocus={true}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
             <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
@@ -132,8 +149,9 @@ const RootPage: React.FC = () => {
             <button
               type="submit"
               className="w-full py-2 bg-[#3b4acc] text-white rounded-md hover:bg-[#3241b0] transition duration-200"
+              disabled={loading}
             >
-              Sign In
+              {loading ? "Loading..." : "Sign In"}
             </button>
 
             <p className="text-sm text-right text-blue-600 hover:underline cursor-pointer">
