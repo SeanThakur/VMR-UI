@@ -3,13 +3,15 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Slider from "react-slick";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Image from "next/image";
 import axiosInstance from "@/utils/axiosInstance";
+import { useAuthStore } from "@/store/useAuthStore";
 
 const RootPage: React.FC = () => {
-  // const router = useRouter();
+  const router = useRouter();
+  const { setLoggedIn } = useAuthStore();
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -34,14 +36,13 @@ const RootPage: React.FC = () => {
     try {
       setLoading(true);
       const response = axiosInstance.post("/login_api.php", {
-        email,
+        username: email,
         password,
       });
-      console.log("login response", { response });
       // localStorage.setItem("auth_token", token);
       // document.cookie = `auth_token=${token}; path=/; secure; samesite=strict`;
-      // setLoggedIn(true);
-      // router.push("/home");
+      setLoggedIn(true);
+      router.push("/home");
     } catch (error) {
       console.error("Login failed:", error);
     } finally {
