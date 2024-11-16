@@ -7,7 +7,7 @@ interface AuthState {
 }
 
 export const useAuthStore = create<AuthState>((set) => ({
-  isLoggedIn: !!localStorage.getItem("auth_token"),
+  isLoggedIn: false,
   setLoggedIn: (value) => set({ isLoggedIn: value }),
   logout: () => {
     localStorage.removeItem("auth_token");
@@ -15,3 +15,9 @@ export const useAuthStore = create<AuthState>((set) => ({
     set({ isLoggedIn: false });
   },
 }));
+
+// Initialize isLoggedIn on the client side
+if (typeof window !== "undefined") {
+  const token = localStorage.getItem("auth_token");
+  useAuthStore.setState({ isLoggedIn: !!token });
+}
