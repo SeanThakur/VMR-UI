@@ -3,6 +3,13 @@ type RelatedReportDto = {
   title: string;
 };
 
+// type RelatedReportResponseDto = {
+//   image: string;
+//   r_category: string;
+//   r_name: string;
+//   r_no: string;
+// }
+
 type Category = {
   image: string;
   title: string;

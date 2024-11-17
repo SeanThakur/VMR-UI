@@ -1,8 +1,20 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import RelatedReportItem from "./RelatedReportItem";
 import { relatedReports } from "@/utils/data";
+import axiosInstance from "@/utils/axiosInstance";
 
 const RelatedReports = () => {
+  // const [relatedReportData, setRelatedReportData] = useState<RelatedReportResponseDto[]>([]);
+
+  const relatedReportAPI = async () => {
+    const respose = await axiosInstance.get("Related_reports.php");
+    console.log(respose.data);
+  };
+
+  useEffect(() => {
+    relatedReportAPI();
+  }, []);
+
   return (
     <Fragment>
       <div className="text-lg text-gray-800 font-light mb-6 text-left">
