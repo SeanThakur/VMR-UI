@@ -1,10 +1,20 @@
 "use client";
 
+import { useAuthStore } from "@/store/useAuthStore";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const SalesNav: React.FC = () => {
+  const { logout } = useAuthStore();
+  const router = useRouter();
+
+  const onLoggingOut = () => {
+    logout();
+    router.push("/");
+  };
+
   return (
     <div className="shadow-md">
       <div className="bg-[#3B4ACC] flex justify-between items-center px-4 md:px-6 py-3">
@@ -32,6 +42,12 @@ const SalesNav: React.FC = () => {
             </p>
           </div>
         </div>
+        <button
+          onClick={onLoggingOut}
+          className="text-white bg-[#0DAFBF]  px-4 py-1 text-[14px] px-3 py-1 rounded-5px font-roboto-condensed transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE]"
+        >
+          Logout
+        </button>
       </div>
     </div>
   );

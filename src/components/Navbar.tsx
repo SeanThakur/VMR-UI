@@ -1,8 +1,10 @@
 "use client";
 
 import { useTabStore } from "@/store/store";
+import { useAuthStore } from "@/store/useAuthStore";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
@@ -10,8 +12,15 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+  const { logout } = useAuthStore();
 
   const { activeTab, setActiveTab } = useTabStore();
+
+  const onLoggingOut = () => {
+    logout();
+    router.push("/");
+  };
 
   const tabs = [
     { label: "Reports" },
@@ -55,6 +64,12 @@ const Navbar: React.FC = () => {
         <div className="flex items-center space-x-4">
           <button className=" hidden md:inline bg-teal-500 text-white text-[12px] px-3 py-1 rounded-5px hover:bg-teal-600 transition duration-300">
             SUBSCRIBE
+          </button>
+          <button
+            onClick={onLoggingOut}
+            className="text-white bg-[#0DAFBF]  px-4 py-1 text-[14px] px-3 py-1 rounded-5px font-roboto-condensed transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE]"
+          >
+            Logout
           </button>
 
           {/* Menu for mobile */}
