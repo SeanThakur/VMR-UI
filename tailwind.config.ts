@@ -25,7 +25,7 @@ const config: Config = {
         "5px": "5px",
       },
       boxShadow: {
-        "saved-report": "35px 37px 59px -1px rgba(0,0,0,0.25)",
+        "saved-report": "-25px 12px 40px 0px #00000040",
         "related-report": "0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset",
         "nexus-card": "0px_4px_4px_0px_rgba(0,0,0,0.25)",
         "table-content": "0px 4px 4px 0px #00000040",

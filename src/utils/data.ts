@@ -10,6 +10,18 @@ type RelatedReportDto = {
 //   r_no: string;
 // }
 
+export enum UserReportChipType {
+  Requested = "Requested",
+  Saved = "Saved",
+}
+
+export type UserReportType = {
+  image: string;
+  ur_report_name: string;
+  ur_report_id: number;
+  chipText?: UserReportChipType;
+};
+
 type Category = {
   image: string;
   title: string;
@@ -24,6 +36,38 @@ export interface TableData {
   year2023: number;
   cagr: string;
 }
+
+export const userReport: UserReportType[] = [
+  {
+    ur_report_id: 1,
+    image: "/images/savedReportBook1.png",
+    ur_report_name: "Global Treasury And Risk Management Software Market",
+  },
+  {
+    ur_report_id: 2,
+    image: "/images/savedReportBook2.png",
+    ur_report_name: "Global Morel Mushroom Market",
+    chipText: UserReportChipType.Requested,
+  },
+  {
+    ur_report_id: 3,
+    image: "/images/savedReportBook2.png",
+    ur_report_name: "Global Electric Vehicle Traction Motor Market",
+    chipText: UserReportChipType.Requested,
+  },
+  {
+    ur_report_id: 4,
+    image: "/images/savedReportBook3.png",
+    ur_report_name: "Global Bovine Serum Market",
+    chipText: UserReportChipType.Saved,
+  },
+  {
+    ur_report_id: 5,
+    image: "/images/savedReportBook4.png",
+    ur_report_name: "Global Peripheral Intravenous Catheters PIVC Market",
+    chipText: UserReportChipType.Saved,
+  },
+];
 
 export const relatedReports: RelatedReportDto[] = [
   {

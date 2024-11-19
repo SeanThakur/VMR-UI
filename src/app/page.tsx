@@ -47,7 +47,7 @@ const RootPage: React.FC = () => {
         username: email,
         password,
       });
-      const token = response.data.Data.session;
+      const token = response.data.data.session;
       localStorage.setItem("auth_token", token);
       document.cookie = `auth_token=${token}; path=/; secure; samesite=strict`;
       setLoggedIn(true);
