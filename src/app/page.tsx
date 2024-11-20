@@ -8,6 +8,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Image from "next/image";
 import axiosInstance from "@/utils/axiosInstance";
 import { useAuthStore } from "@/store/useAuthStore";
+import { ImSpinner2 } from "react-icons/im";
 
 const RootPage: React.FC = () => {
   const router = useRouter();
@@ -162,7 +163,13 @@ const RootPage: React.FC = () => {
                 className="w-full py-2 bg-[#3b4acc] text-white rounded-md hover:bg-[#3241b0] transition duration-200"
                 disabled={loading}
               >
-                {loading ? "Loading..." : "Sign In"}
+                {loading ? (
+                  <div className="flex items-center justify-center">
+                    <ImSpinner2 className="animate-spin text-white" size={18} />
+                  </div>
+                ) : (
+                  "Sign In"
+                )}
               </button>
 
               <p className="text-sm text-right text-blue-600 hover:underline cursor-pointer">
