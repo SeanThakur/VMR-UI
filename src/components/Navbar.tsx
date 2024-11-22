@@ -3,7 +3,6 @@
 import { useTabStore } from "@/store/store";
 import { useAuthStore } from "@/store/useAuthStore";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
@@ -15,7 +14,13 @@ const Navbar: React.FC = () => {
   const router = useRouter();
   const { logout } = useAuthStore();
 
-  const { activeTab, setActiveTab } = useTabStore();
+  const {
+    activeTab,
+    setActiveTab,
+    selectBook,
+    selectPdfViewer,
+    selectCategoriesListing,
+  } = useTabStore();
 
   const onLoggingOut = () => {
     logout();
@@ -33,12 +38,20 @@ const Navbar: React.FC = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const onHomeLink = () => {
+    selectPdfViewer(false);
+    selectCategoriesListing(false);
+    selectBook(false);
+    setActiveTab("Reports");
+    router.push("/home");
+  };
+
   return (
     <div className="shadow-md">
       <div className="bg-[#3B4ACC] flex justify-between items-center px-4 md:px-6 py-3">
         <div className="flex items-center space-x-4 md:space-x-6">
-          <Link
-            href={"/home"}
+          <div
+            onClick={onHomeLink}
             className="relative w-24 h-10 md:w-28 md:h-12 lg:w-48 lg:h-14"
           >
             <Image
@@ -48,7 +61,7 @@ const Navbar: React.FC = () => {
               objectFit="contain"
               className="w-full h-full"
             />
-          </Link>
+          </div>
 
           <div className="text-white hidden sm:block">
             <h1 className="text-[8px] font-semibold leading-tight uppercase mb-1">

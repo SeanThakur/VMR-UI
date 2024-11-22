@@ -1,12 +1,22 @@
 "use client";
 
+import { useTabStore } from "@/store/store";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { Fragment } from "react";
 
 const InvoicePage = () => {
   const router = useRouter();
+  const { setActiveTab, selectBook, selectPdfViewer, selectCategoriesListing } =
+    useTabStore();
+
+  const onHomeLink = () => {
+    selectPdfViewer(false);
+    selectCategoriesListing(false);
+    selectBook(false);
+    setActiveTab("Reports");
+    router.push("/home");
+  };
   return (
     <Fragment>
       <div className="min-h-screen bg-gray-100 flex flex-col items-center">
@@ -14,8 +24,8 @@ const InvoicePage = () => {
         <div className="relative w-full">
           <div className="bg-[#3B4ACC] w-full flex-col justify-between items-center px-4 md:px-6 py-3">
             <div className="flex items-start h-[250px] p-4 space-x-4 md:space-x-6">
-              <Link
-                href={"/home"}
+              <div
+                onClick={onHomeLink}
                 className="relative w-24 h-10 md:w-28 md:h-12 lg:w-48 lg:h-14"
               >
                 <Image
@@ -25,7 +35,7 @@ const InvoicePage = () => {
                   objectFit="contain"
                   className="w-full h-full"
                 />
-              </Link>
+              </div>
             </div>
           </div>
 

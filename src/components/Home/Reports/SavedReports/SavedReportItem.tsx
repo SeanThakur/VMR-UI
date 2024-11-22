@@ -32,11 +32,10 @@ const SavedReportItem: React.FC<BookCardProps> = ({
       <div className="relative w-[133px] h-[182px] mb-3 bg-transparent">
         {/* shadow-saved-report */}
         <Image
-          src={image}
+          src={image || "/images/savedReportBook1.png"}
           alt="report cover"
           layout="fill"
           objectFit="cover"
-          placeholder="empty"
           className="bg-transparent"
         />
         <div className="absolute top-2 right-2 w-[15px] h-[15px] bg-[#0DAFBF] flex items-center justify-center rounded-sm">
