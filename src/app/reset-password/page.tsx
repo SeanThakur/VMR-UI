@@ -50,7 +50,7 @@ const RootPage: React.FC = () => {
               alt="Image1"
               layout="fill"
               objectFit="cover"
-              className="w-full h-full rounded-[20px]"
+              className="w-full h-full"
             />
           </div>
         </div>
@@ -72,7 +72,7 @@ const RootPage: React.FC = () => {
               <h2 className="font-roboto text-[24px] leading-[28px] font-semibold text-center mt-4 mb-4">
                 Reset Password
               </h2>
-              <p className="text-[16px] md:text-[18px] text-[#AAAAAA] font-roboto leading-[21px] font-normal text-center mb-6 capitalize">
+              <p className="text-[16px] text-[#AAAAAA] font-roboto leading-[21px] font-normal text-center mb-6 capitalize">
                 {sentCode ? (
                   "Please enter new password"
                 ) : (
@@ -88,7 +88,7 @@ const RootPage: React.FC = () => {
                     type="email"
                     placeholder="Email"
                     value={email}
-                    className="w-full px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[67px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[57px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                     autoFocus={true}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -102,7 +102,7 @@ const RootPage: React.FC = () => {
                         value={newPassword}
                         onChange={(e) => setNewPassword(e.target.value)}
                         placeholder="New Password"
-                        className="w-full px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[67px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[57px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                       />
                       <button
@@ -123,7 +123,7 @@ const RootPage: React.FC = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder="Confirm New Password"
-                        className="w-full px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[67px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[57px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                       />
                       <button
