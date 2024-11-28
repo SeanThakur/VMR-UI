@@ -43,7 +43,7 @@ const ContactUs = () => {
               id="firstName"
               name="firstName"
               placeholder="First"
-              className="w-full px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[67px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full text-[14px] px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={formData.name}
               onChange={handleChange}
               required
@@ -57,7 +57,7 @@ const ContactUs = () => {
               id="email"
               name="email"
               placeholder="Email"
-              className="w-full px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[57px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full text-[14px] px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={formData.email}
               onChange={handleChange}
               required
@@ -71,7 +71,7 @@ const ContactUs = () => {
               id="phone"
               name="phone"
               placeholder="Phone"
-              className="w-full px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[57px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full text-[14px] px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={formData.phone}
               onChange={handleChange}
               required
@@ -85,14 +85,14 @@ const ContactUs = () => {
               id="company"
               name="company"
               placeholder="Company"
-              className="w-full px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[57px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full text-[14px] px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={formData.company}
               onChange={handleChange}
             />
           </div>
           <button
             type="submit"
-            className="w-full h-[57px] flex flex-row items-center justify-center mt-4 py-2 bg-gradient-to-r from-gradient-start to-gradient-end text-white font-roboto font-medium text-[18px] rounded-[8px] transition duration-200"
+            className="w-full text-[14px] h-[40px] flex flex-row items-center justify-center mt-4 py-2 bg-gradient-to-r from-gradient-start to-gradient-end text-white font-roboto font-medium text-[18px] rounded-[8px] transition duration-200"
           >
             <div className="w-[18px] h-[18px] mr-3">
               <Image

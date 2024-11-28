@@ -43,7 +43,7 @@ const RootPage: React.FC = () => {
         <title>Login | InvoicePie</title>
       </Head>
       <div className="min-h-screen flex flex-col md:flex-row">
-        <div className="hidden md:block lg:w-1/2 bg-[#FCFCFC] h-full">
+        <div className="hidden md:block lg:w-[60%] bg-[#FCFCFC] h-full">
           <div className="relative min-h-screen">
             <Image
               src="/images/login-wallpaper.png"
@@ -55,8 +55,8 @@ const RootPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 bg-white flex flex-col justify-center p-4 sm:p-8 md:p-12 min-h-screen">
-          <div className="max-w-[395px] height-fill-available md:max-w-[502px] md:w-[502px] mx-auto relative h-[95vh] md:h-full flex flex-col justify-center items-center">
+        <div className="w-full lg:w-[40%] bg-white flex flex-col justify-center p-4 sm:p-8 md:p-12 min-h-screen">
+          <div className="max-w-[395px] height-fill-available md:max-w-[502px] md:w-[400px] mx-auto relative h-[95vh] md:h-full flex flex-col justify-center items-center">
             <div className="flex flex-col items-center justify-center absolute top-[6%]">
               <div className="relative w-[247px] h-[55px] md:w-[308px] md:h-[72px]">
                 <Image
@@ -69,10 +69,10 @@ const RootPage: React.FC = () => {
               </div>
             </div>
             <form className="height-fill-available" onSubmit={onFormSubmit}>
-              <h2 className="font-roboto text-[24px] leading-[28px] font-semibold text-center mt-4 mb-4">
+              <h2 className="font-roboto text-[20px] leading-[28px] font-semibold text-center mt-4 mb-4">
                 Reset Password
               </h2>
-              <p className="text-[16px] text-[#AAAAAA] font-roboto leading-[21px] font-normal text-center mb-6 capitalize">
+              <p className="text-[12px] text-[#AAAAAA] font-roboto leading-[21px] font-normal text-center mb-6 capitalize">
                 {sentCode ? (
                   "Please enter new password"
                 ) : (
@@ -88,7 +88,7 @@ const RootPage: React.FC = () => {
                     type="email"
                     placeholder="Email"
                     value={email}
-                    className="w-full px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[57px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full text-[14px] px-4 py-4 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                     autoFocus={true}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -102,7 +102,7 @@ const RootPage: React.FC = () => {
                         value={newPassword}
                         onChange={(e) => setNewPassword(e.target.value)}
                         placeholder="New Password"
-                        className="w-full px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[57px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full text-[14px] px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                       />
                       <button
@@ -123,7 +123,7 @@ const RootPage: React.FC = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder="Confirm New Password"
-                        className="w-full px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[57px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full text-[14px] px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                       />
                       <button
@@ -143,7 +143,7 @@ const RootPage: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="w-full h-[67px] mt-8 py-2 bg-gradient-to-r from-gradient-start to-gradient-end text-white rounded-[8px] transition duration-200"
+                className="w-full text-[14px] h-[40px] mt-8 py-2 bg-gradient-to-r from-gradient-start to-gradient-end text-white rounded-[8px] transition duration-200"
                 disabled={loading}
               >
                 {loading ? (
@@ -159,10 +159,10 @@ const RootPage: React.FC = () => {
             </form>
 
             <div className="flex flex-col items-center absolute bottom-4 left-0 right-0">
-              <p className="text-center font-normal text-[#BBBBBB] text-[18px] font-roboto leading-[21px]">
+              <p className="text-center font-normal text-[#BBBBBB] text-[14px] font-roboto leading-[21px]">
                 Designed & Developed by{" "}
               </p>
-              <p className="text-center font-normal text-[#BBBBBB] text-[18px] font-roboto leading-[21px]">
+              <p className="text-center font-normal text-[#BBBBBB] text-[14px] font-roboto leading-[21px]">
                 <span className="text-[#3B4ACC]">
                   Verified Market Research®
                 </span>{" "}
