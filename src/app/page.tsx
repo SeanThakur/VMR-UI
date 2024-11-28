@@ -73,7 +73,7 @@ const RootPage: React.FC = () => {
       </Head>
       {render && (
         <div className="min-h-screen flex flex-col md:flex-row">
-          <div className="hidden md:block lg:w-[60%] bg-[#FCFCFC] h-full">
+          <div className="hidden md:block lg:w-[50%] bg-[#FCFCFC] h-full">
             <div className="relative min-h-screen">
               <Image
                 src="/images/login-wallpaper.png"
@@ -85,7 +85,7 @@ const RootPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-[40%] bg-white flex flex-col justify-center p-4 sm:p-8 md:p-12 min-h-screen">
+          <div className="w-full lg:w-[50%] bg-white flex flex-col justify-center p-4 sm:p-8 md:p-12 min-h-screen">
             <div className="max-w-[395px] height-fill-available md:max-w-[502px] md:w-[400px] mx-auto relative h-[95vh] md:h-full flex flex-col justify-center items-center">
               <div className="flex flex-col items-center justify-center absolute top-[6%]">
                 <div className="relative w-[247px] h-[55px]">
