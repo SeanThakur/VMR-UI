@@ -137,18 +137,18 @@ export const categoriesItem: Category[] = [
     image: "/images/categories3.png",
     title: "Global And GCC HDPE   Pipes Market",
   },
-  {
-    image: "/images/categories4.png",
-    title: "Global Service Delivery   Automation Market",
-  },
-  {
-    image: "/images/categories5.png",
-    title: "Global Glycyrrhizine (CAS:1405-86-3) Market",
-  },
-  {
-    image: "/images/categories1.png",
-    title: "Global Haemodialysis   Catheters Market",
-  },
+  // {
+  //   image: "/images/categories4.png",
+  //   title: "Global Service Delivery   Automation Market",
+  // },
+  // {
+  //   image: "/images/categories5.png",
+  //   title: "Global Glycyrrhizine (CAS:1405-86-3) Market",
+  // },
+  // {
+  //   image: "/images/categories1.png",
+  //   title: "Global Haemodialysis   Catheters Market",
+  // },
 ];
 
 export const keyPlayersItemData = [

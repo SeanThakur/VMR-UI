@@ -20,6 +20,16 @@ const config: Config = {
         foreground: "var(--foreground)",
         customBlue: "#3B4ACCAB",
         navbarBlue: "#3B4ACC",
+        "gradient-start": "rgba(33, 161, 215, 0.698039)",
+        "gradient-end": "#3B4ACC",
+      },
+      backgroundImage: {
+        "navbar-gradient":
+          "linear-gradient(90deg, rgba(33, 161, 215, 0.7) 0%, #3B4ACC 49.5%)",
+        "tab-button-gradient":
+          "linear-gradient(90deg, #2C2A48 0%, #6B66AE 100%)",
+        "filter-gradient":
+          "linear-gradient(90deg, rgba(33, 161, 215, 0.7) 0%, #3B4ACC 100%)",
       },
       borderRadius: {
         "5px": "5px",

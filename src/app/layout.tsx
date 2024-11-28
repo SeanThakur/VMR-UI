@@ -8,6 +8,8 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
@@ -54,6 +56,7 @@ export default function RootLayout({
         className={`${robotoSerif.variable} ${robotoMono.variable} ${InterFont.variable} ${robotoCondensed.variable} ${roboto.variable} antialiased`}
       >
         {children}
+        <ToastContainer />
       </body>
       <Script
         src="https://acrobatservices.adobe.com/view-sdk/viewer.js"

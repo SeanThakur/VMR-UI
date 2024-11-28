@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,34 +47,32 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="shadow-md">
-      <div className="bg-[#3B4ACC] flex justify-between items-center px-4 md:px-6 py-3">
-        <div className="flex items-center space-x-4 md:space-x-6">
+      <div className="bg-navbar-gradient rounded-tl-[10px] rounded-tr-[10px] flex justify-between items-center px-4 md:px-8 md: py-5 py-3">
+        <div className="flex items-center">
           <div
             onClick={onHomeLink}
-            className="relative w-24 h-10 md:w-28 md:h-12 lg:w-48 lg:h-14"
+            className="relative w-24 h-10 md:w-28 md:h-12 lg:w-[217px] lg:h-[48px]"
           >
             <Image
-              src="/images/VMRWhiteLogo.png"
+              src="/images/VMRNavbarLogo.png"
               alt="Logo"
               layout="fill"
               objectFit="contain"
               className="w-full h-full"
             />
           </div>
-
-          <div className="text-white hidden sm:block">
-            <h1 className="text-[8px] font-semibold leading-tight uppercase mb-1">
-              Industry Access:
-            </h1>
-            <p className="text-[12px] text-gray-200 leading-tight flex items-center">
-              <span>Electronics & Semiconductors</span>
-              <MdKeyboardArrowDown />
-            </p>
-          </div>
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className=" hidden md:inline bg-teal-500 text-white text-[12px] px-3 py-1 rounded-5px hover:bg-teal-600 transition duration-300">
+          <button className="hidden md:flex flex flex-row items-center bg-[#05B3C0] text-white text-[14px] font-roboto font-medium leading-[16px] px-[20px] py-[10px] rounded-5px hover:bg-teal-600 transition duration-300">
+            <div className="w-[18px] h-[18px] mr-2">
+              <Image
+                src="/icons/add-solid.svg"
+                alt="subscribe"
+                width={18}
+                height={18}
+              />
+            </div>
             SUBSCRIBE
           </button>
           <button
@@ -96,15 +93,15 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Bottom Navigation (hidden on mobile, shows in menu) */}
-      <div className="relative bg-white md:flex justify-between items-center px-4 md:px-0 hidden shadow-lg shadow-gray-300">
-        <div className="flex space-x-4 md:space-x-8 relative w-full">
+      <div className="relative bg-black shadow-table-content md:flex justify-between items-center px-4 md:px-0 hidden">
+        <div className="flex space-x-4 md:space-x-8 py-5 px-4 relative w-full">
           {tabs.map((tab) => (
             <a
               key={tab.label}
-              className={`relative z-10 font-semibold px-8 py-2 cursor-pointer ${
+              className={`relative z-10 font-medium font-roboto text-[20px] leading-[23px] px-8 py-2 cursor-pointer ${
                 activeTab === tab.label
-                  ? "bg-[#3B4ACC] text-white absolute inset-0 h-full z-0"
-                  : "text-gray-700 hover:text-blue-600"
+                  ? "bg-tab-button-gradient rounded-[8px] text-white absolute inset-0 h-full z-0"
+                  : "text-white hover:text-[#05B3C0]"
               }`}
               onClick={() => setActiveTab(tab.label)}
             >
@@ -114,18 +111,18 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Right-side Icons */}
-        <div className="flex space-x-4 text-blue-600 z-10 mr-8">
-          <div className="w-[20px] h-[20px] mr-2 cursor-pointer">
+        <div className="flex space-x-6 z-10 mr-8">
+          <div className="w-[21px] h-[31px] mr-2 cursor-pointer">
             <Image
-              src="/icons/preferences.svg"
+              src="/icons/preferences-white.svg"
               alt="preferences"
               width={20}
               height={20}
             />
           </div>
-          <div className="w-[20px] h-[20px] mr-2 cursor-pointer">
+          <div className="w-[21px] h-[26px] cursor-pointer">
             <Image
-              src="/icons/notification-fill.svg"
+              src="/icons/notification-white.svg"
               alt="notification"
               width={20}
               height={20}

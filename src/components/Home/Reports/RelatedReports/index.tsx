@@ -38,7 +38,7 @@ const RelatedReports = () => {
         </div>
       ) : (
         <div className="relative w-full bg-[#0DAFBF1A] shadow-related-report rounded-lg overflow-x-auto flex space-x-4 sm:space-x-8 px-2 sm:px-4 pt-2">
-          {userRelatedReportData.map((data) => (
+          {userRelatedReportData?.map((data) => (
             <RelatedReportItem
               key={data.r_no}
               image={data.image}

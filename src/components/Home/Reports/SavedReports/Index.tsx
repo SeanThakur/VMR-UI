@@ -69,8 +69,8 @@ const SavedReports = () => {
         </div>
       ) : (
         <div className="flex flex-col sm:flex-row sm:justify-between items-center">
-          <div className="flex flex-wrap gap-6 sm:gap-14 mt-3 mb-5 justify-start">
-            {userReportData.slice(paginate.start, paginate.end).map((user) => (
+          <div className="flex flex-wrap gap-6 md:gap-24 mt-3 mb-5 justify-start">
+            {userReportData?.slice(paginate.start, paginate.end).map((user) => (
               <SavedReportItem
                 key={user.ur_report_id}
                 image={user.image}

@@ -29,7 +29,7 @@ const SavedReportItem: React.FC<BookCardProps> = ({
       className="flex flex-col items-start w-[150px] py-4 pr-4 cursor-pointer transform transition-transform duration-300 hover:-translate-y-2"
       onClick={handleBookClick}
     >
-      <div className="relative w-[133px] h-[182px] mb-3 bg-transparent">
+      <div className="relative w-[133px] h-[182px] md:w-[200px] md:h-[280px] mb-3 bg-transparent">
         {/* shadow-saved-report */}
         <Image
           src={image || "/images/savedReportBook1.png"}
@@ -69,7 +69,7 @@ const SavedReportItem: React.FC<BookCardProps> = ({
           <span className="ml-1 text-[8px]">{chipText}</span>
         </div>
       )}
-      <p className="font-light font-roboto-condensed leading-[21px] text-[15px] line-clamp-3">
+      <p className="font-light font-roboto text-black leading-[21px] text-[15px] line-clamp-3">
         {title}
       </p>
     </div>
