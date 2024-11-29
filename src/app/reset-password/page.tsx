@@ -89,7 +89,7 @@ const RootPage: React.FC = () => {
           router.push("/");
           return;
         } else {
-          let erroMessage =
+          const erroMessage =
             response.data.message ||
             "Something went wrong, please try again later";
           toast.warning(erroMessage, {
