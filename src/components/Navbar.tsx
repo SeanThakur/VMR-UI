@@ -13,13 +13,7 @@ const Navbar: React.FC = () => {
   const router = useRouter();
   const { logout } = useAuthStore();
 
-  const {
-    activeTab,
-    setActiveTab,
-    selectBook,
-    selectPdfViewer,
-    selectCategoriesListing,
-  } = useTabStore();
+  const { activeTab, setActiveTab } = useTabStore();
 
   const onLoggingOut = () => {
     logout();
@@ -27,27 +21,29 @@ const Navbar: React.FC = () => {
   };
 
   const tabs = [
-    { label: "Reports" },
-    { label: "Insights" },
-    { label: "Organizations" },
-    { label: "Consultations" },
+    { label: "Reports", route: "/home" },
+    { label: "Insights", route: "/insights" },
+    { label: "Organizations", route: "/home" },
+    { label: "Consultations", route: "/home" },
   ];
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const onTabClick = (label: string, route: string) => {
+    setActiveTab(label);
+    router.push(route);
+  };
+
   const onHomeLink = () => {
-    selectPdfViewer(false);
-    selectCategoriesListing(false);
-    selectBook(false);
     setActiveTab("Reports");
     router.push("/home");
   };
 
   return (
     <div className="shadow-md">
-      <div className="bg-navbar-gradient rounded-tl-[10px] rounded-tr-[10px] flex justify-between items-center px-4 md:px-8 md: py-5 py-3">
+      <div className="bg-navbar-gradient flex justify-between items-center px-4 md:px-8 md: py-5 py-3">
         <div className="flex items-center">
           <div
             onClick={onHomeLink}
@@ -103,7 +99,7 @@ const Navbar: React.FC = () => {
                   ? "bg-tab-button-gradient rounded-[8px] text-white absolute inset-0 h-full z-0"
                   : "text-white hover:text-[#05B3C0]"
               }`}
-              onClick={() => setActiveTab(tab.label)}
+              onClick={() => onTabClick(tab.label, tab.route)}
             >
               {tab.label}
             </a>
@@ -138,7 +134,7 @@ const Navbar: React.FC = () => {
             <a
               key={tab.label}
               className={`block text-gray-700 font-semibold hover:underline cursor-pointer`}
-              onClick={() => setActiveTab(tab.label)}
+              onClick={() => onTabClick(tab.label, tab.route)}
             >
               {tab.label}
             </a>

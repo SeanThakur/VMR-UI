@@ -1,5 +1,6 @@
 import { useTabStore } from "@/store/store";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface RelatedReportBookProps {
@@ -11,10 +12,12 @@ const RelatedReportItem: React.FC<RelatedReportBookProps> = ({
   image,
   title,
 }) => {
-  const { selectBook } = useTabStore();
+  const { setActiveTab } = useTabStore();
+  const router = useRouter();
 
   const handleBookClick = () => {
-    selectBook(true);
+    setActiveTab("Reports");
+    router.push("/client");
   };
   return (
     <div

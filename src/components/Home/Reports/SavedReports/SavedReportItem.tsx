@@ -1,6 +1,7 @@
 import { useTabStore } from "@/store/store";
 import { UserReportChipType } from "@/utils/data";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const chipIcons = {
   requested: "/icons/requested.svg",
@@ -18,10 +19,12 @@ const SavedReportItem: React.FC<BookCardProps> = ({
   title,
   chipText,
 }) => {
-  const { selectBook } = useTabStore();
+  const { setActiveTab } = useTabStore();
+  const router = useRouter();
 
   const handleBookClick = () => {
-    selectBook(true);
+    setActiveTab("Reports");
+    router.push("/client");
   };
 
   return (

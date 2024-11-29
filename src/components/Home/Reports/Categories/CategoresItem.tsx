@@ -1,5 +1,6 @@
 import { useTabStore } from "@/store/store";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface CategoresItemProps {
@@ -8,10 +9,12 @@ interface CategoresItemProps {
 }
 
 const CategoresItem: React.FC<CategoresItemProps> = ({ image, title }) => {
-  const { selectCategoriesListing } = useTabStore();
+  const { setActiveTab } = useTabStore();
+  const router = useRouter();
 
   const onCategoriesSelect = () => {
-    selectCategoriesListing(true);
+    setActiveTab("Reports");
+    router.push("/category");
   };
   return (
     <div

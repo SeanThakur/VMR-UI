@@ -18,15 +18,17 @@ import CategoresItem from "../Home/Reports/Categories/CategoresItem";
 import { useRouter } from "next/navigation";
 
 const Book = () => {
-  const { selectBook, selectPdfViewer } = useTabStore();
+  const { setActiveTab } = useTabStore();
   const router = useRouter();
 
   const handleBookClick = () => {
-    selectBook(false);
+    setActiveTab("Reports");
+    router.push("/home");
   };
 
   const onViewReport = () => {
-    selectPdfViewer(true);
+    setActiveTab("Insights");
+    router.push("/report-view");
   };
 
   return (

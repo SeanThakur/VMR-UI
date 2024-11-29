@@ -9,13 +9,15 @@ import InsightsConfig from "./InsightsConfig/Index";
 import TestimonialBanner from "./TestimonialBanner";
 import { useTabStore } from "@/store/store";
 import Infographics from "./Infographics";
+import { useRouter } from "next/navigation";
 
 const PDFViewer = () => {
-  const { selectPdfViewer, setActiveTab } = useTabStore();
+  const { setActiveTab } = useTabStore();
+  const router = useRouter();
 
   const handleBookClick = () => {
-    selectPdfViewer(false);
     setActiveTab("Reports");
+    router.push("/client");
   };
   return (
     <Fragment>

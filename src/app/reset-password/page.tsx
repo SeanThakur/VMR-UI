@@ -4,8 +4,10 @@ import React, { Fragment, useState } from "react";
 import Head from "next/head";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import Image from "next/image";
-// import axiosInstance from "@/utils/axiosInstance";
+import axiosInstance from "@/utils/axiosInstance";
 import { ImSpinner2 } from "react-icons/im";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const RootPage: React.FC = () => {
   //   const router = useRouter();
@@ -29,9 +31,38 @@ const RootPage: React.FC = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      setSentCode(true);
+      if (!sentCode) {
+        const response = await axiosInstance.post("/request_otp.php", {
+          email: email,
+        });
+        if (response) {
+          setSentCode(true);
+          console.log("reset login code response", response);
+        } else {
+          setSentCode(false);
+        }
+      } else {
+        // const response = await axiosInstance.post("/otp_validate.php", {
+        //   email: email,
+        //   otp: otpCode,
+        //   new_password: newPassword,
+        // });
+      }
     } catch (error) {
-      window.alert("Error occured: " + error);
+      if (axios.isAxiosError(error)) {
+        const errorMessage =
+          error?.response?.data?.status_message ||
+          "An unexpected error occurred.";
+        toast.warning(errorMessage, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
     } finally {
       setLoading(false);
     }
@@ -58,7 +89,7 @@ const RootPage: React.FC = () => {
         <div className="w-full lg:w-[50%] bg-white flex flex-col justify-center p-4 sm:p-8 md:p-12 min-h-screen">
           <div className="max-w-[395px] height-fill-available md:max-w-[502px] md:w-[400px] mx-auto relative h-[95vh] md:h-full flex flex-col justify-center items-center">
             <div className="flex flex-col items-center justify-center absolute top-[6%]">
-              <div className="relative w-[247px] h-[55px] md:w-[308px] md:h-[72px]">
+              <div className="relative w-[247px] h-[55px]">
                 <Image
                   src="/images/VMRLoginLogo.png"
                   alt="Logo"

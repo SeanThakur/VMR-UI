@@ -3,6 +3,8 @@ import RelatedReportItem from "./RelatedReportItem";
 import { RelatedReportResponseDto } from "@/utils/data";
 import axiosInstance from "@/utils/axiosInstance";
 import SavedReportSkeletonItem from "../SavedReports/SavedReportSkeletonItem";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const RelatedReports = () => {
   const [userRelatedReportData, setRelatedReportData] = useState<
@@ -15,7 +17,20 @@ const RelatedReports = () => {
       const respose = await axiosInstance.get("Related_reports.php");
       setRelatedReportData(respose.data.data);
     } catch (error) {
-      console.log(error);
+      if (axios.isAxiosError(error)) {
+        const errorMessage =
+          error?.response?.data?.status_message ||
+          "An unexpected error occurred.";
+        toast.warning(errorMessage, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
     } finally {
       setLoading(false);
     }

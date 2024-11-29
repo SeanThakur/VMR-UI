@@ -6,6 +6,7 @@ import CustomerTestimonials from "@/components/Sales/CustomerTestimonials/Index"
 import SalesFAQS from "@/components/Sales/FAQs/Index";
 import SalesNav from "@/components/Sales/SalesNav";
 import TabComponent from "@/components/Sales/Tabs/TabComponent";
+import { useTabStore } from "@/store/store";
 import { categoriesItem, relatedReports } from "@/utils/data";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -13,6 +14,12 @@ import React from "react";
 
 const Sales = () => {
   const router = useRouter();
+  const { setActiveTab } = useTabStore();
+
+  const onReportView = () => {
+    setActiveTab("Insights");
+    router.push("/report-view");
+  };
   return (
     <div className="flex flex-col fill-available w-full bg-cover bg-center">
       <SalesNav />
@@ -23,7 +30,7 @@ const Sales = () => {
         <div className="flex flex-col w-full lg:w-[85%] mr-4">
           <div
             className="flex flex-row items-center mb-6 cursor-pointer"
-            onClick={() => router.push("/home")}
+            onClick={onReportView}
           >
             <div className="w-[18px] h-[18px] mr-2">
               <Image
