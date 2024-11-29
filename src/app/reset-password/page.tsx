@@ -8,23 +8,26 @@ import axiosInstance from "@/utils/axiosInstance";
 import { ImSpinner2 } from "react-icons/im";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const RootPage: React.FC = () => {
-  //   const router = useRouter();
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  const [showNewPassword, setShowNewPassword] = useState<boolean>(false);
+  const [showConfirmPassword, setShowConfirmPassword] =
+    useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [sentCode, setSentCode] = useState<boolean>(false);
   const [password, setPassword] = useState<string>("");
-  const [newPassword, setNewPassword] = useState<string>("");
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [newOTP, setNewOTP] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
   };
 
-  const toggleNewPasswordVisibility = () => {
-    setShowNewPassword((prev) => !prev);
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword((prev) => !prev);
   };
 
   const onFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -36,17 +39,74 @@ const RootPage: React.FC = () => {
           email: email,
         });
         if (response) {
+          if (response.data.status === "error") {
+            toast.warning(response.data.message, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+            return;
+          }
           setSentCode(true);
-          console.log("reset login code response", response);
         } else {
           setSentCode(false);
         }
       } else {
-        // const response = await axiosInstance.post("/otp_validate.php", {
-        //   email: email,
-        //   otp: otpCode,
-        //   new_password: newPassword,
-        // });
+        if (confirmPassword != password) {
+          toast.warning(
+            "New password and confirm password is not matched! please try again",
+            {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            }
+          );
+          return;
+        }
+        const response = await axiosInstance.post("/otp_validate.php", {
+          email: email,
+          otp: newOTP,
+          new_password: password,
+        });
+        if (response.data.status != "error") {
+          toast.success("Your password is successfully changed", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          router.push("/");
+          return;
+        } else {
+          let erroMessage =
+            response.data.message ||
+            "Something went wrong, please try again later";
+          toast.warning(erroMessage, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          setSentCode(false);
+          setNewOTP("");
+          setPassword("");
+          setConfirmPassword("");
+          return;
+        }
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -127,33 +187,20 @@ const RootPage: React.FC = () => {
                 </div>
                 {sentCode && (
                   <Fragment>
-                    <div className="relative">
-                      <input
-                        type={showNewPassword ? "text" : "password"}
-                        value={newPassword}
-                        onChange={(e) => setNewPassword(e.target.value)}
-                        placeholder="New Password"
-                        className="w-full text-[14px] px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required
-                      />
-                      <button
-                        type="button"
-                        onClick={toggleNewPasswordVisibility}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600"
-                      >
-                        {showNewPassword ? (
-                          <AiFillEyeInvisible size={20} />
-                        ) : (
-                          <AiFillEye size={20} />
-                        )}
-                      </button>
-                    </div>
+                    <input
+                      type={"text"}
+                      value={newOTP}
+                      onChange={(e) => setNewOTP(e.target.value)}
+                      placeholder="OTP"
+                      className="w-full text-[14px] px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      required
+                    />
                     <div className="relative">
                       <input
                         type={showPassword ? "text" : "password"}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        placeholder="Confirm New Password"
+                        placeholder="New Password"
                         className="w-full text-[14px] px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                       />
@@ -163,6 +210,27 @@ const RootPage: React.FC = () => {
                         className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600"
                       >
                         {showPassword ? (
+                          <AiFillEyeInvisible size={20} />
+                        ) : (
+                          <AiFillEye size={20} />
+                        )}
+                      </button>
+                    </div>
+                    <div className="relative">
+                      <input
+                        type={showConfirmPassword ? "text" : "password"}
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        placeholder="Confirm Password"
+                        className="w-full text-[14px] px-4 py-2 border border-[#CFCFD1] rounded-[8px] bg-white h-[40px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        required
+                      />
+                      <button
+                        type="button"
+                        onClick={toggleConfirmPasswordVisibility}
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600"
+                      >
+                        {showConfirmPassword ? (
                           <AiFillEyeInvisible size={20} />
                         ) : (
                           <AiFillEye size={20} />
