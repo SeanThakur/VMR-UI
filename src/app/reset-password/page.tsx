@@ -103,7 +103,7 @@ const RootPage: React.FC = () => {
               <h2 className="font-roboto text-[20px] leading-[28px] font-semibold text-center mt-4 mb-4">
                 Reset Password
               </h2>
-              <p className="text-[12px] text-[#AAAAAA] font-roboto leading-[21px] font-normal text-center mb-6 capitalize">
+              <p className="text-[12px] text-[#AAAAAA] font-roboto leading-[21px] font-normal text-center mb-6">
                 {sentCode ? (
                   "Please enter new password"
                 ) : (

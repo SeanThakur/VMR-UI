@@ -15,7 +15,7 @@ const RelatedReports = () => {
   const relatedReportAPI = async () => {
     try {
       const respose = await axiosInstance.get("Related_reports.php");
-      setRelatedReportData(respose.data.data);
+      setRelatedReportData(respose.data.data || []);
     } catch (error) {
       if (axios.isAxiosError(error)) {
         const errorMessage =
@@ -31,6 +31,7 @@ const RelatedReports = () => {
           progress: undefined,
         });
       }
+      setRelatedReportData([]);
     } finally {
       setLoading(false);
     }
@@ -42,8 +43,8 @@ const RelatedReports = () => {
 
   return (
     <Fragment>
-      <div className="text-lg text-gray-800 font-light mb-6 text-left">
-        Related Reports
+      <div className="text-[26px] text-black leading-[30px] font-light font-roboto mb-6 text-left uppercase">
+        RELATED REPORTS
       </div>
       {loading ? (
         <div className="flex flex-wrap gap-6 sm:gap-14">
@@ -52,15 +53,23 @@ const RelatedReports = () => {
           ))}
         </div>
       ) : (
-        <div className="relative w-full bg-[#0DAFBF1A] shadow-related-report rounded-lg overflow-x-auto flex space-x-4 sm:space-x-8 px-2 sm:px-4 pt-2">
-          {userRelatedReportData?.map((data) => (
-            <RelatedReportItem
-              key={data.r_no}
-              image={data.image}
-              title={data.r_name}
-            />
-          ))}
-        </div>
+        <Fragment>
+          {userRelatedReportData.length === 0 ? (
+            <div className="rounded-[10px] mt-8 shadow-related-report bg-filter-gradient height-fill-available h-[200px] text-[24px] font-roboto font-normal text-white flex items-center justify-center">
+              There is no Related Reports!
+            </div>
+          ) : (
+            <div className="relative w-full bg-[#0DAFBF1A] shadow-related-report rounded-lg overflow-x-auto flex space-x-4 sm:space-x-8 px-2 sm:px-4 pt-2">
+              {userRelatedReportData.map((data) => (
+                <RelatedReportItem
+                  key={data.r_no}
+                  image={data.image}
+                  title={data.r_name}
+                />
+              ))}
+            </div>
+          )}
+        </Fragment>
       )}
     </Fragment>
   );

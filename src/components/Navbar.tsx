@@ -23,8 +23,8 @@ const Navbar: React.FC = () => {
   const tabs = [
     { label: "Reports", route: "/home" },
     { label: "Insights", route: "/insights" },
-    { label: "Organizations", route: "/home" },
-    { label: "Consultations", route: "/home" },
+    { label: "Organizations", route: "/organizations" },
+    { label: "Consultations", route: "/consultations" },
   ];
 
   const toggleMenu = () => {
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
           </button>
           <button
             onClick={onLoggingOut}
-            className="text-white bg-[#0DAFBF]  px-4 py-1 text-[14px] px-3 py-1 rounded-5px font-roboto-condensed transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE]"
+            className="uppercase text-white bg-[#05B3C0] text-white text-[14px] font-roboto font-medium px-[20px] py-[8px] rounded-5px transform transition-transform duration-300 hover:-translate-y-1 hover:bg-teal-600"
           >
             Logout
           </button>
