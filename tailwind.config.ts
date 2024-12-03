@@ -30,6 +30,8 @@ const config: Config = {
           "linear-gradient(90deg, #2C2A48 0%, #6B66AE 100%)",
         "filter-gradient":
           "linear-gradient(90deg, rgba(33, 161, 215, 0.7) 0%, #3B4ACC 100%)",
+        "categories-filter-gradient":
+          "linear-gradient(90deg, rgba(33, 161, 215, 0.698039) 0%, #3B4ACC 100%)",
       },
       borderRadius: {
         "5px": "5px",

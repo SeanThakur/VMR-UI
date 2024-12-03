@@ -22,6 +22,7 @@ const Navbar: React.FC = () => {
 
   const tabs = [
     { label: "Reports", route: "/home" },
+    { label: "Categories", route: "/categories" },
     { label: "Insights", route: "/insights" },
     { label: "Organizations", route: "/organizations" },
     { label: "Consultations", route: "/consultations" },

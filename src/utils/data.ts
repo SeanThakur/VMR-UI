@@ -124,6 +124,65 @@ export const relatedReports: RelatedReportDto[] = [
   },
 ];
 
+export const categoriesViewallItem: Category[] = [
+  {
+    image: "/images/categories1.png",
+    title: "CAMERA",
+  },
+  {
+    image: "/images/categories2.png",
+    title: "Global Total Reflection",
+  },
+  {
+    image: "/images/categories3.png",
+    title: "Global And GCC HDPE",
+  },
+  {
+    image: "/images/categories4.png",
+    title: "Global Service",
+  },
+  {
+    image: "/images/categories5.png",
+    title: "Global Glycyrrhizine",
+  },
+  {
+    image: "/images/categories1.png",
+    title: "Global Haemodialysis",
+  },
+  {
+    image: "/images/categories1.png",
+    title: "CAMERA",
+  },
+  {
+    image: "/images/categories2.png",
+    title: "Global Total Reflection",
+  },
+  {
+    image: "/images/categories3.png",
+    title: "Global And GCC HDPE",
+  },
+  {
+    image: "/images/categories4.png",
+    title: "Global Service",
+  },
+  {
+    image: "/images/categories5.png",
+    title: "Global Glycyrrhizine",
+  },
+  {
+    image: "/images/categories1.png",
+    title: "Global Haemodialysis",
+  },
+  {
+    image: "/images/categories5.png",
+    title: "Global Glycyrrhizine",
+  },
+  {
+    image: "/images/categories1.png",
+    title: "Global Haemodialysis",
+  },
+];
+
 export const categoriesItem: Category[] = [
   {
     image: "/images/categories1.png",
