@@ -36,7 +36,7 @@ const RootPage: React.FC = () => {
       localStorage.setItem("auth_token", token);
       setName(name);
       document.cookie = `auth_token=${token}; path=/; secure; samesite=strict`;
-      setLoggedIn(true, response.data.data.user_name);
+      setLoggedIn(true);
       router.push("/home");
     } catch (error) {
       if (axios.isAxiosError(error)) {
