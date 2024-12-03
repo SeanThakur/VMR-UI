@@ -72,7 +72,10 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className="hidden md:flex flex flex-row items-center bg-[#05B3C0] text-white text-[14px] font-roboto font-medium leading-[16px] px-[20px] py-[10px] rounded-5px hover:bg-teal-600 transition duration-300">
+          <button
+            onClick={() => router.push("/sales")}
+            className="hidden md:flex flex flex-row items-center bg-[#05B3C0] text-white text-[14px] font-roboto font-medium leading-[16px] px-[20px] py-[10px] rounded-5px hover:bg-teal-600 transition duration-300"
+          >
             <div className="w-[18px] h-[18px] mr-2">
               <Image
                 src="/icons/add-solid.svg"
@@ -102,7 +105,7 @@ const Navbar: React.FC = () => {
 
       {/* Bottom Navigation (hidden on mobile, shows in menu) */}
       <div className="relative bg-black shadow-table-content md:flex justify-between items-center px-4 md:px-0 hidden">
-        <div className="flex space-x-4 md:space-x-8 py-5 px-4 relative w-full">
+        <div className="flex space-x-4 md:space-x-6 py-5 px-4 relative w-full">
           {tabs.map((tab) => (
             <a
               key={tab.label}
@@ -119,21 +122,21 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Right-side Icons */}
-        <div className="flex space-x-6 z-10 mr-8">
-          <div className="w-[21px] h-[31px] mr-2 cursor-pointer">
+        <div className="lg:flex hidden flex space-x-6 z-10 mr-8">
+          <div className="w-[16px] h-[16px] mr-2 cursor-pointer">
             <Image
               src="/icons/preferences-white.svg"
               alt="preferences"
-              width={20}
-              height={20}
+              width={16}
+              height={16}
             />
           </div>
-          <div className="w-[21px] h-[26px] cursor-pointer">
+          <div className="w-[16px] h-[16px] cursor-pointer">
             <Image
               src="/icons/notification-white.svg"
               alt="notification"
-              width={20}
-              height={20}
+              width={16}
+              height={16}
             />
           </div>
         </div>
@@ -141,18 +144,29 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="bg-white md:hidden px-4 py-3 space-y-2 shadow-md">
+        <div className="bg-black md:hidden px-4 py-3 space-y-2 shadow-md">
           {tabs.map((tab) => (
             <a
               key={tab.label}
-              className={`block text-gray-700 font-semibold hover:underline cursor-pointer`}
+              className={`block text-white font-medium font-roboto text-[14px] leading-[23px] px-2 py-1 hover:underline cursor-pointer`}
               onClick={() => onTabClick(tab.label, tab.route)}
             >
               {tab.label}
             </a>
           ))}
 
-          <button className="block w-full bg-teal-500 text-white py-2 rounded-md hover:bg-teal-600 transition duration-300 mt-2">
+          <button
+            onClick={() => router.push("/sales")}
+            className="w-full flex flex-row items-center justify-center bg-[#05B3C0] text-white text-[14px] font-roboto font-medium leading-[16px] px-[20px] py-[10px] rounded-5px hover:bg-teal-600 transition duration-300"
+          >
+            <div className="w-[18px] h-[18px] mr-2">
+              <Image
+                src="/icons/add-solid.svg"
+                alt="subscribe"
+                width={18}
+                height={18}
+              />
+            </div>
             SUBSCRIBE
           </button>
         </div>

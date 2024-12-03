@@ -10,7 +10,7 @@ const Categories = () => {
         Categories
       </p>
       <CategoriesFilterTabs />
-      <div className="grid grid-cols-4 gap-12 pb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12">
         {categoriesViewallItem.map((item, idx) => (
           <div
             className="flex justify-center items-center cursor-pointer transform transition-transform duration-300 hover:-translate-y-2"

@@ -14,22 +14,20 @@ const CategoriesFilterTabs = () => {
     setActiveFilter(tab);
   };
   return (
-    <div>
-      <div className="flex space-x-4 md:space-x-8 py-8 relative w-full">
-        {filterTabs.map((tab) => (
-          <a
-            key={tab.label}
-            className={`text-center relative rounded-[10px] z-10 font-medium font-roboto text-[16px] leading-[18px] px-9 py-2 cursor-pointer ${
-              activeFilter === tab.label
-                ? "bg-categories-filter-gradient text-white absolute inset-0 h-full z-0"
-                : " text-black border border-[#CFCFD1]"
-            }`}
-            onClick={() => onFilterTabClick(tab.label)}
-          >
-            {tab.label}
-          </a>
-        ))}
-      </div>
+    <div className="flex flex-wrap gap-x-3 justify-center lg:justify-start gap-y-4 md:space-x-6 py-8 w-full">
+      {filterTabs.map((tab) => (
+        <a
+          key={tab.label}
+          className={`text-center flex items-center justify-center h-[40px] rounded-[10px] z-10 font-medium font-roboto text-[16px] leading-[18px] px-9 py-2 cursor-pointer ${
+            activeFilter === tab.label
+              ? "bg-categories-filter-gradient text-white"
+              : " text-black border border-[#CFCFD1]"
+          }`}
+          onClick={() => onFilterTabClick(tab.label)}
+        >
+          {tab.label}
+        </a>
+      ))}
     </div>
   );
 };
