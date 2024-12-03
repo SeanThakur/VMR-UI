@@ -3,14 +3,15 @@
 import { useTabStore } from "@/store/store";
 import { useAuthStore } from "@/store/useAuthStore";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
+  const pathName = usePathname();
   const { logout } = useAuthStore();
 
   const { activeTab, setActiveTab } = useTabStore();
@@ -20,13 +21,16 @@ const Navbar: React.FC = () => {
     router.push("/");
   };
 
-  const tabs = [
-    { label: "Reports", route: "/home" },
-    { label: "Categories", route: "/categories" },
-    { label: "Insights", route: "/insights" },
-    { label: "Organizations", route: "/organizations" },
-    { label: "Consultations", route: "/consultations" },
-  ];
+  const tabs = useMemo(
+    () => [
+      { label: "Reports", route: "/home" },
+      { label: "Categories", route: "/categories" },
+      { label: "Insights", route: "/insights" },
+      { label: "Organizations", route: "/organizations" },
+      { label: "Consultations", route: "/consultations" },
+    ],
+    []
+  );
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -41,6 +45,13 @@ const Navbar: React.FC = () => {
     setActiveTab("Reports");
     router.push("/home");
   };
+
+  useEffect(() => {
+    const currentRoute = pathName;
+    const activeTab =
+      tabs.find((tab) => tab.route === currentRoute)?.label || "Reports";
+    setActiveTab(activeTab);
+  }, [pathName, setActiveTab, tabs]);
 
   return (
     <div className="shadow-md">
