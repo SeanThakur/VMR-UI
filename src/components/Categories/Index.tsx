@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import SecondaryInput from "../SecondaryInput";
 import RelatedReportItem from "../Home/Reports/RelatedReports/RelatedReportItem";
 import { categoriesItem, relatedReports } from "@/utils/data";
@@ -13,6 +13,8 @@ type Card = {
 };
 
 const CategoriesListing = () => {
+  const [categoriesSearchReport, setCategoriesSearchReport] =
+    useState<string>("");
   const categoriesCard: Card[] = [
     {
       title: "Global Treasury And Risk Management Software Market",
@@ -65,7 +67,13 @@ const CategoriesListing = () => {
           </div>
           <div className="flex flex-col justify-between items-end">
             <div className="w-full sm:w-auto mb-4">
-              <SecondaryInput label="Search Keyword" />
+              <SecondaryInput
+                label="Search Keyword"
+                inputValue={categoriesSearchReport}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setCategoriesSearchReport(e.target.value)
+                }
+              />
             </div>
             <span className="underline text-[18px] font-light cursor-pointer font-roboto-mono leading-[23px]">
               View all reports

@@ -13,7 +13,6 @@ import { useAuthStore } from "@/store/useAuthStore";
 const Reports = () => {
   const [searchReport, setSearchReport] = useState<string>("");
   const { name } = useAuthStore();
-  console.log("page", name);
   // const [debouncedSearch, setDebouncedSearch] = useState<string>(searchReport);
   // const [searchLoading, setSearchLoading] = useState<boolean>(false);
   // const [searchData, setSearchData] = useState<UserReportType[]>([]);
