@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 interface AuthState {
   isLoggedIn: boolean;
-  setLoggedIn: (value: boolean, name: string) => void;
+  setLoggedIn: (value: boolean) => void;
   logout: () => void;
   name: string;
   setName: (value: string) => void;
