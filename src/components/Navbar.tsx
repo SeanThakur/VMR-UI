@@ -106,7 +106,7 @@ const Navbar: React.FC = () => {
           {tabs.map((tab) => (
             <a
               key={tab.label}
-              className={`relative z-10 font-medium font-roboto text-[20px] leading-[23px] px-8 py-2 cursor-pointer ${
+              className={`relative z-10 font-medium font-roboto text-[14px] leading-[23px] px-8 py-2 cursor-pointer ${
                 activeTab === tab.label
                   ? "bg-tab-button-gradient rounded-[8px] text-white absolute inset-0 h-full z-0"
                   : "text-white hover:text-[#05B3C0]"

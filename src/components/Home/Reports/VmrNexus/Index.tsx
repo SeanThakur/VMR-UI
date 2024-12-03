@@ -1,6 +1,6 @@
 import SecondaryInput from "@/components/SecondaryInput";
 import Image from "next/image";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import CardItem from "./CardItem";
 import Banner from "../Banner";
 import ContactUs from "../ContactUs";
@@ -10,6 +10,7 @@ type NexusCard = {
 };
 
 const VMRNexus = () => {
+  const [vmrSearchReport, setVMRSearchReport] = useState<string>("");
   const nexusCard: NexusCard[] = [
     {
       title: "Global Treasury And Risk Management Software Market",
@@ -69,7 +70,13 @@ const VMRNexus = () => {
           </div>
         </div>
         <div className="w-full md:w-auto">
-          <SecondaryInput label="Search Keyword" />
+          <SecondaryInput
+            label="Search Keyword"
+            inputValue={vmrSearchReport}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setVMRSearchReport(e.target.value)
+            }
+          />
         </div>
       </div>
       <div className="flex flex-col mb-8">

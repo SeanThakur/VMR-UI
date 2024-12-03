@@ -106,7 +106,7 @@ const SavedReports = () => {
           {userReportData?.length > 4 && (
             <div
               onClick={reportPagnination}
-              className={`w-[16px] h-[16px] mr-2 mt-3 sm:mt-0 cursor-pointer hidden md:block ${
+              className={`w-[18px] h-[18px] mr-2 mt-3 sm:mt-0 cursor-pointer hidden md:block ${
                 isForward ? "transform rotate-0" : "transform rotate-180"
               }`}
             >
