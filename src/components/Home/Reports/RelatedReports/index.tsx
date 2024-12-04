@@ -2,9 +2,9 @@ import React, { Fragment, useEffect, useState } from "react";
 import RelatedReportItem from "./RelatedReportItem";
 import { RelatedReportResponseDto } from "@/utils/data";
 import axiosInstance from "@/utils/axiosInstance";
-import SavedReportSkeletonItem from "../SavedReports/SavedReportSkeletonItem";
 import axios from "axios";
 import { toast } from "react-toastify";
+import RelatedReportSkeletonItem from "./RelatedReportSkeletonItem";
 
 const RelatedReports = () => {
   const [userRelatedReportData, setRelatedReportData] = useState<
@@ -49,7 +49,7 @@ const RelatedReports = () => {
       {loading ? (
         <div className="flex flex-wrap gap-6 sm:gap-14">
           {[1, 2, 3, 4, 5].map((_, idx) => (
-            <SavedReportSkeletonItem key={idx} />
+            <RelatedReportSkeletonItem key={idx} />
           ))}
         </div>
       ) : (
