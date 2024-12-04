@@ -1,80 +1,24 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import SavedReportItem from "./SavedReportItem";
 import Image from "next/image";
-import axiosInstance from "@/utils/axiosInstance";
-import { UserReportType } from "@/utils/data";
 import SavedReportSkeletonItem from "./SavedReportSkeletonItem";
-import axios from "axios";
-import { toast } from "react-toastify";
+import { UserReportType } from "@/utils/data";
 
-const SavedReports = () => {
-  const [userReportData, setUserReportData] = useState<UserReportType[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [paginate, setPaginate] = useState<{ start: number; end: number }>({
-    start: 0,
-    end: 5,
-  });
-  const [isForward, setIsForward] = useState<boolean>(true);
+interface SavedReportInterface {
+  loading: boolean;
+  userReportData: UserReportType[];
+  paginate: { start: number; end: number };
+  isForward: boolean;
+  reportPagnination: () => void;
+}
 
-  const usersReportAPI = async () => {
-    try {
-      const respose = await axiosInstance.get("users_report.php");
-      setUserReportData(respose.data.data || []);
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        const errorMessage =
-          error?.response?.data?.status_message ||
-          "An unexpected error occurred.";
-        toast.warning(errorMessage, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-      }
-      setUserReportData([]);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const reportPagnination = () => {
-    const totalData = userReportData.length;
-
-    if (isForward) {
-      const newStart = paginate.start + 5;
-      const newEnd = paginate.end + 5;
-
-      if (newEnd >= totalData) {
-        setIsForward(false);
-      }
-
-      setPaginate({
-        start: newStart,
-        end: Math.min(newEnd, totalData),
-      });
-    } else {
-      const newStart = Math.max(0, paginate.start - 5);
-      const newEnd = Math.max(5, paginate.end - 5);
-
-      if (newStart === 0) {
-        setIsForward(true);
-      }
-
-      setPaginate({
-        start: newStart,
-        end: newEnd,
-      });
-    }
-  };
-
-  useEffect(() => {
-    usersReportAPI();
-  }, []);
-
+const SavedReports: React.FC<SavedReportInterface> = ({
+  loading,
+  userReportData,
+  paginate,
+  isForward,
+  reportPagnination,
+}) => {
   return (
     <Fragment>
       {loading ? (
