@@ -22,6 +22,11 @@ export type UserReportType = {
   chipText?: UserReportChipType;
 };
 
+export type CategoriesType = {
+  category_main: string;
+  category_image: string;
+};
+
 type Category = {
   image: string;
   title: string;
