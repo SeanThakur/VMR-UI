@@ -229,7 +229,10 @@ const Sales = () => {
           <p className="text-[26px] text-black font-light">
             RELATED CATEGORIES
           </p>
-          <p className="underline text-right font-light font-black text-[18px] cursor-pointer">
+          <p
+            className="underline text-right font-light font-black text-[18px] cursor-pointer"
+            onClick={() => router.push("/categories")}
+          >
             View 184 reports
           </p>
         </div>

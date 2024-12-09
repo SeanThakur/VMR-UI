@@ -12,7 +12,7 @@ interface TabState {
 }
 
 export const useTabStore = create<TabState>((set) => ({
-  activeTab: "Reports",
+  activeTab: "Home",
   bookSelected: false,
   pdfViewerSelected: false,
   categoriesSelected: false,

@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
 
   const tabs = useMemo(
     () => [
-      { label: "Reports", route: "/home" },
+      { label: "Home", route: "/home" },
       { label: "Categories", route: "/categories" },
       { label: "Insights", route: "/insights" },
       { label: "Organizations", route: "/organizations" },
@@ -42,19 +42,19 @@ const Navbar: React.FC = () => {
   };
 
   const onHomeLink = () => {
-    setActiveTab("Reports");
+    setActiveTab("Home");
     router.push("/home");
   };
 
   useEffect(() => {
     const currentRoute = pathName;
     const activeTab =
-      tabs.find((tab) => tab.route === currentRoute)?.label || "Reports";
+      tabs.find((tab) => tab.route === currentRoute)?.label || "Home";
     setActiveTab(activeTab);
   }, [pathName, setActiveTab, tabs]);
 
   return (
-    <div className="shadow-md">
+    <div id="navbar" className="shadow-md">
       <div className="bg-navbar-gradient flex justify-between items-center px-4 md:px-8 md: py-5 py-3">
         <div className="flex items-center">
           <div

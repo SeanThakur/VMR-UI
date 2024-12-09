@@ -27,7 +27,7 @@ const SalesNav: React.FC = () => {
   };
 
   return (
-    <div className="shadow-md">
+    <div id="navbar" className="shadow-md">
       <div className="bg-[#3B4ACC] flex justify-between items-center px-4 md:px-6 py-3">
         <div className="flex items-center space-x-4 md:space-x-6">
           <div
@@ -55,7 +55,7 @@ const SalesNav: React.FC = () => {
         </div>
         <button
           onClick={onLoggingOut}
-          className="text-white bg-[#0DAFBF]  px-4 py-1 text-[14px] px-3 py-1 rounded-5px font-roboto-condensed transform transition-transform duration-300 hover:-translate-y-1 hover:bg-[#0000EE]"
+          className="uppercase text-white bg-[#05B3C0] text-white text-[14px] font-roboto font-medium px-[20px] py-[8px] rounded-5px transform transition-transform duration-300 hover:-translate-y-1 hover:bg-teal-600"
         >
           Logout
         </button>

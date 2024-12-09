@@ -13,7 +13,7 @@ const CategoresItem: React.FC<CategoresItemProps> = ({ image, title }) => {
   const router = useRouter();
 
   const onCategoriesSelect = () => {
-    setActiveTab("Reports");
+    setActiveTab("Home");
     router.push("/category");
   };
   return (
