@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import CategoriesFilterTabs from "./FilterTabs";
-import { CategoriesType } from "@/utils/data";
+import { CategoriesFilterType, CategoriesType } from "@/utils/data";
 import Image from "next/image";
 import axiosInstance from "@/utils/axiosInstance";
 import axios from "axios";
@@ -9,12 +9,20 @@ import CategoriesSkeletonItem from "./CategoriesSkeletonItem";
 
 const Categories = () => {
   const [categoriesData, setCategoriesData] = useState<CategoriesType[]>([]);
+  const [categoriesFilterData, setCategoriesFilterData] = useState<
+    CategoriesFilterType[]
+  >([{ category_main: "All" }]);
   const [loading, setLoading] = useState<boolean>(true);
 
   const getCategoriesAPI = async () => {
     try {
       const respose = await axiosInstance.get("category.php");
       setCategoriesData(respose.data.data || []);
+      respose.data.data.forEach((el: CategoriesType) => {
+        setCategoriesFilterData(
+          (data) => [...data, { category_main: el.category_main }] || []
+        );
+      });
     } catch (error) {
       if (axios.isAxiosError(error)) {
         const errorMessage =
@@ -44,7 +52,7 @@ const Categories = () => {
       <p className="text-black font-roboto font-medium text-[32px] leading-[37.5px]">
         Categories
       </p>
-      <CategoriesFilterTabs />
+      <CategoriesFilterTabs data={categoriesFilterData} />
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-6">
           {Array(8)

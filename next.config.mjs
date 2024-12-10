@@ -7,7 +7,22 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        hostname: "www.verifiedmarketreports.com",
+      },
+      {
         hostname: "www.marketresearchandnews.com",
+      },
+      {
+        hostname: "www.opal-rt.com",
+      },
+      {
+        hostname: "www.elock.com",
+      },
+      {
+        hostname: "www.starchemindia.in",
+      },
+      {
+        hostname: "www.cumi-murugappa.com",
       },
     ],
   },

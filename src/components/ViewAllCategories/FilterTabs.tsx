@@ -1,31 +1,33 @@
+import { CategoriesFilterType } from "@/utils/data";
 import React, { useState } from "react";
 
-const CategoriesFilterTabs = () => {
+interface CategoriesFilterTabsInterface {
+  data: CategoriesFilterType[];
+}
+
+const CategoriesFilterTabs: React.FC<CategoriesFilterTabsInterface> = ({
+  data,
+}) => {
   const [activeFilter, setActiveFilter] = useState<string>("All");
-  const filterTabs = [
-    { label: "All" },
-    { label: "Railway" },
-    { label: "Bikes" },
-    { label: "Tires and wheels" },
-    { label: "Human Resources Services" },
-    { label: "Professional Services" },
-  ];
+
   const onFilterTabClick = (tab: string) => {
     setActiveFilter(tab);
   };
+
   return (
-    <div className="flex flex-wrap gap-x-3 justify-center lg:justify-start gap-y-4 md:space-x-6 py-8 w-full">
-      {filterTabs.map((tab) => (
+    <div className="flex overflow-x-auto gap-x-3 justify-center lg:justify-start gap-y-4 md:space-x-6 py-8 w-full">
+      {data.map((tab) => (
         <a
-          key={tab.label}
-          className={`text-center flex items-center justify-center h-[40px] rounded-[10px] z-10 font-medium font-roboto text-[16px] leading-[18px] px-9 py-2 cursor-pointer ${
-            activeFilter === tab.label
+          key={tab.category_main}
+          className={`text-center flex items-center justify-center max-w-fit h-[40px] rounded-[10px] font-medium font-roboto text-[16px] leading-[18px] px-9 py-2 cursor-pointer whitespace-nowrap text-ellipsis ${
+            activeFilter === tab.category_main
               ? "bg-categories-filter-gradient text-white"
               : " text-black border border-[#CFCFD1]"
           }`}
-          onClick={() => onFilterTabClick(tab.label)}
+          onClick={() => onFilterTabClick(tab.category_main)}
+          title={tab.category_main}
         >
-          {tab.label}
+          {tab.category_main}
         </a>
       ))}
     </div>
