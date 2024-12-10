@@ -15,11 +15,11 @@ const CategoriesFilterTabs: React.FC<CategoriesFilterTabsInterface> = ({
   };
 
   return (
-    <div className="flex overflow-x-auto gap-x-3 justify-center lg:justify-start gap-y-4 md:space-x-6 py-8 w-full">
+    <div className="flex overflow-x-auto gap-x-1 justify-center lg:justify-start gap-y-4 md:space-x-6 py-8 w-full">
       {data.map((tab) => (
         <a
           key={tab.category_main}
-          className={`text-center flex items-center justify-center max-w-fit h-[40px] rounded-[10px] font-medium font-roboto text-[16px] leading-[18px] px-9 py-2 cursor-pointer whitespace-nowrap text-ellipsis ${
+          className={`text-center flex items-center justify-center max-w-fit h-[40px] rounded-[10px] font-medium font-roboto text-[16px] leading-[18px] px-4 py-2 cursor-pointer whitespace-nowrap text-ellipsis ${
             activeFilter === tab.category_main
               ? "bg-categories-filter-gradient text-white"
               : " text-black border border-[#CFCFD1]"

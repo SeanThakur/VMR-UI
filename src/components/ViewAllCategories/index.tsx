@@ -84,7 +84,7 @@ const Categories = () => {
                         className="rounded-tl-[20px] rounded-tr-[20px]"
                       />
                     </div>
-                    <p className="text-black font-roboto font-normal text-[16px] text-left px-4 py-2 leading-[18px]">
+                    <p className="text-black font-roboto font-normal text-[16px] text-left px-4 py-2 leading-[18px] line-clamp-1 overflow-hidden">
                       {item.category_main}
                     </p>
                   </div>
