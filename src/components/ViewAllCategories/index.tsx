@@ -19,9 +19,10 @@ const Categories = () => {
       const respose = await axiosInstance.get("category.php");
       setCategoriesData(respose.data.data || []);
       respose.data.data.forEach((el: CategoriesType) => {
-        setCategoriesFilterData(
-          (data) => [...data, { category_main: el.category_main }] || []
-        );
+        setCategoriesFilterData((data) => [
+          ...data,
+          { category_main: el.category_main },
+        ]);
       });
     } catch (error) {
       if (axios.isAxiosError(error)) {
