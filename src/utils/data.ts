@@ -26,6 +26,10 @@ export type CategoriesFilterType = {
   category_main: string;
 };
 
+export type CategoriesSubFilterType = {
+  category_sub: string;
+};
+
 export type CategoriesType = {
   category_main: string;
   category_image: string;
